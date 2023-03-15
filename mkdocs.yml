@@ -1,0 +1,66 @@
+site_name: Blazam Documentation
+site_description: Documentation for the Blazam application
+site_author: Chris Jacobsen
+copyright: Blazam 2023
+repo_url: https://github.com/Blazam-App/BLAZAM
+edit_uri: blob/Docs/BLAZAM/docsource
+docs_dir: docsource
+site_dir: docs
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra:
+  analytics:
+    provider: google
+    property: G-TG0YV4T565
+    feedback:
+        title: Was this page helpful?
+        ratings:
+          - icon: material/emoticon-happy-outline
+            name: This page was helpful
+            data: 1
+            note: >-
+              Thanks for your feedback!
+          - icon: material/emoticon-sad-outline
+            name: This page could be improved
+            data: 0
+            note: >- 
+              Thanks for your feedback! Help us improve this page by
+              using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+    - Home: 'index.md'
+    - Installation Guide:
+        - 'MSI Installer': 'install/msi.md'
+        - Manual Installation: 
+            - 'Install': 'install/manual.md'
+            - 'Configuration': 'install/config.md'
+        - Security: 'install/security.md'
+        - Updating:
+          - 'Manual Updates': 'update/manual.md'
+          - 'Self Updates': 'update/self.md'
+          - 'Auto Updates': 'update/auto.md'
+    - Admin Guide:
+      - Introduction: 'adminguide.md'
+      - Permissions:
+        - 'Abstract': 'permissions/abstract.md'
+    - About:
+        - 'License': 'license.md'
+        - 'Privacy': 'privacy.md'
