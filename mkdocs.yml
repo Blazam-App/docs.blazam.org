@@ -59,8 +59,9 @@ nav:
           - 'Auto Updates': 'update/auto.md'
     - Admin Guide:
       - Introduction: 'adminguide.md'
+      - First Run: 'admin/initialSetup.md'
       - Permissions:
-        - 'Abstract': 'permissions/abstract.md'
+        - 'Abstract': 'admin/permissions/abstract.md'
     - About:
         - 'License': 'license.md'
         - 'Privacy': 'privacy.md'

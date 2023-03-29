@@ -9,4 +9,4 @@ has been made. Further testing and optimization are required.
 
 Attempting to update from within Blazam may or may not work properly.
 
-For now the best way to update is to perform a [Manual Update]("update/manual.md")
+For now the best way to update is to perform a [Manual Update](manual.md)

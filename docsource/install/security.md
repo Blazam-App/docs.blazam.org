@@ -38,12 +38,8 @@ administrator.
 
 ## Encryption
 
-!!! note
-
-    We are considering moving the private key from the `%temp%\Blazam` directory to the appsettings.json
-
-The application encrypts sensitive database data such as passwords. Blazam automatically creates a random
-private key to use for this encryption on first launch.
+The application encrypts sensitive database data such as passwords. Blazam uses the `EncryptionString` from the
+[appSettings.json configuration file](config.md)
 
 ### Private Key
 The privatte key in the current version is stored under `%temp%\Blazam\writable\security\database.kety`

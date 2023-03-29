@@ -6,7 +6,11 @@ hide:
 
 [Main Site](https://blazam.org)
 
-A powerful web-based Active Directory management portal.
+While not yet complete, the vision of Blazam is to be a
+powerful, free, web-based Active Directory management portal.
+
+Enable you and your users to manage legacy Active Directory in a modern way.
+
 
 !!! warning "Beta Warning"
 
