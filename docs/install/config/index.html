@@ -417,6 +417,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#encryptionkey" class="md-nav__link">
+    EncryptionKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#debugmode" class="md-nav__link">
     DebugMode
   </a>
@@ -452,8 +459,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#databasetype" class="md-nav__link">
+    DatabaseType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sqlconnectionstring" class="md-nav__link">
     SQLConnectionString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqliteconnectionstring" class="md-nav__link">
+    SQLiteConnectionString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysqlconnectionstring" class="md-nav__link">
+    MySQLConnectionString
   </a>
   
 </li>
@@ -628,23 +656,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../admin/initialSetup/" class="md-nav__link">
+        First Run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Permissions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Permissions
         </label>
@@ -656,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../permissions/abstract/" class="md-nav__link">
+      <a href="../../admin/permissions/abstract/" class="md-nav__link">
         Abstract
       </a>
     </li>
@@ -797,6 +839,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#encryptionkey" class="md-nav__link">
+    EncryptionKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#debugmode" class="md-nav__link">
     DebugMode
   </a>
@@ -832,8 +881,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#databasetype" class="md-nav__link">
+    DatabaseType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sqlconnectionstring" class="md-nav__link">
     SQLConnectionString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqliteconnectionstring" class="md-nav__link">
+    SQLiteConnectionString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysqlconnectionstring" class="md-nav__link">
+    MySQLConnectionString
   </a>
   
 </li>
@@ -881,14 +951,18 @@ file in the root path of the application directory.</p>
       &quot;Microsoft.EntityFrameworkCore.Database.Command&quot;: &quot;Warning&quot;
     }
   },
+  &quot;EncryptionKey&quot;: &quot;supersecretstring&quot;,
   &quot;DebugMode&quot;: &quot;false&quot;,
   &quot;InstallType&quot;: &quot;IIS&quot;,
   &quot;ListeningAddress&quot;: &quot;*&quot;,
   &quot;HTTPPort&quot;: &quot;79&quot;,
   &quot;HTTPSPort&quot;: &quot;442&quot;,
   &quot;AllowedHosts&quot;: &quot;*&quot;,
+  &quot;DatabaseType&quot;: &quot;SQLite&quot;,
   &quot;ConnectionStrings&quot;: {
-    &quot;SQLConnectionString&quot;: &quot;Data Source=localhost;Database=BLAZAM;Persist Security Info=True;Integrated Security=False;Connection Timeout=10;TrustServerCertificate=True;&quot;
+    &quot;SQLConnectionString&quot;: &quot;Data Source=localhost;Database=BLAZAM;Persist Security Info=True;Integrated Security=False;Connection Timeout=10;TrustServerCertificate=True;&quot;,
+    &quot;SQLiteConnectionString&quot;: &quot;Data Source=%temp%/Blazam/database.db;&quot;,
+    &quot;MySQLConnectionString&quot;: &quot;Server=localhost;User=blazam;Password=blazam;Database=blazam;&quot;
   }
 
 }
@@ -896,6 +970,30 @@ file in the root path of the application directory.</p>
 <h3 id="config-options">Config Options</h3>
 <h4 id="logging">Logging</h4>
 <p>It is recommended not to modify these settings</p>
+<h4 id="encryptionkey">EncryptionKey</h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>It is critical that you changed this value</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing this value after installation will break decryption,
+thereby preventing any successful logons.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>Any string, this is the seed that generates the encryption key used by the database</td>
+</tr>
+</tbody>
+</table>
 <h4 id="debugmode">DebugMode</h4>
 <table>
 <thead>
@@ -995,6 +1093,29 @@ file in the root path of the application directory.</p>
 </tr>
 </tbody>
 </table>
+<h4 id="databasetype">DatabaseType</h4>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SQL</code></td>
+<td>The application will use the SQLConnectionString</td>
+</tr>
+<tr>
+<td><code>SQLite</code></td>
+<td>The application will use the SQLiteConnectionString</td>
+</tr>
+<tr>
+<td><code>MySQL</code></td>
+<td>The application will use the MySQLConnectionString</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sqlconnectionstring">SQLConnectionString</h4>
 <table>
 <thead>
@@ -1007,6 +1128,36 @@ file in the root path of the application directory.</p>
 <tr>
 <td><code>string</code></td>
 <td>The connection string to connect to your SQL server. If you need a generator try <a href="https://www.aireforge.com/tools/sql-server-connection-string-generator">this one</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sqliteconnectionstring">SQLiteConnectionString</h4>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>The connection string to the database file. For more info on how to make your string, <a href="https://www.connectionstrings.com/sqlite-net-provider/">click here</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mysqlconnectionstring">MySQLConnectionString</h4>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>The connection string to connect to your Mysql server. For more info on how to make your string, <a href="https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html">click here</a>.</td>
 </tr>
 </tbody>
 </table>

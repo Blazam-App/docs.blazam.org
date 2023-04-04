@@ -576,23 +576,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../admin/initialSetup/" class="md-nav__link">
+        First Run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Permissions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Permissions
         </label>
@@ -604,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../permissions/abstract/" class="md-nav__link">
+      <a href="../../admin/permissions/abstract/" class="md-nav__link">
         Abstract
       </a>
     </li>
@@ -768,8 +782,8 @@
 
 <h2 id="pre-requisites">Pre-Requisites</h2>
 <ul>
-<li>Install an SQL Express or MS SQL server, or use an existing one.</li>
-<li>Create an empty database, a new SQL or AD user to connect with, and permissions and logons set.<ul>
+<li>Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. Alternatively, opt for the file based Sqlite <code>DatabaseType</code>.</li>
+<li>Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.<ul>
 <li>Refer to your database documentation for security setup and best practices</li>
 </ul>
 </li>
@@ -811,6 +825,10 @@
 </li>
 </ol>
 <h2 id="install-as-service">Install as Service</h2>
+<ol>
+<li>Extract the application to <code>C:\Program Files\Blazam</code></li>
+<li>Using nssm.exe in the extracted files, install <code>BLAZAM.exe</code> as a service.</li>
+</ol>
 
 
   
