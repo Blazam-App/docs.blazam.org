@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\docsource",
+    "\\docsource\\admin",
+    "\\docsource\\install"
   ],
-  "SelectedNode": "\\C:\\Users\\Chris\\Source\\Repos\\docs.blazam.org",
   "PreviewInSolutionExplorer": false
 }

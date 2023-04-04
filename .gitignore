@@ -368,3 +368,8 @@ FodyWeavers.xsd
 /BLAZAM/appsettings.json
 /Setup/BLAZAM.msi
 /BLAZAM/database.db
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/docs.blazam.org/FileContentIndex/c40ac28b-2a77-43a9-aba6-459cec4b1ef3.vsidx
+/.vs/docs.blazam.org/FileContentIndex/d5ecfbf3-abcc-4f27-844d-0f7522229567.vsidx
+/.vs/docs.blazam.org/v17/.wsuo

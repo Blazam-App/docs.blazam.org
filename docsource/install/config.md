@@ -14,14 +14,18 @@ file in the root path of the application directory.
       "Microsoft.EntityFrameworkCore.Database.Command": "Warning"
     }
   },
+  "EncryptionKey": "supersecretstring",
   "DebugMode": "false",
   "InstallType": "IIS",
   "ListeningAddress": "*",
   "HTTPPort": "79",
   "HTTPSPort": "442",
   "AllowedHosts": "*",
+  "DatabaseType": "SQLite",
   "ConnectionStrings": {
-    "SQLConnectionString": "Data Source=localhost;Database=BLAZAM;Persist Security Info=True;Integrated Security=False;Connection Timeout=10;TrustServerCertificate=True;"
+    "SQLConnectionString": "Data Source=localhost;Database=BLAZAM;Persist Security Info=True;Integrated Security=False;Connection Timeout=10;TrustServerCertificate=True;",
+    "SQLiteConnectionString": "Data Source=%temp%/Blazam/database.db;",
+    "MySQLConnectionString": "Server=localhost;User=blazam;Password=blazam;Database=blazam;"
   }
 
 }
@@ -29,6 +33,20 @@ file in the root path of the application directory.
 ### Config Options
 #### Logging
 It is recommended not to modify these settings
+
+
+#### EncryptionKey
+!!! danger
+
+    It is critical that you changed this value
+!!! note
+
+    Changing this value after installation will break decryption,
+    thereby preventing any successful logons.
+| Values      | Description                          |
+| ----------- | ------------------------------------ |
+| `string`      | Any string, this is the seed that generates the encryption key used by the database|
+
 
 #### DebugMode
 | Values      | Description                          |
@@ -75,9 +93,28 @@ It is recommended not to modify these settings
 | `*`         | Allows all IP addresses to communicate with the Blazam|
 | `subnet/mask`| Allows only IP's from the defined subnet to communicate with the Blazam|
 
+#### DatabaseType
+| Values      | Description                          |
+| ----------- | ------------------------------------ |
+| `SQL`       | The application will use the SQLConnectionString    |
+| `SQLite`    | The application will use the SQLiteConnectionString |
+| `MySQL`     | The application will use the MySQLConnectionString  |
+
 
 #### SQLConnectionString
 
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
 | `string`         | The connection string to connect to your SQL server. If you need a generator try [this one](https://www.aireforge.com/tools/sql-server-connection-string-generator).|
+
+#### SQLiteConnectionString
+
+| Values      | Description                          |
+| ----------- | ------------------------------------ |
+| `string`         | The connection string to the database file. For more info on how to make your string, [click here](https://www.connectionstrings.com/sqlite-net-provider/).|
+
+#### MySQLConnectionString
+
+| Values      | Description                          |
+| ----------- | ------------------------------------ |
+| `string`         | The connection string to connect to your Mysql server. For more info on how to make your string, [click here](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).|
