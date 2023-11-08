@@ -44,11 +44,15 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
     - Home: 'index.md'
     - Installation Guide:
-        - 'MSI Installer': 'install/msi.md'
+        - 'Web Installer': 'install/web.md'
         - Manual Installation: 
             - 'Install': 'install/manual.md'
             - 'Configuration': 'install/config.md'
@@ -58,7 +62,6 @@ nav:
           - 'Self Updates': 'update/self.md'
           - 'Auto Updates': 'update/auto.md'
     - Admin Guide:
-      - Introduction: 'adminguide.md'
       - First Run: 'admin/initialSetup.md'
       - Permissions:
         - 'Abstract': 'admin/permissions/abstract.md'

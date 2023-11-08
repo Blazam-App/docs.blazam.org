@@ -41,17 +41,20 @@ administrator.
 The application encrypts sensitive database data such as passwords. Blazam uses the `EncryptionString` from the
 [appSettings.json configuration file](config.md)
 
-### Private Key
-The privatte key in the current version is stored under `%temp%\Blazam\writable\security\database.kety`
 
-The temp directory is the temp directory of the running user of the application, or `C:\Windows\Temp`
+!!! tip "Backup the Encryption Key"
 
-!!! tip "Backup the Private Key"
-
-    It is highly recommended to backup the private key immediatly following the installation wizard.
+    It is highly recommended to backup the encryption key immediatly following the installation wizard.
     
-    Loss of the private key will result in the inabillity to log in as the application `admin`,, and
+    Loss of the encryption key will result in the inabillity to log in as the application `admin`, and
     break communication with your Actvie Directory, effectivley locking you out without manual modifications
     to the database.
 
-    To backup the key, go to the `Settings` page and click the `System` tab.
+    To backup the key from the app, go to the `Settings` page and click the `System` tab. (Coming soon)
+
+??? failure "Lost your encryption key?"
+    
+    1. Connect to your database with a management application. Modify the admin password in the table 'AppSettings' to a new password in plaintext
+    2. Restart Blazam and log in with the new admin password.
+    3. Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.
+    4. Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.

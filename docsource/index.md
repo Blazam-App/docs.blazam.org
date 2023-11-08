@@ -11,12 +11,6 @@ powerful, free, web-based Active Directory management portal.
 
 Enable you and your users to manage legacy Active Directory in a modern way.
 
-
-!!! warning "Beta Warning"
-
-    This app is currently in beta. If you choose to install now you may
-    have to reinstall from scratch in a future update.
-
 ## Summary
 Blazam is a powerful, mobile-friendly, web-based Active Directory management portal.
 

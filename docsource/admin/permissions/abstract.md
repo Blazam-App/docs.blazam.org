@@ -1,12 +1,16 @@
 ﻿# Permissions Abstract
 Permission in Blazam differ from Active Directory in one major (and extremely helpful) way.
 
-Active Directory ACL permissions are applied per OU. This means that for every OU you want a group to have
-access to, you have to create the exact same ACL list in each OU for that group. This is time consuming and
-leads to mistakes.
+|Feature |  Active Directory | Blazam |
+| ----------- | ------------------------------------ | - |
+| `Reusable ACL's`       | :fontawesome-regular-circle-xmark: Each ACL is unique for each OU  | :fontawesome-regular-circle-check: Create one type of access and reuse that list for any number of OU's |
+| `ACL Naming`       | :fontawesome-regular-circle-xmark: ACL's are simply a list of properties in the security tab with no real grouping or organization capability | :fontawesome-regular-circle-check: Named ACL's allow for quick identification of access and it's source as well as allowing the creation of role based ACL lists |
+| `ACL inheritance`    | :fontawesome-regular-circle-check: ACL's at higher level OU's propagate down except for overriding deny's | :fontawesome-regular-circle-check: Blazam behaves the same as Active Directory in this regard |
 
-Blazam adds a layer of abstraction to this paradigm. By including an `Access Level` layer between the OU permissions and the group assinged,
-you can create a single ACL rule an reuse it for as many groups on as many OU's as you'd like.
+!!! info "TLDR"
+
+	Blazam adds a layer of abstraction to Active Directory permissions. By including an `Access Level` layer between the OU permissions and the group assinged,
+	you can create a single ACL rule an reuse it for as many groups on as many OU's as you'd like.
 
 The `Access Level`'s you define can be reused or coombined to create exactly the configuration you desire.
 

@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\docs",
     "\\docsource",
     "\\docsource\\admin",
     "\\docsource\\install"
   ],
+  "SelectedNode": "\\BuildDocumentation.ps1",
   "PreviewInSolutionExplorer": false
 }

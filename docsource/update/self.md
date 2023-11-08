@@ -2,11 +2,10 @@
 
 !!! warning
 
-	Self-update is still very much in Alpha
+	Self-update is now in Beta.
 
-The end goal is to have Blazam update itself. While progress to that goal
-has been made. Further testing and optimization are required.
+Blazam can update itself regardless of how it is installed.
 
-Attempting to update from within Blazam may or may not work properly.
+To update go to `Configure` -> `Settings` -> `Update`, if an update is available, an update button and release notes will be available.
 
-For now the best way to update is to perform a [Manual Update](manual.md)
+During a self update Blazam backs up the current installation to `C:\Windows\temp\Blazam\backup\` or wherever your Windows temporary folder is configured.

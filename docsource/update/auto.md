@@ -2,15 +2,12 @@
 
 !!! warning
 
-	Auto-update is still very much in Alpha
-
-	It is not recommended to enable automatic updates at this time
+	Auto-update is now in Beta
 
 
-!!! info 
+To configure automatic updates, go to `Configure` -> `Settings` -> `Update` and enable auto updates.
 
-	The end goal is to have Blazam update itself. While progress to that goal
-	has been made. Further testing and optimization are required.
+You can then choose a time of day to perform the update. The default value is 2:00 local server time. Choose a time with minimal user activity to avoid disruptions.
 
-For now the best way to update is to perform a [Manual Update](manual.md)
+When an update is release, Blazam will schedule a self update at the configured time.
 
