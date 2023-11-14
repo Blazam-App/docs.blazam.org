@@ -45,7 +45,7 @@ jobs:
           # GitHub Actor Username (default: github.actor)
           #actor: # optional, default is GITHUB_ACTOR
           # GitHub Token
-          token: '${{ secrets.GITHUB_TOKEN }}'
+          token: '${{ secrets.SECRET_KEY }}'
           
       - name: Commit Changes
       
