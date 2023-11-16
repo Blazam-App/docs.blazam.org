@@ -69,5 +69,6 @@ jobs:
           git branch live
           git checkout live
           git add .
+          git pull
           git commit -m "Build files"
           git push origin live
