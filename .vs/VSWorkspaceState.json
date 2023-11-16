@@ -4,8 +4,10 @@
     "\\docs",
     "\\docsource",
     "\\docsource\\admin",
-    "\\docsource\\install"
+    "\\docsource\\admin\\permissions",
+    "\\docsource\\install",
+    "\\docsource\\update"
   ],
-  "SelectedNode": "\\BuildDocumentation.ps1",
+  "SelectedNode": "\\docs\\CNAME",
   "PreviewInSolutionExplorer": false
 }

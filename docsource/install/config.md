@@ -51,7 +51,7 @@ It is recommended not to modify these settings
 #### DebugMode
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `true`      | The application will provide a demo user for login  |
+| `true`      | The application will provide additional debugging information to the browser (This may expose priviledged information to users, only enable for assisting development)  |
 | `false`     | The application will operate in the normal mode |
 
 #### InstallType
