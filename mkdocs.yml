@@ -52,7 +52,7 @@ nav:
         - 'Web Installer': 'install/web.md'
         - Manual Installation: 
             - 'Install': 'install/manual.md'
-            - 'Configuration': 'install/config.md'
+        - Configuration: 'install/config.md'
         - Security: 'install/security.md'
         - Updating:
           - 'Manual Updates': 'update/manual.md'
