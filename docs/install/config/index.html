@@ -229,37 +229,10 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Manual Installation
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Manual Installation" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Manual Installation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../manual/" title="Install" class="md-nav__link">
-      Install
+    <a href="../manual/" title="Manual Installation" class="md-nav__link">
+      Manual Installation
     </a>
   </li>
 
@@ -318,14 +291,6 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#config-options" class="md-nav__link">
-    Config Options
-  </a>
-  
-    <nav class="md-nav" aria-label="Config Options">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#logging" class="md-nav__link">
@@ -408,21 +373,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
     
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -445,16 +400,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
     
-    <label class="md-nav__link" for="nav-2-4">
+    <label class="md-nav__link" for="nav-2-5">
       Updating
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Updating" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-4">
+      <label class="md-nav__title" for="nav-2-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -688,14 +643,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#config-options" class="md-nav__link">
-    Config Options
-  </a>
-  
-    <nav class="md-nav" aria-label="Config Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#logging" class="md-nav__link">
     Logging
   </a>
@@ -776,11 +723,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -834,18 +776,34 @@ file in the root path of the application directory.</p>
 }
 </code></pre></div>
 
-<h3 id="config-options">Config Options</h3>
-<h4 id="logging">Logging</h4>
+<h3 id="logging">Logging</h3>
 <p>It is recommended not to modify these settings</p>
-<h4 id="encryptionkey">EncryptionKey</h4>
+<h3 id="encryptionkey">EncryptionKey</h3>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>Changing this value after installation will break decryption,
 thereby preventing any successful logons.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For manual installations, be sure to change this value from it's
+default before launching the app. Make it whatever you want, as
+long as it's different</p>
+</div>
+<details class="tip"><summary>Backup the Encryption Key!</summary><p>It is highly recommended to backup the encryption key immediatly following the installation wizard for
+production environments.</p>
+<p>Loss of the encryption key will result in the inabillity to log in as the application <code>admin</code>, and
+break communication with your Actvie Directory, effectivley locking you out without manual modifications
+to the database.</p>
+<p>To backup the key from the app, go to the <code>Settings</code> page and click the <code>System</code> tab. (Coming soon)</p>
+</details>
+<details class="failure"><summary>Lost your encryption key?</summary><ol>
+<li>Connect to your database with a management application. Modify the admin password in the table 'AppSettings' to a new password in plaintext</li>
+<li>Restart Blazam and log in with the new admin password.</li>
+<li>Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.</li>
+<li>Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.</li>
+</ol>
+</details>
 <table>
 <thead>
 <tr>
@@ -860,7 +818,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="debugmode">DebugMode</h4>
+<h3 id="debugmode">DebugMode</h3>
 <table>
 <thead>
 <tr>
@@ -879,7 +837,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="installtype">InstallType</h4>
+<h3 id="installtype">InstallType</h3>
 <div class="admonition note inline end">
 <p class="admonition-title">Note</p>
 <p>This will likely not be implemented</p>
@@ -902,7 +860,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="httpport">HTTPPort</h4>
+<h3 id="httpport">HTTPPort</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This setting has no effect when running under IIS</p>
@@ -921,7 +879,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="httpsport">HTTPSPort</h4>
+<h3 id="httpsport">HTTPSPort</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This setting has no effect when running under IIS</p>
@@ -940,7 +898,11 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="allowedhosts">AllowedHosts</h4>
+<h3 id="allowedhosts">AllowedHosts</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This setting has no effect when running under IIS</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -959,7 +921,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="databasetype">DatabaseType</h4>
+<h3 id="databasetype">DatabaseType</h3>
 <table>
 <thead>
 <tr>
@@ -982,7 +944,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="sqlconnectionstring">SQLConnectionString</h4>
+<h3 id="sqlconnectionstring">SQLConnectionString</h3>
 <table>
 <thead>
 <tr>
@@ -997,7 +959,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="sqliteconnectionstring">SQLiteConnectionString</h4>
+<h3 id="sqliteconnectionstring">SQLiteConnectionString</h3>
 <table>
 <thead>
 <tr>
@@ -1012,7 +974,7 @@ thereby preventing any successful logons.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="mysqlconnectionstring">MySQLConnectionString</h4>
+<h3 id="mysqlconnectionstring">MySQLConnectionString</h3>
 <table>
 <thead>
 <tr>
@@ -1045,7 +1007,7 @@ thereby preventing any successful logons.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../manual/" title="Install" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../manual/" title="Manual Installation" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1054,7 +1016,7 @@ thereby preventing any successful logons.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Install
+                Manual Installation
               </div>
             </div>
           </a>

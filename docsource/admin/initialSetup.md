@@ -49,3 +49,9 @@ This is the most important of first launch steps.
 !!! info
     
     At the bottom of the page is a connection status panel that will show you the state of the connection as you make changes.
+
+## Finalize Install
+After finalizing install you will be brought to the login page.
+Enter the admin username and the password you set during the initial setup.
+
+![Screenshot of login page](/admin/img/install/login.png)
