@@ -68,4 +68,4 @@ jobs:
          #git config --global user.name "Github"
           git add .
           git commit -m "Build files"
-          git push origin master
+          git push live
