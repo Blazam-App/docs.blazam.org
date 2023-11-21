@@ -15,9 +15,11 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
 !!! danger
 
     Running the web application under elevated priviledges exposes your Active Directory to unneccessary risk of framework exploits.
+## Active Directory User
 
 The application only has as much priviledge as you supply it. It is possible to set up an advanced permission ACL within Active
 Directory for the user account provided for AD communication to limit the exposure of the application.
+
 ## Application User
 
 !!! danger

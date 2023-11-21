@@ -4,4 +4,6 @@ Installing via the Web installer is the recommended method as it performs all re
 
 The Web installer allows installing the application under IIS, or as a stand-alone service installed under Program Files.
 
+It always installs the latest version.
+
 [Download Web Installer](https://blazam.org/download)
