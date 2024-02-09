@@ -4,8 +4,8 @@
 
 !!! info 
 
-	The end goal is to have Blazam update itself. While progress to that goal
-	has been made. Further testing and optimization are required.
+	Blazam can update itself, but some configuration
+	is required. Check the self-update page for more info.
 
 
 Manual updating is very easy with Blazam

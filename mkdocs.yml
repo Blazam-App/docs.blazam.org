@@ -49,10 +49,9 @@ markdown_extensions:
 nav:
     - Home: 'index.md'
     - Installation Guide:
-        - 'Web Installer': 'install/web.md'
-        - Manual Installation: 
-            - 'Install': 'install/manual.md'
-            - 'Configuration': 'install/config.md'
+        - Web Installer: 'install/web.md'
+        - Manual Installation: 'install/manual.md'
+        - Configuration: 'install/config.md'
         - Security: 'install/security.md'
         - Updating:
           - 'Manual Updates': 'update/manual.md'

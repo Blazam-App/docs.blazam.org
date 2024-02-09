@@ -26,3 +26,4 @@ Feel free to deviate from the instructions to fit your desired deployment
 
 1. Extract the application to `C:\Program Files\Blazam`
 1. Using nssm.exe in the extracted files, install `BLAZAM.exe` as a service.
+1. Continue with [Configuration](config.md)

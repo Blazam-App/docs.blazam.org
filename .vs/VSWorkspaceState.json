@@ -1,11 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
     "\\docs",
     "\\docsource",
-    "\\docsource\\admin",
-    "\\docsource\\install"
+    "\\docsource\\install",
+    "\\docsource\\update",
+    "\\docs\\admin",
+    "\\docs\\admin\\img",
+    "\\docs\\admin\\img\\install"
   ],
-  "SelectedNode": "\\BuildDocumentation.ps1",
+  "SelectedNode": "\\docsource\\index.md",
   "PreviewInSolutionExplorer": false
 }

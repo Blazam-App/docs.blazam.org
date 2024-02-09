@@ -2,21 +2,22 @@
 
 After installing Blazam, open a browser you your published website.
 
-Upon first launch the application will enter an installation wizard
+Upon first launch, the application will enter an installation wizard
 to guide you in completing the initial configuration.
 
+# Setup Wizard
 ## Database
 
 ### Pre-requisites
 - A database must be created prior to first launch.
 - A user account with permission to write to the database and create and delete tables must also be provided.
 
-!!! info
+!!! tip
 
-    The web installer ensure the prerequisites are fulfilled before allowing installation.
+    The web installer ensures the prerequisites are fulfilled before allowing installation.
 
 
-The database page confirms that the setting you configured in appsettings.json (or as performed by the web installer) are correct and a connection to the 
+The database page confirms that the settings you configured in appsettings.json (or as performed by the web installer) are correct and a connection to the 
 database is successful.
 
 You can then "install" the database, which will set up all the neccessary tables and seed data.
@@ -31,7 +32,7 @@ This account is provided to allow login even when no connection to Active Direct
 
 This is the most important of first launch steps.
 
-`Server` - This ca be your domain name, but if that doesn't work pick a domain controller to connect to and use it's DNS name.
+`Server` - This can be your domain name, but if that doesn't work pick a domain controller to connect to and use it's DNS name.
 
 `Port` - The port to connect to.
 
@@ -49,3 +50,9 @@ This is the most important of first launch steps.
 !!! info
     
     At the bottom of the page is a connection status panel that will show you the state of the connection as you make changes.
+
+## Finalize Install
+After finalizing install you will be brought to the login page.
+Enter the `admin` username and the password you set during the initial setup.
+
+![Screenshot of login page](/admin/img/install/login.png)

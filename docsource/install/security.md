@@ -7,7 +7,7 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
 
     The developers of Blazam always keep security and priviledge protection as a top priority. 
     
-    All password are encrypted both at rest and in transit. All incoming/outgoing connections are TLS/SSL capable.  
+    All passwords are encrypted both at rest and in transit. All incoming/outgoing connections are TLS/SSL capable.  
     
     Having said that, we take no responsibillity
     for any damages incurred from your use of this software. You are encouraged to review the source code for yourself.
@@ -15,9 +15,11 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
 !!! danger
 
     Running the web application under elevated priviledges exposes your Active Directory to unneccessary risk of framework exploits.
+## Active Directory User
 
 The application only has as much priviledge as you supply it. It is possible to set up an advanced permission ACL within Active
 Directory for the user account provided for AD communication to limit the exposure of the application.
+
 ## Application User
 
 !!! danger
@@ -41,6 +43,10 @@ administrator.
 The application encrypts sensitive database data such as passwords. Blazam uses the `EncryptionString` from the
 [appSettings.json configuration file](config.md)
 
+??? question "How it works"
+    
+    The encryption key you provide is not the actual key used for encryption. This provides
+    security through obscurity for peace of mind that it alone is not a key to the kingdom.
 
 !!! tip "Backup the Encryption Key"
 
