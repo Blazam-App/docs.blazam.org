@@ -1,7 +1,7 @@
 site_name: Blazam Documentation
 site_description: Documentation for the Blazam application
 site_author: Chris Jacobsen
-copyright: Blazam 2023
+copyright: Blazam 2024
 repo_url: https://github.com/Blazam-App/docs.blazam.org
 edit_uri: blob/master/docsource
 docs_dir: docsource
