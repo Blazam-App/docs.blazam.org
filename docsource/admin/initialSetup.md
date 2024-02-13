@@ -14,10 +14,10 @@ to guide you in completing the initial configuration.
 
 !!! tip
 
-    The web installer ensures the prerequisites are fulfilled before allowing installation.
+    The [web installer](../install/web.md) ensures the prerequisites are fulfilled before allowing installation.
 
 
-The database page confirms that the settings you configured in appsettings.json (or as performed by the web installer) are correct and a connection to the 
+The database page confirms that the settings you configured in [appSettings.json](../install/config.md) (or as performed by the web installer) are correct and a connection to the 
 database is successful.
 
 You can then "install" the database, which will set up all the neccessary tables and seed data.

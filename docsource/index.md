@@ -6,8 +6,7 @@ hide:
 
 [Main Site](https://blazam.org)
 
-While not yet complete, the vision of Blazam is to be a
-powerful, free, web-based Active Directory management portal.
+The vision of Blazam is to be a powerful, free, web-based Active Directory management portal.
 
 Enable you and your users to manage legacy Active Directory in a modern way.
 
@@ -16,7 +15,7 @@ Blazam is a powerful, mobile-friendly, web-based Active Directory management por
 
 ## Requirements
 * Active Directory
-* Windows Host Machine (Workstation/Server)
+* Domain-joined Windows Host Machine (Workstation/Server)
 * Well-defined OU structure
 
 !!! warning "Sorry"
@@ -33,4 +32,4 @@ Blazam is a powerful, mobile-friendly, web-based Active Directory management por
     The technical reality of LDAP and Active Directory prohibit any tolerable experience
     delegating groups to groups.
 ## Open Source
-This program and the documentation are open source. Contributions are encouraged.
+Blazam and it's documentation are open source. Contributions are encouraged.
