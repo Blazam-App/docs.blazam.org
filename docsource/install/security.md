@@ -5,7 +5,7 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
 
 !!! abstract
 
-    The developers of Blazam always keep security and priviledge protection as a top priority. 
+    The developers of Blazam always keep security and privilege protection as a top priority. 
     
     All passwords are encrypted both at rest and in transit. All incoming/outgoing connections are TLS/SSL capable.  
     
@@ -14,7 +14,11 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
 
 !!! danger
 
-    Running the web application under elevated priviledges exposes your Active Directory to unneccessary risk of framework exploits.
+    Running the web application under elevated privileges exposes your Web Server and Active Directory to unneccessary risk of framework exploits.
+
+## Internet Facing
+Should you decide to publish Blazam to the internet, you should ensure that a valid
+SSL certificate is supplied and forcing of HTTPS is enabled either in-app or via IIS.
 ## Active Directory User
 
 The application only has as much privilege as you supply it. It is possible to set up an advanced permission ACL within Active

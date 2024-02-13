@@ -131,14 +131,3 @@ It is recommended not to modify these settings
 | ----------- | ------------------------------------ |
 | `string`         | The connection string to connect to your database. If you need a generator try one of the following [SQL](https://www.aireforge.com/tools/sql-server-connection-string-generator), [Sqlite](https://www.connectionstrings.com/sqlite-net-provider/), [Mysql](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).|
 
-### SQLiteConnectionString
-
-| Values      | Description                          |
-| ----------- | ------------------------------------ |
-| `string`         | The connection string to the database file. For more info on how to make your string, .|
-
-### MySQLConnectionString
-
-| Values      | Description                          |
-| ----------- | ------------------------------------ |
-| `string`         | The connection string to connect to your Mysql server. For more info on how to make your string, .|

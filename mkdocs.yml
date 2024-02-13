@@ -11,7 +11,9 @@ docs_dir: docsource
 site_dir: docs
 extra:
   social:
-    - icon: fontawesome/brands/mastodon 
+    - icon: fontawesome/brands/github 
+      link: https://blazam.org/
+    - icon: fontawesome/solid/globe 
       link: https://blazam.org/
   consent:
     title: Cookie consent
@@ -68,11 +70,12 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
     - Home: 'index.md'
+    - Security: 'install/security.md'
     - Installation Guide:
         - Web Installer: 'install/web.md'
         - Manual Installation: 'install/manual.md'
         - Configuration: 'install/config.md'
-        - Security: 'install/security.md'
+
         - Updating:
           - 'Manual Updates': 'update/manual.md'
           - 'Self Updates': 'update/self.md'
