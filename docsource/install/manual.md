@@ -2,14 +2,14 @@
 * Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. Alternatively, opt for the file based Sqlite `DatabaseType`.
 * Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.
 	* Refer to your database documentation for security setup and best practices
-* Download and [Install .NET Core 6.x Runtime](https://aka.ms/dotnet-download) from Micrsoft
-	* If running under IIS, you will also need the [.NET Core 6.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsft.
+* Download and [Install .NET Core 6.x Runtime](https://aka.ms/dotnet-download) from Microsoft
+	* If running under IIS, you will also need the [.NET Core 6.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
 ### [Download](https://blazam.org/download)
 
 ## Install under IIS
 Feel free to deviate from the instructions to fit your desired deployment
 
-1. Install the Application Initialization Module
+1. Install the Application Initialization Module (Optional)
 	* You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Application Initialization`.
 1. Copy contents of zip file to a directory accessible by IIS
 1. Create new Site in IIS for Blazam

@@ -1,15 +1,42 @@
 site_name: Blazam Documentation
 site_description: Documentation for the Blazam application
 site_author: Chris Jacobsen
-copyright: Blazam 2024
+site_url: https://docs.blazam.org
+copyright: >
+  &copy; Blazam 2022-2024 <br><a href="#__consent">Change cookie settings</a>
+
 repo_url: https://github.com/Blazam-App/BLAZAM
 edit_uri: https://github.com/Blazam-App/docs.blazam.org/blob/master/docsource
 docs_dir: docsource
 site_dir: docs
 extra:
+  social:
+    - icon: fontawesome/brands/mastodon 
+      link: https://blazam.org/
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
   analytics:
     provider: google
     property: G-TG0YV4T565
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 theme:
   features:
     - content.action.edit
@@ -61,3 +88,8 @@ nav:
     - About:
         - 'License': 'license.md'
         - 'Privacy': 'privacy.md'
+  
+
+plugins:
+  - privacy
+  - search

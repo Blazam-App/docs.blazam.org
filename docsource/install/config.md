@@ -77,9 +77,9 @@ It is recommended not to modify these settings
 
 ### InstallType
 
-!!! note inline end
+!!! warning inline end
 
-    This will likely not be implemented
+    This has been deprecated and will be removed in a future version
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
 | `IIS`       | Lets the application know it is running under IIS |
@@ -125,20 +125,20 @@ It is recommended not to modify these settings
 | `MySQL`     | The application will use the MySQLConnectionString  |
 
 
-### SQLConnectionString
+### DBConnectionString
 
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `string`         | The connection string to connect to your SQL server. If you need a generator try [this one](https://www.aireforge.com/tools/sql-server-connection-string-generator).|
+| `string`         | The connection string to connect to your database. If you need a generator try one of the following [SQL](https://www.aireforge.com/tools/sql-server-connection-string-generator), [Sqlite](https://www.connectionstrings.com/sqlite-net-provider/), [Mysql](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).|
 
 ### SQLiteConnectionString
 
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `string`         | The connection string to the database file. For more info on how to make your string, [click here](https://www.connectionstrings.com/sqlite-net-provider/).|
+| `string`         | The connection string to the database file. For more info on how to make your string, .|
 
 ### MySQLConnectionString
 
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `string`         | The connection string to connect to your Mysql server. For more info on how to make your string, [click here](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).|
+| `string`         | The connection string to connect to your Mysql server. For more info on how to make your string, .|

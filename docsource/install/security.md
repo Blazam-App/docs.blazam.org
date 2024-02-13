@@ -17,7 +17,7 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
     Running the web application under elevated priviledges exposes your Active Directory to unneccessary risk of framework exploits.
 ## Active Directory User
 
-The application only has as much priviledge as you supply it. It is possible to set up an advanced permission ACL within Active
+The application only has as much privilege as you supply it. It is possible to set up an advanced permission ACL within Active
 Directory for the user account provided for AD communication to limit the exposure of the application.
 
 ## Application User
@@ -28,7 +28,7 @@ Directory for the user account provided for AD communication to limit the exposu
 ### For IIS
 Use the default IIS_User account provided to the application pool.
 ### For Service
-Using the NetworkService account is reccomended.
+Using the NetworkService account is recommended.
 ## Folder Permissions
 For most deployments, no modifications to folder permissions are required.
 
