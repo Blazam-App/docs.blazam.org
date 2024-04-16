@@ -7,12 +7,12 @@
 Blazam can update itself regardless of how it is installed.
 
 ## Self-Update Setup
-Some manual configuration is neccessary to perform self-updates for now.
+Some manual configuration is necessary to perform self-updates for now.
 
 First decide the account to use. There are two approved options.
 
 1. Use the Active Directory Credentials provided to Blazam
-1. Use a custom set of credentials. *(This can be a local user account with no administrative permissions)*
+1. Use a custom set of credentials. *(This can be a local user account with no administrative permissions, but granted management permissions to IIS or the service)*
 
 Finally, apply write permissions to the application installation directory 
 for the chosen account.

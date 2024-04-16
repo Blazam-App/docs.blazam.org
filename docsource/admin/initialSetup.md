@@ -1,6 +1,6 @@
 ﻿# Initial Setup
 
-After installing Blazam, open a browser you your published website.
+After installing Blazam, open a browser to your published website.
 
 Upon first launch, the application will enter an installation wizard
 to guide you in completing the initial configuration.
@@ -8,7 +8,7 @@ to guide you in completing the initial configuration.
 # Setup Wizard
 ## Database
 
-### Pre-requisites
+### Pre-requisites (Excluding Sqlite)
 - A database must be created prior to first launch.
 - A user account with permission to write to the database and create and delete tables must also be provided.
 
@@ -20,7 +20,7 @@ to guide you in completing the initial configuration.
 The database page confirms that the settings you configured in [appSettings.json](../install/config.md) (or as performed by the web installer) are correct and a connection to the 
 database is successful.
 
-You can then "install" the database, which will set up all the neccessary tables and seed data.
+You can then "install" the database, which will set up all the necessary tables and seed data.
 
 ## Authentication
 
@@ -44,7 +44,7 @@ This is the most important of first launch steps.
 
 `FQDN` - The fully qualified domain name of your Active Directory domain.
 
-`Base DN` - The base oranizational unit distinguished name from where to begin scoping the application. Any OU's above this DN are not available to Blazam.
+`Base DN` - The base organizational unit distinguished name from where to begin scoping the application. Any OU's above this DN are not available to Blazam.
 
 
 !!! info

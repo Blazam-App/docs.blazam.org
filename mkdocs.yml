@@ -74,6 +74,7 @@ nav:
     - Installation Guide:
         - Web Installer: 'install/web.md'
         - Manual Installation: 'install/manual.md'
+        - Firewalls and Ports: 'install/firewall.md'
         - Configuration: 'install/config.md'
 
         - Updating:

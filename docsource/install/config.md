@@ -16,22 +16,20 @@ file in the root path of the application directory.
   },
   "EncryptionKey": "supersecretstring",
   "DebugMode": "false",
-  "InstallType": "IIS",
   "ListeningAddress": "*",
   "HTTPPort": "79",
   "HTTPSPort": "442",
   "AllowedHosts": "*",
-  "DatabaseType": "SQLite",
+  "DatabaseType": "SQLite", //SQL,SQLite,or MySQL
   "ConnectionStrings": {
-    "SQLConnectionString": "Data Source=localhost;Database=BLAZAM;Persist Security Info=True;Integrated Security=False;Connection Timeout=10;TrustServerCertificate=True;",
-    "SQLiteConnectionString": "Data Source=%temp%/Blazam/database.db;",
-    "MySQLConnectionString": "Server=localhost;User=blazam;Password=blazam;Database=blazam;"
+
+    "DBConnectionString": ""
   }
 
 }
 ```
 ### Logging
-It is recommended not to modify these settings
+It is recommended not to modify logging settings. They may be useful for issues that arise.
 
 
 ### EncryptionKey
@@ -56,14 +54,18 @@ It is recommended not to modify these settings
     break communication with your Actvie Directory, effectivley locking you out without manual modifications
     to the database.
 
-    To backup the key from the app, go to the `Settings` page and click the `System` tab. (Coming soon)
+    To backup the key from the app, go to the `Settings` page and click the `System` tab.
 
 ??? failure "Lost your encryption key?"
     
     1. Connect to your database with a management application. Modify the admin password in the table 'AppSettings' to a new password in plaintext
-    2. Restart Blazam and log in with the new admin password.
-    3. Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.
-    4. Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.
+    1. If running as a service and forcing HTTPS, change ForceHTTPS in 'AppSettings' to 0
+    1. Restart Blazam and log in with the new admin password.
+    1. Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.
+    1. Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.
+    1. Reset Duo Private Key if set.
+    1. Reset Update Credentials password if set.
+    1. Reupload SSL Certificate if running as a service for HTTPS
 
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
@@ -74,16 +76,6 @@ It is recommended not to modify these settings
 | ----------- | ------------------------------------ |
 | `true`      | The application will provide additional debugging information to the browser (This may expose priviledged information to users, only enable for assisting development)  |
 | `false`     | The application will operate in the normal mode |
-
-### InstallType
-
-!!! warning inline end
-
-    This has been deprecated and will be removed in a future version
-| Values      | Description                          |
-| ----------- | ------------------------------------ |
-| `IIS`       | Lets the application know it is running under IIS |
-| `Service`   | Lets the application know it is running as a service |
 
 
 ### HTTPPort
