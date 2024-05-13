@@ -53,4 +53,4 @@ component to ease and enhance the delegation process.
 
 ## Impersonation
 As a super admin, you will be able to impersonate the application experience of other users.
-This is extremely helpful when setting up permission to verify the access you intended.
+This is extremely helpful when setting up permissions to verify the access you intended.

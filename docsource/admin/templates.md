@@ -1,5 +1,5 @@
 # Templates
-Templates are use to define the data applied at user
+Templates are used to define the data applied at user
 creation. They allow you to prefill or request entry
 of whatever user properties you want.
 
