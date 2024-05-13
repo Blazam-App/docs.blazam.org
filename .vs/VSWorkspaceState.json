@@ -3,7 +3,6 @@
     "",
     "\\docs",
     "\\docsource",
-    "\\docsource\\admin",
     "\\docsource\\admin\\settings",
     "\\docsource\\install",
     "\\docsource\\stylesheets",
@@ -11,5 +10,6 @@
     "\\docs\\install",
     "\\docs\\install\\manual"
   ],
+  "SelectedNode": "\\mkdocs.yml",
   "PreviewInSolutionExplorer": false
 }

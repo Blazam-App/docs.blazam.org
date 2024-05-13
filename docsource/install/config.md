@@ -112,9 +112,9 @@ It is recommended not to modify logging settings. They may be useful for issues 
 ### DatabaseType
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `SQL`       | The application will use the SQLConnectionString    |
-| `SQLite`    | The application will use the SQLiteConnectionString |
-| `MySQL`     | The application will use the MySQLConnectionString  |
+| `SQL`       | The application will operate under SQL|
+| `SQLite`    | The application will operate under SQLite|
+| `MySQL`     | The application will operate under MySQL|
 
 
 ### DBConnectionString
