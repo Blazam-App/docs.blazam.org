@@ -2,8 +2,8 @@
 * Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. Alternatively, opt for the file based Sqlite `DatabaseType`.
 * Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.
 	* Refer to your database documentation for security setup and best practices
-* Download and [Install .NET Core 6.x Runtime](https://aka.ms/dotnet-download) from Microsoft
-	* If running under IIS, you will also need the [.NET Core 6.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
+* Download and [Install .NET Core 8.x Runtime](https://aka.ms/dotnet-download) from Microsoft
+	* If running under IIS, you will also need the [.NET Core 8.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
 ### [Download](https://blazam.org/download)
 
 ## Install under IIS

@@ -2,6 +2,8 @@
 The fields configuration section allows for the definition of custom schema attributes
 in your Active Directory environment.
 
+Once a field is defined it will become available for delegation in [Permissions](permissions.md).
+
 ## Display Name
 This is the label that will be shown for this attribute in Blazam.
 It can be in your localized language for your convenience.
