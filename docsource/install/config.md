@@ -1,6 +1,12 @@
 ﻿# Configuration
 All web host application settings are set in the `appsettings.json`
 file in the root path of the application directory.
+
+!!! note
+
+    If this is a manual installation you must create the `appsettings.json` file.
+    A template is available (`appsettings.example.json`) that can be copied and renamed.
+
 ## AppSettings
 `appsettings.json`
 ### Example File
