@@ -9,8 +9,9 @@
     "\\docsource\\stylesheets",
     "\\docsource\\update",
     "\\docs\\install",
+    "\\docs\\install\\config",
     "\\docs\\install\\manual"
   ],
-  "SelectedNode": "\\docsource\\install\\security.md",
+  "SelectedNode": "\\docs",
   "PreviewInSolutionExplorer": false
 }

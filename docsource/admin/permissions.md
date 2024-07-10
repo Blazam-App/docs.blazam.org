@@ -4,7 +4,7 @@ Permission in Blazam differ from Active Directory in one major (and extremely he
 |Feature |  Active Directory | Blazam |
 | ----------- | ------------------------------------ | - |
 | Reusable ACL's      | :fontawesome-regular-circle-xmark:{ .red } Each ACL is unique for each OU  | :fontawesome-regular-circle-check:{ .green } Create one type of access and reuse that list for any number of OU's |
-| ACL Naming          | :fontawesome-regular-circle-xmark:{ .red } ACL's are simply a list of properties in the security tab with no real grouping or organization capability | :fontawesome-regular-circle-check:{ .green } Named ACL's allow for quick identification of access and it's source as well as allowing the creation of role based ACL's |
+| ACL Naming          | :fontawesome-regular-circle-xmark:{ .red } ACL's are simply a list of properties in the security tab with no real grouping or de-granularization | :fontawesome-regular-circle-check:{ .green } Named ACL's allow for quick identification of access and it's source as well as allowing the creation of role based ACL's |
 | ACL inheritance     | :fontawesome-regular-circle-check:{ .green } ACL's at higher level OU's propagate down except for overriding deny's | :fontawesome-regular-circle-check:{ .green } Blazam behaves the same as Active Directory in this regard |
 
 !!! info "TLDR"
@@ -39,14 +39,25 @@ Nested group members are counted.
 
 ## Access Levels
 Access Levels improve upon the default permission system found in Active Directory.
-### Name
+
+### Parameters
+#### Name
 You can name your Access Levels however you'd like.
-### Object Permissions
+#### Object Permissions
 Permissions are split between different Active Directory object types. You can set different permissions
 for groups from users, computers, or OU's within the same OU, or any combination therein.
-### Field Permissions
+#### Field Permissions
 Under each object type allowed, you can choose which fields will be denied, readable, or editable.
 
+### Group Membership Access
+Group membership control in Blazam is currently very rigid. A user needs three separate permissions provided.
+#### MemberOf
+The delegate user must be provided read access to the MemberOf field for users in order to see a user's groups, 
+and MemberOf for groups to see groups members. (This requirement may be removed in a future version)
+#### Assign/Unassing Action
+The delegate user must have Assign/Unassign action permissions provided to the parent group in order to assign users or groups to it.
+#### Read Users/Groups
+The final permission that must be assigned to delegates is read access to users or groups to be able to add as a member of the parent group
 ## Mappings
 Mapping permissions is similar to default Active Directory permissions, but utilizing the powereful `Acces Level`
 component to ease and enhance the delegation process.
