@@ -355,6 +355,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Web Installer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -364,6 +375,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Requisites
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -750,6 +789,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -861,6 +921,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Requisites
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -883,7 +960,19 @@
 
 
 <h1 id="web-installer">Web Installer</h1>
-<p>Installing via the Web installer is the recommended method as it performs all required pre-installation checks automatically, and configures the application to launch based on the chosen installation type.</p>
+<h2 id="pre-requisites">Pre-Requisites</h2>
+<ul>
+<li>Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. For testing, you can opt for the file based Sqlite <code>DatabaseType</code>.</li>
+<li>Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.<ul>
+<li>Refer to your database documentation for security setup and best practices</li>
+</ul>
+</li>
+<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Runtime</a> from Microsoft<ul>
+<li>If running under IIS, you will also need the <a href="https://aka.ms/dotnet-download">.NET Core 8.x Web Hosting Bundle</a>, also from Microsoft.</li>
+<li>Installing via the Web installer is the recommended method as it performs all required pre-installation checks automatically, and configures the application to launch based on the chosen installation type.</li>
+</ul>
+</li>
+</ul>
 <p>The Web installer allows installing the application under IIS, or as a stand-alone service installed under Program Files.</p>
 <p>It always installs the latest version.</p>
 <p><a href="https://blazam.org/download">Download Web Installer</a></p>

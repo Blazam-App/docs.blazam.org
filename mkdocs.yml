@@ -89,6 +89,7 @@ nav:
       - Permissions: 'admin/permissions.md'
       - Templates: 'admin/templates.md'
       - Fields: 'admin/fields.md'
+      - Notifications: 'admin/notifications.md'
   
     - About:
         - 'License': 'license.md'
