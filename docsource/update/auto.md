@@ -1,10 +1,5 @@
 ﻿# Automatic Updates
 
-!!! info
-
-	Auto-update is now in Beta
-
-
 ## Self-Update Setup
 Some manual configuration is neccessary to perform self-updates for now.
 

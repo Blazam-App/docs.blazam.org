@@ -1,5 +1,5 @@
 ﻿# Permissions
-Permission in Blazam differ from Active Directory in one major (and extremely helpful) way.
+Permissions in Blazam differ from Active Directory in one major (and extremely helpful) way.
 
 |Feature |  Active Directory | Blazam |
 | ----------- | ------------------------------------ | - |
@@ -9,7 +9,7 @@ Permission in Blazam differ from Active Directory in one major (and extremely he
 
 !!! info "TLDR"
 
-	Blazam adds a layer of abstraction to Active Directory permissions. By including an `Access Level` layer between the OU permissions and the group assinged,
+	Blazam adds a layer of abstraction to Active Directory permissions. By including an `Access Level` layer between the OU permissions and the group assigned,
 	you can create a single ACL rule and reuse it for as many groups on as many OU's as you'd like.
 
 The `Access Level`'s you define can be reused or combined to create exactly the configuration you desire.
@@ -30,10 +30,12 @@ The `Access Level`'s you define can be reused or combined to create exactly the 
 
 	Permissions that are applied inherit fully down the OU tree unless a `Deny` permission is set at a lower level.
 
-## Groups
-The core element of the permission system in Blazam is the Active Directory Group.
+## Delegates
+The core element of the permission system in Blazam is the "Delegate".
 
-Any group added will allow the members of that group to log into the application.
+A "Delegate" can be any group or user.
+
+Any "Delegate" added will allow that user or members of that group to log into the application.
 
 Nested group members are counted.
 
@@ -50,10 +52,7 @@ for groups from users, computers, or OU's within the same OU, or any combination
 Under each object type allowed, you can choose which fields will be denied, readable, or editable.
 
 ### Group Membership Access
-Group membership control in Blazam is currently very rigid. A user needs three separate permissions provided.
-#### MemberOf
-The delegate user must be provided read access to the MemberOf field for users in order to see a user's groups, 
-and MemberOf for groups to see groups members. (This requirement may be removed in a future version)
+Group membership control in Blazam is tied to the group and read permissions.
 #### Assign/Unassing Action
 The delegate user must have Assign/Unassign action permissions provided to the parent group in order to assign users or groups to it.
 #### Read Users/Groups

@@ -1,9 +1,4 @@
 ﻿# Self-Update
-
-!!! info
-
-	Self-update is now in Beta. You can also set up automatic updates.  Check the [auto  update](auto.md) page for more info.
-
 Blazam can update itself regardless of how it is installed.
 
 ## Self-Update Setup
