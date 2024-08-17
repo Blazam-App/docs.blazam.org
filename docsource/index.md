@@ -6,14 +6,11 @@ hide:
 
 [Main Site](https://blazam.org)
 
-The vision of Blazam is to be a powerful, free, web-based Active Directory management portal.
+Blazam is a powerful, free, web-based Active Directory management portal.
 
 Enable you and your users to manage legacy Active Directory in a modern way.
 
-## Summary
-Blazam is a powerful, mobile-friendly, web-based Active Directory management portal.
-
-## Requirements
+## Environment Requirements
 * Active Directory
 * Domain-joined Windows Host Machine (Workstation/Server)
 * Well-defined OU structure
