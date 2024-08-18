@@ -1037,6 +1037,10 @@
 <h2 id="install-under-iis">Install under IIS</h2>
 <p>Feel free to deviate from the instructions to fit your desired deployment</p>
 <ol>
+<li>Ensure the Web Socket Module is installed (Required)<ul>
+<li>You can find the module under <code>Server Roles</code> -&gt; <code>Web Server</code> -&gt; <code>Application Developer</code> -&gt; <code>Web Sockets</code>.</li>
+</ul>
+</li>
 <li>Install the Application Initialization Module (Optional)<ul>
 <li>You can find the module under <code>Server Roles</code> -&gt; <code>Web Server</code> -&gt; <code>Application Developer</code> -&gt; <code>Application Initialization</code>.</li>
 </ul>
@@ -1067,7 +1071,7 @@
 </ol>
 <h2 id="install-as-service">Install as Service</h2>
 <ol>
-<li>Extract the application to <code>C:\Program Files\Blazam</code></li>
+<li>Extract the application to any directory eg:<code>C:\Program Files\Blazam</code></li>
 <li>Using nssm.exe in the extracted files, install <code>BLAZAM.exe</code> as a service.</li>
 <li>Continue with <a href="../config/">Configuration</a></li>
 </ol>
