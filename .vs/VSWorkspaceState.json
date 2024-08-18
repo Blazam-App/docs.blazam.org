@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docsource"
+    "\\docs",
+    "\\docsource",
+    "\\docsource\\admin"
   ],
   "SelectedNode": "\\docs",
   "PreviewInSolutionExplorer": false

@@ -9,6 +9,8 @@
 ## Install under IIS
 Feel free to deviate from the instructions to fit your desired deployment
 
+1. Ensure the Web Socket Module is installed (Required)
+	* You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Web Sockets`.
 1. Install the Application Initialization Module (Optional)
 	* You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Application Initialization`.
 1. Copy contents of zip file to a directory accessible by IIS
@@ -24,6 +26,6 @@ Feel free to deviate from the instructions to fit your desired deployment
 1. Continue with [Configuration](config.md)
 ## Install as Service
 
-1. Extract the application to `C:\Program Files\Blazam`
+1. Extract the application to any directory eg:`C:\Program Files\Blazam`
 1. Using nssm.exe in the extracted files, install `BLAZAM.exe` as a service.
 1. Continue with [Configuration](config.md)
