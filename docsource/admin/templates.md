@@ -78,7 +78,7 @@ will be asked to change their password upon first domain login.
 
 #### Send Welcome Email
 If enabled, an email containing the username and password will be sent. If 
-the email field is generated or static the email will go to that address. If
+the email field is generated, static, or editable the email will go to that address. If
 no address is entered into the email field, the user will be asked for a destination.
 
 #### Ask For Alternate Email
