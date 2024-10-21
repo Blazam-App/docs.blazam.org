@@ -815,6 +815,75 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Account Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-username-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow Username Override
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#require-password-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Require Password Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-welcome-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send Welcome Email
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask-for-alternate-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ask For Alternate Email
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula-sim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula Sim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
       Fields
@@ -1079,6 +1148,75 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Account Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow-username-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow Username Override
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#require-password-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Require Password Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-welcome-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send Welcome Email
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask-for-alternate-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ask For Alternate Email
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula-sim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula Sim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
       Fields
@@ -1157,10 +1295,154 @@ Useful for base templates that should not be used directly.</p>
 <p>Define the username and display name formats along with  the new password for created users.
 An assortment of string variables are available to compute the value
 on creation.</p>
+<p>In addition, you can pull the first X characters of a field or perform
+regex matches.</p>
+<h3 id="variables">Variables</h3>
+<p><code>{variable:modifier[argument]}</code>, <code>{variable:modifier}</code>, <code>{variable[argument]}</code>, or just <code>{variable}</code></p>
+<p>Variables Expressions must be surrounded by curly braces eg: <code>{fn}</code></p>
+<p>Modifiers and Arguments are both optional</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Variable Description</th>
+<th>Modifier</th>
+<th>Modifier Description</th>
+<th>Argument</th>
+<th>Argument Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fn</td>
+<td>First Name</td>
+<td>u, l, regex</td>
+<td>Upper Case, Lower Case, Regular Expression</td>
+<td>0-10000, Regex Expression eg: (?&lt;!\d)([a-zA-Z])(\d)</td>
+<td>Pulls the first x number of characters, A custom regular expression in match mode</td>
+</tr>
+<tr>
+<td>fi</td>
+<td>First Initial</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mn</td>
+<td>Middle Name</td>
+<td>u, l, regex</td>
+<td>Upper Case, Lower Case, Regular Expression</td>
+<td>0-10000, Regex Expression eg: (?&lt;!\d)([a-zA-Z])(\d)</td>
+<td>Pulls the first x number of characters, A custom regular expression in match mode</td>
+</tr>
+<tr>
+<td>mi</td>
+<td>Middle Initial</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ln</td>
+<td>Last Name</td>
+<td>u, l, regex</td>
+<td>Upper Case, Lower Case, Regular Expression</td>
+<td>0-10000, Regex Expression eg: (?&lt;!\d)([a-zA-Z])(\d)</td>
+<td>Pulls the first x number of characters, A custom regular expression in match mode</td>
+</tr>
+<tr>
+<td>li</td>
+<td>Last Initial</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>username</td>
+<td>Username</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>alphanum</td>
+<td>Random letter or number</td>
+<td>u, l</td>
+<td>Upper Case, Lower Case</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>Random letter</td>
+<td>u, l</td>
+<td>Upper Case, Lower Case</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>num</td>
+<td>Random number</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>For a random two letter 6 digit password you would enter <code>{Alpha}{Alpha}{Num}{Num}{Num}{Num}{Num}{Num}</code></p>
+<p class="admonition-title">Examples</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{fn}</code></td>
+<td>Returns the whole first name</td>
+</tr>
+<tr>
+<td><code>{fn[1]}</code> or <code>{fi}</code></td>
+<td>Returns the first initial</td>
+</tr>
+<tr>
+<td><code>{fn:l[2]}</code></td>
+<td>Returns the first two characters of the first name in lower case</td>
+</tr>
+<tr>
+<td><code>{ln:regex[^(.{3})(.*Jr)$]}</code></td>
+<td>A regex search on the last name pulling the first 3 characters and includes Jr if the last name ends in Jr</td>
+</tr>
+</tbody>
+</table>
 </div>
+<h3 id="account-options">Account Options</h3>
+<h4 id="allow-username-override">Allow Username Override</h4>
+<p>If enabled, users will be able to change the generated username.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Super-admins are always able to override usernames</p>
+</div>
+<h4 id="require-password-change">Require Password Change</h4>
+<p>If enabled, the associated checkbox in ADUC will be checked and users
+will be asked to change their password upon first domain login.</p>
+<h4 id="send-welcome-email">Send Welcome Email</h4>
+<p>If enabled, an email containing the username and password will be sent. If 
+the email field is generated or static the email will go to that address. If
+no address is entered into the email field, the user will be asked for a destination.</p>
+<h4 id="ask-for-alternate-email">Ask For Alternate Email</h4>
+<p>If enabled, Blazam will always ask for a custom destination address for credential emails.</p>
+<h3 id="formula-sim">Formula Sim</h3>
+<p>The formula simulator allows you to more easily construct your generated variable
+expressions. Preview your changes on the fly while constructing your configuration.</p>
 <h3 id="fields">Fields</h3>
 <p>This section allows for the addition of any of the user attribute you want to define
 After adding a field, you can then define a value, allow the user to edit the value,

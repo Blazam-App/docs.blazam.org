@@ -3,7 +3,8 @@
     "",
     "\\docs",
     "\\docsource",
-    "\\docsource\\admin"
+    "\\docsource\\admin",
+    "\\docsource\\install"
   ],
   "SelectedNode": "\\docs",
   "PreviewInSolutionExplorer": false
