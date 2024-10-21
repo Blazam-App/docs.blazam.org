@@ -40,6 +40,9 @@ Variables Expressions must be surrounded by curly braces eg: `{fn}`
 
 Modifiers and Arguments are both optional
 
+Variable Expressions can be chained together and anything outside of curly braces will
+be copied as is. eg: `{fi}{ln}`
+
 |Variable|Variable Description|Modifier|Modifier Description|Argument|Argument Description|
 | -------- | -------- | -------- | -------- | -------- | -------- |
 |fn|First Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression eg: (?<!\d)([a-zA-Z])(\d)| Pulls the first x number of characters, A custom regular expression in match mode|
