@@ -28,7 +28,7 @@ The full set of widgets are:
 By default Blazam searches all Active Directory object types. To narrow your search, use the type filter
 to specify the object type you are looking for.
 
-### Enabled Only
+#### Enabled Only
 When green the search will only return enabled accounts (Users and computers), otherwise disabled
 accounts will be included in search results.
 
