@@ -881,6 +881,26 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -889,10 +909,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -903,8 +923,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             About
           </label>
@@ -1133,9 +1153,13 @@ to the database.</p>
 <summary>Lost your encryption key?</summary>
 <ol>
 <li>Connect to your database with a management application. Modify the admin password in the table 'AppSettings' to a new password in plaintext</li>
+<li>If running as a service and forcing HTTPS, change ForceHTTPS in 'AppSettings' to 0</li>
 <li>Restart Blazam and log in with the new admin password.</li>
 <li>Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.</li>
 <li>Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.</li>
+<li>Reset Duo Private Key if set.</li>
+<li>Reset Update Credentials password if set.</li>
+<li>Reupload SSL Certificate if running as a service for HTTPS</li>
 </ol>
 </details>
 

@@ -879,6 +879,26 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -887,10 +907,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -901,8 +921,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             About
           </label>
@@ -1085,17 +1105,25 @@ for message customization.</p>
 </div>
 <p>This is your organizations tech support portal for help buttons within Blazam.</p>
 <h2 id="branding-icon">Branding Icon</h2>
-<p>Upload you organization's logo or other image to use within the app.</p>
-<h2 id="website-fqdn">Website FQDN</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Not currently implemented</p>
+<p>Upload you organization's logo or other image to use within the app. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The icons used in Blazam are sent to the browser in a method that
+tells the browser to cache the image for up to 24 hours. This reduces
+traffic between the web server and the database. Keep this in mind when
+changing the Branding Icon.</p>
 </div>
-<p>The full domain name of your Blazam instance for use in email notification links.</p>
+<h2 id="website-fqdn">Website FQDN</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Will be used for links within notification emails in an upcoming update</p>
+</div>
+<p>The fully qualified domain name of your Blazam instance for use in email notification links.</p>
 <h2 id="ssl-certificate">SSL Certificate</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Only available when running Blazam as a service</p>
+<p>Only available when running Blazam as a service. Use IIS Manager to control
+SSL when running under IIS.</p>
 </div>
 <p>Upload an SSL certificate with private key to use for encryption</p>
 

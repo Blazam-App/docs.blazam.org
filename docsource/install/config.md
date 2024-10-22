@@ -112,8 +112,8 @@ It is recommended not to modify logging settings. They may be useful for issues 
     This setting has no effect when running under IIS
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `*`         | Allows all IP addresses to communicate with the Blazam|
-| `subnet/mask`| Allows only IP's from the defined subnet to communicate with the Blazam|
+| `*`         | Allows all IP addresses to communicate with Blazam|
+| `subnet/mask`| Allows only IP's from the defined subnet to communicate with Blazam|
 
 ### DatabaseType
 | Values      | Description                          |

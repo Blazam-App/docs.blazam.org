@@ -65,6 +65,10 @@ The application encrypts sensitive database data such as passwords. Blazam uses 
 ??? failure "Lost your encryption key?"
     
     1. Connect to your database with a management application. Modify the admin password in the table 'AppSettings' to a new password in plaintext
-    2. Restart Blazam and log in with the new admin password.
-    3. Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.
-    4. Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.
+    1. If running as a service and forcing HTTPS, change ForceHTTPS in 'AppSettings' to 0
+    1. Restart Blazam and log in with the new admin password.
+    1. Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.
+    1. Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.
+    1. Reset Duo Private Key if set.
+    1. Reset Update Credentials password if set.
+    1. Reupload SSL Certificate if running as a service for HTTPS

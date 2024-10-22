@@ -94,7 +94,7 @@ After adding a field, you can then define a value, allow the user to edit the va
 or require the value on creation.
 
 ### Organizational Unit
-Where the new user should be placed. Pretty self-explanatory.
+Where the new user should be placed. Users must have "Create User" priviledges in this OU to use this template.
 
 ### Groups
 The groups to assign the user to after creation. This can include inherited groups
