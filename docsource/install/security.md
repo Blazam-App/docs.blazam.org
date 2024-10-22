@@ -42,6 +42,10 @@ The following conditions warrant changing application root directory permissions
 * You want to configure a separate account to run self-updates under, if that account is not a local
 administrator.
 
+### Application Permissions
+In addition to folder permissions, the account used for updating, whether a domain admin or custom account,
+must be provided permissinos to be able to manage IIS sites or services on the web host.
+
 ## Encryption
 
 The application encrypts sensitive database data such as passwords. Blazam uses the `EncryptionString` from the
