@@ -12,13 +12,13 @@ to add each widget.
 
 
 The full set of widgets are:
-- New Users
-- New Groups
-- New Computers
-- New OU's
-- New Printers
-- Changed AD Entries
-- Changed Passwords
-- Locked Out Users
-- Favorites
-- Application Logons (Super-admins only)
+* New Users
+* New Groups
+* New Computers
+* New OU's
+* New Printers
+* Changed AD Entries
+* Changed Passwords
+* Locked Out Users
+* Favorites
+* Application Logons (Super-admins only)
