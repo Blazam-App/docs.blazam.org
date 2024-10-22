@@ -12,6 +12,7 @@ to add each widget.
 
 
 The full set of widgets are:
+
 * New Users
 * New Groups
 * New Computers
