@@ -44,7 +44,7 @@ administrator.
 
 ### Application Permissions
 In addition to folder permissions, the account used for updating, whether a domain admin or custom account,
-must be provided permissinos to be able to manage IIS sites or services on the web host.
+must be provided permissions to be able to manage IIS sites or services on the web host.
 
 ## Encryption
 
