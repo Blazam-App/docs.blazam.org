@@ -22,3 +22,19 @@ The full set of widgets are:
 * Locked Out Users
 * Favorites
 * Application Logons (Super-admins only)
+
+### Universal Search
+#### Search Type
+By default Blazam searches all Active Directory object types. To narrow your search, use the type filter
+to specify the object type you are looking for.
+
+### Enabled Only
+When green the search will only return enabled accounts (Users and computers), otherwise disabled
+accounts will be included in search results.
+
+#### Search Box
+The search box in the center of the AppBar is the key tool for navigating Blazam.
+Auto-complete searches are performed, respecting the type filter, against all accessible
+AD objects. 
+
+Searches are currently performed against the first name, last name, display name, and username, emails are excluded.
