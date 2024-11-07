@@ -86,6 +86,8 @@ nav:
       - Settings:
         - Application: 'admin/settings/application.md'
         - Authentication: 'admin/settings/authentication.md'
+        - Active Directory: 'admin/settings/activeDirectory.md'
+        - Active Directory: 'admin/settings/activeDirectory.md'
       - Permissions: 'admin/permissions.md'
       - Templates: 'admin/templates.md'
       - Fields: 'admin/fields.md'

@@ -58,9 +58,34 @@ The delegate user must have Assign/Unassign action permissions provided to the p
 #### Read Users/Groups
 The final permission that must be assigned to delegates is read access to users or groups to be able to add as a member of the parent group
 ## Mappings
-Mapping permissions is similar to default Active Directory permissions, but utilizing the powereful `Acces Level`
+Mapping permissions is similar to default Active Directory permissions, but utilizing the powerful `Acces Level`
 component to ease and enhance the delegation process.
 
 ## Impersonation
 As a super admin, you will be able to impersonate the application experience of other users.
 This is extremely helpful when setting up permissions to verify the access you intended.
+
+## Effective Permissions
+An effective permission simulator is available to test user->target applied permissions without having to enter impersonation
+
+## Global Permission Settings
+These permissions apply to all users and Active Directory search results
+
+### Allow Access Requests
+Allow users to request group assign and/or unassign access to groups that a user has read access to but lacks those assignment
+action permissions from within Blazam.
+
+Upon request, a notification is sent to all `Super-Users` for approval or rejection. If approved, Blazam automatically assigns
+access to the group for the user.
+
+### Allow self access
+Allows all users that can log into Blazam (anyone under Delegates) to be able to have additional permissions applied to their
+own Active Directory account within Blazam. The applied access is an additional `Access Level` with all the features it provides
+applied only to their own accounts.
+
+You could for instance allow additional fields to be read, like Employee ID.
+
+You can provide edit access to phone numbers or home addresses for self service of address changes and emergency notification
+destinations.
+
+You can allow a user to disable their own accounts if that is something people do.

@@ -2,6 +2,9 @@
 ## Admin Password
 Allows for changing the built-in admin account password
 
+Use a strong password as this account has full
+access
+
 ## Session Timeout
 The time in minutes that a web user should be authenticated for. 
 !!! note
