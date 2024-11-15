@@ -39,3 +39,17 @@ Auto-complete searches are performed, respecting the type filter, against all ac
 AD objects. 
 
 Searches are currently performed against the first name, last name, display name, and username, emails are excluded.
+
+### Notifications
+Notifications can be found by clicking the bell icon in the top right next to your `User Button`.
+
+Unread notifications will cause a red dot with the unread count next to the icon to alert you.
+
+Clicking the icon with the notifications panel open will close it.
+
+### User Button
+The user button provides access to change your email address, the color theme of Blazam, as well as upload an avatar icon to use for personalization.
+
+There is also a button that will take you directly to Blazam's documentation.
+
+The last option in the menu is, of course, sign out.
