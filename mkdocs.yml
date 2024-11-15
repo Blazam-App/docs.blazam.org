@@ -92,8 +92,9 @@ nav:
       - Templates: 'admin/templates.md'
       - Fields: 'admin/fields.md'
       - Notifications: 'admin/notifications.md'
-    - User Guide: 'user/index.md'
-
+    - User Guide:
+      - User Interface :  'user/index.md'
+      - Notifications: 'user/notifications.md'
     - About:
         - 'License': 'license.md'
         - 'Privacy': 'privacy.md'
