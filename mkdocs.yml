@@ -87,7 +87,7 @@ nav:
         - Application: 'admin/settings/application.md'
         - Authentication: 'admin/settings/authentication.md'
         - Active Directory: 'admin/settings/activeDirectory.md'
-        - Active Directory: 'admin/settings/activeDirectory.md'
+        - API: 'admin/settings/api.md'
         - Webhooks: 'admin/settings/webhooks.md'
       - Permissions: 'admin/permissions.md'
       - Templates: 'admin/templates.md'

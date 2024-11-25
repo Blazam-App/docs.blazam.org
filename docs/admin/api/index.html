@@ -22,7 +22,7 @@
     
     
       
-        <title>Api - Blazam Documentation</title>
+        <title>API - Blazam Documentation</title>
       
     
     
@@ -85,6 +85,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -117,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Api
+              API
             
           </span>
         </div>
@@ -686,11 +691,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../settings/activeDirectory/" class="md-nav__link">
+      <a href="../settings/api.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Active Directory
+    API
   </span>
   
 
@@ -1005,6 +1010,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Management
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1027,9 +1060,27 @@
   
 
 
-  <h1>Api</h1>
-
-
+<h1 id="api">API</h1>
+<p>Blazam is still young, and so the API is currently quite
+limited.</p>
+<h2 id="documentation">Documentation</h2>
+<p>For the latest API documentation, open up your Blazam installation,
+log in, and click your user avatar button. There will be an "API"
+menu option.</p>
+<p>This menu allows for the creation of API tokens for the account you
+logged in with.</p>
+<p>Tokens have a lifetime that is set upon creation. This can not be changed
+after creation. After creation the tokens can be provided a description for
+their purpose, along with revoking the token from future authentications as
+well as outright deletion.</p>
+<p>It is currently only possible to create an API token from an existing Blazam
+user. This means that if you want a unique identity, for logging, from an
+external system, an Active Directory account will need to be created,
+along with permission in Blazam set and an API token created under said account.</p>
+<h2 id="admin-management">Admin Management</h2>
+<p>As an admin, you can access <code>Configure</code> -&gt; <code>API Tokens</code> to monitor and
+control the API tokens created by your users. Every active token will be listed
+and you can see latest activity and delete old or at risk tokens.</p>
 
 
 
