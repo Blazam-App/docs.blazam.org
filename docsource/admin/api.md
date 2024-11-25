@@ -5,9 +5,10 @@ limited.
 ## Documentation
 For the latest API documentation, open up your Blazam installation,
 log in, and click your user avatar button. There will be an "API"
-menu option.
+menu option. A link to Swagger documentaion is available from this menu.
 
-This menu allows for the creation of API tokens for the account you
+## API Token Creation
+The API token modal allows for the creation of API tokens for the account you
 logged in with.
 
 Tokens have a lifetime that is set upon creation. This can not be changed
