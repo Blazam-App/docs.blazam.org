@@ -9,15 +9,15 @@ notify or block.
 Notifications are sent for all Active Directory object types for the
 subscribed actions.
 
-Notifications inhert down the directory, meaning that an allow subscription
+Notifications inherit down the directory, meaning that an allow subscription
 at the top of the directory will trigger for every object in Blazam. If a block
 subscription is created at a lower level, any object in that or deeper Organizational
 Units will be ignored for those notification action triggers.
+!!! note "Limitations"
 
-#### Limitations
-It's important to point out that Blazam can only notify on changes made from
-within Blazam itself. It does not actively monitor Active Directory and track
-changes.
+    It's important to point out that Blazam can only notify on changes made from
+    within Blazam itself. It does not actively monitor Active Directory and track
+    changes.
 
 ## Notification Scope
 Notifications respect the permissions provided to your account.
