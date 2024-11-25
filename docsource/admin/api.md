@@ -21,6 +21,11 @@ user. This means that if you want a unique identity, for logging, from an
 external system, an Active Directory account will need to be created,
 along with permission in Blazam set and an API token created under said account.
 
+## Perimssions
+API tokens respect the permissions of the derived user. API access follows
+the exact same rules as applied in GUI. Currently only admins can create tokens
+so this is a warning for future updates.
+
 ## Admin Management
 As an admin, you can access `Configure` -> `API Tokens` to monitor and
 control the API tokens created by your users. Every active token will be listed
