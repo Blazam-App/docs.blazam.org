@@ -4,8 +4,9 @@ limited.
 
 ## Documentation
 For the latest API documentation, open up your Blazam installation,
-log in, and click your user avatar button. There will be an "API"
-menu option. A link to Swagger documentaion is available from this menu.
+log in, and click your user avatar button. There you will find the "API"
+token creation menu option. A link to Swagger documentation is also available
+from this menu.
 
 ## API Token Creation
 The API token modal allows for the creation of API tokens for the account you
@@ -21,7 +22,7 @@ user. This means that if you want a unique identity, for logging, from an
 external system, an Active Directory account will need to be created,
 along with permission in Blazam set and an API token created under said account.
 
-## Perimssions
+## Permissions
 API tokens respect the permissions of the derived user. API access follows
 the exact same rules as applied in GUI. Currently only admins can create tokens
 so this is a warning for future updates.

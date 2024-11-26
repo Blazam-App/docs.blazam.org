@@ -53,8 +53,8 @@ be displayed next to the Notifications button as they arrive.
 Subscriptions set for email will send an email notification to the user's configured
 email address within Blazam (accessible from the `User Button` of each Blazam user).
 
-By default Blazam populates all users emails with the value in Active Dirctory, if available.
+By default Blazam populates all users emails with the value in Active Directory, if available.
 
 ### Block
 Subscriptions that block do the exact opposite of those that don't. It provides a way to easily
-exclude certain OU's or objects from sending unneccessary notifications.
+exclude certain OU's or objects from sending unnecessary notifications.
