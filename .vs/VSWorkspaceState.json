@@ -4,12 +4,11 @@
     "\\docs",
     "\\docsource",
     "\\docsource\\admin",
-    "\\docsource\\admin\\img",
     "\\docsource\\admin\\img\\install",
     "\\docsource\\admin\\settings",
     "\\docsource\\install",
     "\\docsource\\user"
   ],
-  "SelectedNode": "\\docsource\\admin\\notifications.md",
+  "SelectedNode": "\\docsource\\index.md",
   "PreviewInSolutionExplorer": false
 }
