@@ -4,11 +4,9 @@
     "\\docs",
     "\\docsource",
     "\\docsource\\admin",
-    "\\docsource\\admin\\img\\install",
     "\\docsource\\admin\\settings",
     "\\docsource\\install",
     "\\docsource\\user"
   ],
-  "SelectedNode": "\\docsource\\index.md",
   "PreviewInSolutionExplorer": false
 }

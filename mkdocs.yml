@@ -91,6 +91,7 @@ nav:
       - Permissions: 'admin/permissions.md'
       - Templates: 'admin/templates.md'
       - Fields: 'admin/fields.md'
+      - Rules: 'admin/rules.md'
       - Notifications: 'admin/notifications.md'
       - API: 'admin/api.md'
     - User Guide:
