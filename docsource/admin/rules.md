@@ -2,12 +2,16 @@
 Rules provide an additional level of automation. With it,
 business rules and conformity standards can be applied. With the use of custom Active
 Directory Schema unlimited functionality is possible.
-## Creaion
-Rules operate on a subscription model like many other Blazam
-elements. To fire, the object type must be all or matching and 
+
+
+## Rule Triggers
+There are two type of rules in Blazam, Event-Based and Scheduled.
+
+### Event-Based Rules
+Event-based triggers fire when the object type must be all or matching and 
 any filters applied will be respected.
-### Triggers
-Availabble triggers.
+
+#### Trigger Types
 
 * Assign
 * Unassign
@@ -18,14 +22,53 @@ Availabble triggers.
 * Password Changed
 * Disable
 * Enable
-* Scheduled
 
-### Filters
+### Scheduled Rules
+
+Scheduled Rules run, on a schedule, of course.
+
+To determine which Active Directory objects apply to the rule's
+filter, the filter is converted to an LDAP query and polled against
+AD. The returned objects are then verified a second time before applying
+any rule actions to the object.
+
+
+
+Currently, rules can only be scheduled to run daily.
+Depending on the response to this feature, additional
+scheduling flexibillity may be added in the future.
+
+!!! danger
+
+    Rules are powerful tools. Configurations exist that could,
+    in very rare circumstances, disable every Domain account, effectively disabling your domain.
+
+    Chances are ~ 1/(Number of User Accounts)^2
+
+    The following combniation of conditions warrant precautions for this
+    * The Application Base DN is the domain root
+    * The rule filter could apply to all domain admins
+    * The action disables or otherwise incapacitates the account
+
+   
+
+## Rule Filters
 Filters allow filtering against any default or custom Active
 Directory field. 
 
-#### Operators
+Leaving a filter blank results in the rule running for every
+entry triggered.
+
+!!! danger
+
+    Leaving a scheduled rule's filter blank will lead to every applicable
+    object type in Active Directory under the Application Root DN
+    being acted on.
+   
+### Operators
 Not all operators available for all attribute types.
+
+Operators can be inverted with the Negate checkbox.
 
 * Equals
 * Starts With
@@ -36,7 +79,9 @@ Not all operators available for all attribute types.
 * Historicatal Time Frame
 * Future Time Frame
 
-#### Actions
+## Rule Actions
+Rule actions allow for Blazam to modify Active Directory objects.
+
 * Modify Field
 * Send Email (Not Implemented)
 * Assign
@@ -44,19 +89,7 @@ Not all operators available for all attribute types.
 * Lockout
 * Unlock
 * Enable
-* Disabble
+* Disable
 * Move
 
 
-## Execution
-Rules are executes in one of two ways.
-
-1. An Active Directory Entry is modified in soome way.
-1. A scheduled time has passed
-
-### Event Driven
-When a change in Blazam occurrs the rules are chhecked for
-any applicable rules to execute for the changed enry.
-
-### Scheduled
-At the timee of day set the rule will execute against all Active Directory entries.
