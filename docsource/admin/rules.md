@@ -73,7 +73,7 @@ Operators can be inverted with the Negate checkbox.
 * Equals
 * Starts With
 * End With
-* Coontains
+* Contains
 * Before Now
 * After Now
 * Historicatal Time Frame
