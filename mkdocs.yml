@@ -85,9 +85,9 @@ nav:
       - First Run: 'admin/initialSetup.md'
       - Settings:
         - Application: 'admin/settings/application.md'
-        - Authentication: 'admin/settings/authentication.md'
+        - Authentication: 'admisn/settings/authentication.md'
         - Active Directory: 'admin/settings/activeDirectory.md'
-        - Webhooks: 'admin/settings/webhooks.md'
+      - Webhooks: 'admin/webhooks.md'
       - Permissions: 'admin/permissions.md'
       - Templates: 'admin/templates.md'
       - Fields: 'admin/fields.md'

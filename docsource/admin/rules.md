@@ -46,6 +46,7 @@ scheduling flexibillity may be added in the future.
     Chances are ~ 1/(Number of User Accounts)^2
 
     The following combniation of conditions warrant precautions for this
+
     * The Application Base DN is the domain root
     * The rule filter could apply to all domain admins
     * The action disables or otherwise incapacitates the account
