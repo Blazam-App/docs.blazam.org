@@ -93,4 +93,26 @@ Rule actions allow for Blazam to modify Active Directory objects.
 * Disable
 * Move
 
+## After Execution
+A setting is available to prevent execution of remaining rules if a
+rule should conflict with the intent of a lower priority rule.
+
+## Matches Preview
+When viewing rules, a matches button will show the matched Active Directory
+objects for that rule's filtes when clicked. This allows visibility into
+what objects will be affected when the rule is triggered/run.
+
+## Rule Timestamps
+Rules show the last triggered and last executed times.
+### Last Triggerd
+The last time a matching event within Blazam occurs, or the scheduled time
+is reached.
+### Last Executed
+The last time a rule performed an action on an Active Directory object that
+matched the rule's filters.
+
+## Manual Execution
+Scheduled rules allow for on-demand execution to process the
+rule before the scheduled time.
+
 
