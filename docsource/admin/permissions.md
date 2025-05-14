@@ -58,7 +58,7 @@ The delegate user must have Assign/Unassign action permissions provided to the p
 #### Read Users/Groups
 The final permission that must be assigned to delegates is read access to users or groups to be able to add as a member of the parent group
 ## Mappings
-Mapping permissions is similar to default Active Directory permissions, but utilizing the powerful `Acces Level`
+Mapping permissions is similar to default Active Directory permissions, but utilizing the powerful `Access Level`
 component to ease and enhance the delegation process.
 
 ## Impersonation

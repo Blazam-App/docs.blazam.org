@@ -89,7 +89,7 @@ The formula simulator allows you to more easily construct your generated variabl
 expressions. Preview your changes on the fly while constructing your configuration.
 
 ### Fields
-This section allows for the addition of any of the user attribute you want to define
+This section allows for the addition of any of the user attribute you want to define.s
 After adding a field, you can then define a value, allow the user to edit the value,
 or require the value on creation.
 

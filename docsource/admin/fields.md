@@ -15,7 +15,7 @@ in Active Directory.
 Remember you need to enable `Advanced View` in ADUC to see the attributes tab.
 
 ## Field Type
-This should be set based on the type of data the the attribute stores. Check the
+This should be set based on the type of data that the attribute stores. Check the
 attribute values to determine the best match. If the value does not show in Blazam
 try a different type.
 
