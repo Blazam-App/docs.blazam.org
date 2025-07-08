@@ -6,7 +6,8 @@
 	* If running under IIS, you will also need the [.NET Core 8.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
 ### [Download](https://blazam.org/download)
 
-## Install under IIS
+## Windows Host
+### Install under IIS
 Feel free to deviate from the instructions to fit your desired deployment
 
 1. Ensure the Web Socket Module is installed (Required)
@@ -24,8 +25,31 @@ Feel free to deviate from the instructions to fit your desired deployment
 	* In IIS Manager, right click on the site for the application, select `Manage Website` -> `Advanced Settings` and set the `Preload Enabled` value to `true`.
 
 1. Continue with [Configuration](config.md)
-## Install as Service
+### Install as Service
 
 1. Extract the application to any directory eg:`C:\Program Files\Blazam`
 1. Using nssm.exe in the extracted files, install `BLAZAM.exe` as a service.
 1. Continue with [Configuration](config.md)
+
+## Ubuntu Host
+
+!!! warning
+
+    The Linux compatible Blazam is not yet available for public use in production. Beta testing only!
+
+
+Installing Blazam on Linux manually is not a trivial
+undertaking. Using the install.sh script is more user
+friendly and streamlined for installation on Linux.
+### Install under Nginx
+
+1. Install the necessary dependency packages from apt using the command
+``` bash
+sudo apt-get install -y aspnetcore-runtime-8.0 openssl jq libldap2 curl wget unzip
+```
+1. Create a libldap.so symlink using
+``` bash
+ln -sf "${target_lib_path}" "/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0"
+```
+### Insalll under Apache
+### Install as Service

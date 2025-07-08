@@ -42,6 +42,7 @@ extra:
 theme:
   features:
     - content.action.edit
+    - content.code.copy
     - navigation.footer
   name: material
   palette:
@@ -61,10 +62,14 @@ extra_css:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  #- pymdownx.superfences
-  #- pymdownx.inlinehilite
-  #- pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
