@@ -65,6 +65,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
   - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
@@ -76,6 +78,7 @@ markdown_extensions:
 nav:
     - Home: 'index.md'
     - Security: 'install/security.md'
+    - System Requirements: 'install/requirements.md'
     - Installation Guide:
         - Web Installer: 'install/web.md'
         - Manual Installation: 'install/manual.md'
