@@ -469,6 +469,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="System Communications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-directory-ldapldaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active Directory (LDAP/LDAPS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-workstation-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Workstation Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1140,6 +1164,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="System Communications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-directory-ldapldaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active Directory (LDAP/LDAPS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-workstation-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Workstation Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1166,11 +1214,62 @@
 
 
 <h1 id="firewall">Firewall</h1>
+<p>This document outlines the necessary firewall ports for Blazam to function correctly.</p>
+<hr />
 <h2 id="user-access">User Access</h2>
-<p>Blazam listens for HTTP and HTTPS connections on whatever ports you configure during installation.</p>
-<p>Forward these ports on firewalls that should allow access.</p>
+<p>Blazam listens for HTTP and HTTPS connections on the ports you configure during installation. You'll need to forward these ports on any firewalls to allow users to access the web interface.</p>
+<hr />
 <h2 id="system-communications">System Communications</h2>
-<p>If you have a firewall between Blazam and the Active Directory domain controllers forward the port configured in settings within the app.</p>
+<p>Firewall rules are required to allow the Blazam server to communicate with your infrastructure for directory services and remote management.</p>
+<h3 id="active-directory-ldapldaps">Active Directory (LDAP/LDAPS)</h3>
+<p>To query your domain controllers, Blazam requires access to specific LDAP ports. You must open a path from the <strong>Blazam server</strong> to your <strong>Domain Controllers</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Protocol</th>
+<th style="text-align: left;">Port</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>LDAP</strong></td>
+<td style="text-align: left;"><strong>TCP 389</strong></td>
+<td style="text-align: left;">Standard, unencrypted communication.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LDAPS</strong></td>
+<td style="text-align: left;"><strong>TCP 636</strong></td>
+<td style="text-align: left;">Secure (LDAP over SSL/TLS) communication. <strong>(Recommended)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LDAP GC</strong></td>
+<td style="text-align: left;"><strong>TCP 3268</strong></td>
+<td style="text-align: left;">Global Catalog for searching the entire AD forest.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LDAPS GC</strong></td>
+<td style="text-align: left;"><strong>TCP 3269</strong></td>
+<td style="text-align: left;">Secure Global Catalog. <strong>(Recommended)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="remote-workstation-management">Remote Workstation Management</h3>
+<p>For monitoring and managing remote workstations, Blazam uses standard Windows protocols. You must open a path from the <strong>Blazam server</strong> to your <strong>target workstations</strong>.</p>
+<ul>
+<li><strong>Windows Remote Management (WinRM):</strong> This is the modern, preferred method.<ul>
+<li><strong>TCP 5985</strong> (HTTP)</li>
+<li><strong>TCP 5986</strong> (HTTPS - Encrypted)</li>
+</ul>
+</li>
+<li><strong>Windows Management Instrumentation (WMI):</strong> This is a legacy method.<ul>
+<li><strong>TCP 135</strong> (RPC Endpoint Mapper)</li>
+<li><strong>TCP 49152-65535</strong> (RPC Dynamic Port Range for modern Windows systems)</li>
+</ul>
+</li>
+<li><strong>ICMP (Ping):</strong> Allowing the <strong>ICMP protocol</strong> is required for Blazam to check if workstations are online.</li>
+<li><strong>SMB:</strong> <strong>TCP 445</strong> is needed to check the existing of home directories.</li>
+</ul>
 
 
 

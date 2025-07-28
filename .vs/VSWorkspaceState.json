@@ -5,6 +5,7 @@
     "\\docsource\\admin",
     "\\docsource\\admin\\settings",
     "\\docsource\\install",
+    "\\docsource\\stylesheets",
     "\\docsource\\user"
   ],
   "SelectedNode": "\\mkdocs.yml",
