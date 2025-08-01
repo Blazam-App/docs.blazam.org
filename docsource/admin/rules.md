@@ -40,7 +40,7 @@ scheduling flexibillity may be added in the future.
 
 !!! danger
 
-    Rules are powerful tools. Configurations exist that could,
+    Scheduled rules are powerful tools. Configurations exist that could,
     in very rare circumstances, disable every Domain account, effectively disabling your domain.
 
     Chances are ~ 1/(Number of User Accounts)^2
@@ -77,14 +77,14 @@ Operators can be inverted with the Negate checkbox.
 * Contains
 * Before Now
 * After Now
-* Historicatal Time Frame
+* Historical Time Frame
 * Future Time Frame
 
 ## Rule Actions
 Rule actions allow for Blazam to modify Active Directory objects.
 
 * Modify Field
-* Send Email (Not Implemented)
+* Send Email (Not Yet Implemented)
 * Assign
 * Unasign
 * Lockout

@@ -1,10 +1,11 @@
 # Notifications
 Blazam offers a flexible notification system for both in-app and email notifications.
 
-#### Limitations
-It's important to point out that Blazam can only notify on changes made from
-within Blazam itself. It does not actively monitor Active Directory and track
-changes.
+!!! note "Limitations"
+
+	It's important to point out that Blazam can only notify on changes made from
+	within Blazam itself. It does not actively monitor Active Directory and track
+	changes.
 
 ## Requirements
 In order for email notifications to go out, email must be enabled in `Configure -> Settings`.

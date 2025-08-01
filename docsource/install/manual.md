@@ -2,31 +2,32 @@
 * Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. For testing, you can opt for the file based Sqlite `DatabaseType`.
 * Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.
 	* Refer to your database documentation for security setup and best practices
-* Download and [Install .NET Core 8.x Runtime](https://aka.ms/dotnet-download) from Microsoft
-	* If running under IIS, you will also need the [.NET Core 8.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
-### [Download](https://blazam.org/download)
-=== "Windows Host"
 
+## [Download](https://blazam.org/download)
+=== "Windows Host" 
+    
     ### Install under IIS
     Feel free to deviate from the instructions to fit your desired deployment
 
+    1. Download and [Install .NET Core 8.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
     1. Ensure the Web Socket Module is installed (Required)
 	    * You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Web Sockets`.
-    1. Install the Application Initialization Module (Optional)
+    1. Install the Application Initialization Module (Recommended)
 	    * You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Application Initialization`.
     1. Copy contents of zip file to a directory accessible by IIS
     1. Create new Site in IIS for Blazam
 	    * Point the root directory to the directory you unzipped the files to.
 
-    1. Set ApplicationPool to AlwaysRunning (Optional)
+    1. Set ApplicationPool to AlwaysRunning (Recommended)
 	    * In IIS Manager, right click on the application pool under which the application runs and select `Advanced Settings`.	
         * Set start mode to `Always Running`.
-    1. Set IIS Site to Preload (Optional)
+    1. Set IIS Site to Preload (Recommended)
 	    * In IIS Manager, right click on the site for the application, select `Manage Website` -> `Advanced Settings` and set the `Preload Enabled` value to `true`.
 
     1. Continue with [Configuration](config.md)
     ### Install as Service
 
+    1. Download and [Install .NET Core 8.x Runtime](https://aka.ms/dotnet-download) from Microsoft.
     1. Extract the application to any directory eg:`C:\Program Files\Blazam`
     1. Using nssm.exe in the extracted files, install `BLAZAM.exe` as a service.
     1. Continue with [Configuration](config.md)

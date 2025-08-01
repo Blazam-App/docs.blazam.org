@@ -1,7 +1,7 @@
 # Webhooks
 Webhooks are a way for applications to communicate
 with each other in real-time by sending data over
-HTTP when specific events occur.
+HTTP(s) when specific events occur.
 
 ## Subscriptions
 Blazam utilizes a subscription model for webhooks.
@@ -20,7 +20,7 @@ and an authorization token if required.
 To create a subscription, go to `Configure`->`Webhooks` and create a new connection.
 
 Each connection shows the status of the last communication attempt to allow for
-easy identification of misccofigured connections.
+easy identification of misconfigured connections.
 
 ## Audit and Monitoring
 Webhooks by their very nature, are transparent. Failure is invisible

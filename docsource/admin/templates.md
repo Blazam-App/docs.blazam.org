@@ -89,12 +89,12 @@ The formula simulator allows you to more easily construct your generated variabl
 expressions. Preview your changes on the fly while constructing your configuration.
 
 ### Fields
-This section allows for the addition of any of the user attribute you want to define.s
+This section allows for the addition of any of the user attribute you want to define.
 After adding a field, you can then define a value, allow the user to edit the value,
 or require the value on creation.
 
 ### Organizational Unit
-Where the new user should be placed. Users must have "Create User" privileges in this OU to use this template.
+Where the new user should be placed. Users must have "Create User" permission in this OU to use this template.
 
 ### Groups
 The groups to assign the user to after creation. This can include inherited groups

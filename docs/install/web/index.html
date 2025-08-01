@@ -1155,15 +1155,25 @@
 <li>Refer to your database documentation for security setup and best practices</li>
 </ul>
 </li>
-<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Runtime</a> from Microsoft<ul>
-<li>If running under IIS, you will also need the <a href="https://aka.ms/dotnet-download">.NET Core 8.x Web Hosting Bundle</a>, also from Microsoft.</li>
-<li>Installing via the Web installer is the recommended method as it performs all required pre-installation checks automatically, and configures the application to launch based on the chosen installation type.</li>
 </ul>
-</li>
-</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows Host</label><label for="__tabbed_1_2">Linux Host</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Installing via the Web installer is the recommended method as it performs all required pre-installation checks automatically, and configures the application to launch based on the chosen installation type.</p>
 <p>The Web installer allows installing the application under IIS, or as a stand-alone service installed under Program Files.</p>
 <p>It always installs the latest version.</p>
 <p><a href="https://blazam.org/download">Download Web Installer</a></p>
+</div>
+<div class="tabbed-block">
+<p>Installing via the Web installer script is the recommended method as it performs all required pre-installation checks automatically, and configures the application to launch based on the chosen installation type.</p>
+<p>The Web installer script allows installing the application under Apache, nginx, or as a stand-alone service installed under /opt/.</p>
+<p>It always installs the latest version.</p>
+<p><code>bash linenums="1"
+wget https://blazam.org/download/linux_install.sh linux_install.sh
+    sudo linux_install.sh</code></p>
+</div>
+</div>
+</div>
 
 
 

@@ -75,7 +75,7 @@ It is recommended not to modify logging settings. They may be useful for issues 
 
 | Values      | Description                          |
 | ----------- | ------------------------------------ |
-| `string`      | Any string, this is the seed that generates the encryption key used by the database|
+| `string`      | Accepts any and all characters, numbers, and symbols. This is the seed that generates the encryption key used by the database|
 
 ### DebugMode
 | Values      | Description                          |

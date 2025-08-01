@@ -435,31 +435,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pre-Requisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#download" class="md-nav__link">
     <span class="md-ellipsis">
       Download
     </span>
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows Host
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Windows Host">
+    <nav class="md-nav" aria-label="Download">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -479,21 +464,6 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ubuntu Host
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ubuntu Host">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#install-under-nginx" class="md-nav__link">
@@ -1206,31 +1176,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pre-Requisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#download" class="md-nav__link">
     <span class="md-ellipsis">
       Download
     </span>
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows Host
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Windows Host">
+    <nav class="md-nav" aria-label="Download">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1250,21 +1205,6 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ubuntu Host
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ubuntu Host">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#install-under-nginx" class="md-nav__link">
@@ -1330,21 +1270,20 @@
 <li>Refer to your database documentation for security setup and best practices</li>
 </ul>
 </li>
-<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Runtime</a> from Microsoft<ul>
-<li>If running under IIS, you will also need the <a href="https://aka.ms/dotnet-download">.NET Core 8.x Web Hosting Bundle</a>, also from Microsoft.</li>
 </ul>
-</li>
-</ul>
-<h3 id="download"><a href="https://blazam.org/download">Download</a></h3>
-<h2 id="windows-host">Windows Host</h2>
+<h2 id="download"><a href="https://blazam.org/download">Download</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows Host</label><label for="__tabbed_1_2">Linux Host</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <h3 id="install-under-iis">Install under IIS</h3>
 <p>Feel free to deviate from the instructions to fit your desired deployment</p>
 <ol>
+<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Web Hosting Bundle</a>, also from Microsoft.</li>
 <li>Ensure the Web Socket Module is installed (Required)<ul>
 <li>You can find the module under <code>Server Roles</code> -&gt; <code>Web Server</code> -&gt; <code>Application Developer</code> -&gt; <code>Web Sockets</code>.</li>
 </ul>
 </li>
-<li>Install the Application Initialization Module (Optional)<ul>
+<li>Install the Application Initialization Module (Recommended)<ul>
 <li>You can find the module under <code>Server Roles</code> -&gt; <code>Web Server</code> -&gt; <code>Application Developer</code> -&gt; <code>Application Initialization</code>.</li>
 </ul>
 </li>
@@ -1356,14 +1295,14 @@
 </ul>
 </li>
 <li>
-<p>Set ApplicationPool to AlwaysRunning (Optional)</p>
+<p>Set ApplicationPool to AlwaysRunning (Recommended)</p>
 <ul>
 <li>In IIS Manager, right click on the application pool under which the application runs and select <code>Advanced Settings</code>.  </li>
 <li>Set start mode to <code>Always Running</code>.</li>
 </ul>
 </li>
 <li>
-<p>Set IIS Site to Preload (Optional)</p>
+<p>Set IIS Site to Preload (Recommended)</p>
 <ul>
 <li>In IIS Manager, right click on the site for the application, select <code>Manage Website</code> -&gt; <code>Advanced Settings</code> and set the <code>Preload Enabled</code> value to <code>true</code>.</li>
 </ul>
@@ -1374,11 +1313,13 @@
 </ol>
 <h3 id="install-as-service">Install as Service</h3>
 <ol>
+<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Runtime</a> from Microsoft.</li>
 <li>Extract the application to any directory eg:<code>C:\Program Files\Blazam</code></li>
 <li>Using nssm.exe in the extracted files, install <code>BLAZAM.exe</code> as a service.</li>
 <li>Continue with <a href="../config/">Configuration</a></li>
 </ol>
-<h2 id="ubuntu-host">Ubuntu Host</h2>
+</div>
+<div class="tabbed-block">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The Linux compatible Blazam is not yet available for public use in production. Beta testing only!</p>
@@ -1397,6 +1338,9 @@ friendly and streamlined for installation on Linux.</p>
 </ol>
 <h3 id="insalll-under-apache">Insalll under Apache</h3>
 <h3 id="install-as-service_1">Install as Service</h3>
+</div>
+</div>
+</div>
 
 
 
