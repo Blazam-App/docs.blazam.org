@@ -466,27 +466,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-under-nginx" class="md-nav__link">
+  <a href="#pre-requisites_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Install under Nginx
+      Pre-Requisites
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#insalll-under-apache" class="md-nav__link">
+  <a href="#install-blazam" class="md-nav__link">
     <span class="md-ellipsis">
-      Insalll under Apache
+      Install Blazam
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-as-service_1" class="md-nav__link">
+  <a href="#reverse-proxy-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Install as Service
+      Reverse Proxy (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Requisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-blazam_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Blazam
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-proxy-optional_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reverse Proxy (Optional)
     </span>
   </a>
   
@@ -1207,27 +1234,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-under-nginx" class="md-nav__link">
+  <a href="#pre-requisites_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Install under Nginx
+      Pre-Requisites
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#insalll-under-apache" class="md-nav__link">
+  <a href="#install-blazam" class="md-nav__link">
     <span class="md-ellipsis">
-      Insalll under Apache
+      Install Blazam
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-as-service_1" class="md-nav__link">
+  <a href="#reverse-proxy-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Install as Service
+      Reverse Proxy (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Requisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-blazam_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Blazam
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-proxy-optional_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reverse Proxy (Optional)
     </span>
   </a>
   
@@ -1327,17 +1381,163 @@
 <p>Installing Blazam on Linux manually is not a trivial
 undertaking. Using the install.sh script is more user
 friendly and streamlined for installation on Linux.</p>
-<h3 id="install-under-nginx">Install under Nginx</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian/Ubuntu</label><label for="__tabbed_2_2">CentOS/RHEL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="pre-requisites_1">Pre-Requisites</h3>
 <ol>
 <li>Install the necessary dependency packages from apt using the command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>jq<span class="w"> </span>libldap2<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>libldap2<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
 </span></code></pre></div></li>
 <li>Create a libldap.so symlink using
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ln<span class="w"> </span>-sf<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">target_lib_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0&quot;</span>
 </span></code></pre></div></li>
 </ol>
-<h3 id="insalll-under-apache">Insalll under Apache</h3>
-<h3 id="install-as-service_1">Install as Service</h3>
+<h3 id="install-blazam">Install Blazam</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span><span class="s2">&quot;https://blazam.org/downlolad/beta&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>unzip<span class="w"> </span>-oq<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/opt/blazam&quot;</span>
+</span></code></pre></div>
+<h3 id="reverse-proxy-optional">Reverse Proxy (Optional)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Apached Reverse Proxy</label><label for="__tabbed_3_2">nginx Reverse Proxy</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>&lt;VirtualHost<span class="w"> </span>*:80&gt;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span>ServerName<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span>Redirect<span class="w"> </span>permanent<span class="w"> </span>/<span class="w"> </span>https://<span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span>/
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span>&lt;/VirtualHost&gt;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span>&lt;VirtualHost<span class="w"> </span>*:443&gt;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span>ServerName<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="c1"># SSL Configuration</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span>SSLEngine<span class="w"> </span>on
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span>SSLCertificateFile<span class="w"> </span><span class="si">${</span><span class="nv">SSL_CERT_PATH</span><span class="si">}</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span>SSLCertificateKeyFile<span class="w"> </span><span class="si">${</span><span class="nv">SSL_KEY_PATH</span><span class="si">}</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="c1"># Proxy Configuration</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span>ProxyPreserveHost<span class="w"> </span>On
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span>ProxyPass<span class="w"> </span>http://127.0.0.1:5000
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span>ProxyPassReverse<span class="w"> </span>http://127.0.0.1:5000
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="c1"># Required for SignalR WebSockets</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span>RewriteEngine<span class="w"> </span>on
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span>RewriteCond<span class="w"> </span>%<span class="o">{</span>HTTP:UPGRADE<span class="o">}</span><span class="w"> </span>^WebSocket$<span class="w"> </span><span class="o">[</span>NC<span class="o">]</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span>RewriteCond<span class="w"> </span>%<span class="o">{</span>HTTP:CONNECTION<span class="o">}</span><span class="w"> </span>Upgrade$<span class="w"> </span><span class="o">[</span>NC<span class="o">]</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span>RewriteRule<span class="w"> </span>/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>ws://127.0.0.1:5000<span class="o">}</span><span class="se">\$</span><span class="m">1</span><span class="w"> </span><span class="o">[</span>P,L<span class="o">]</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span>RequestHeader<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;X-Forwarded-Proto&quot;</span><span class="w"> </span><span class="s2">&quot;https&quot;</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span>&lt;/VirtualHost&gt;
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>server<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>server_name<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>location<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://<span class="se">\$</span>host<span class="se">\$</span>request_uri<span class="p">;</span><span class="w"> </span><span class="o">}</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">}</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>server<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span>server_name<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span>ssl_certificate<span class="w"> </span><span class="si">${</span><span class="nv">SSL_CERT_PATH</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span>ssl_certificate_key<span class="w"> </span><span class="si">${</span><span class="nv">SSL_KEY_PATH</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span>ssl_protocols<span class="w"> </span>TLSv1.2<span class="w"> </span>TLSv1.3<span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span>location<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span>proxy_pass<span class="w"> </span>http://localhost:5000<span class="p">;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span>proxy_http_version<span class="w"> </span><span class="m">1</span>.1<span class="p">;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w"> </span><span class="se">\$</span>http_upgrade<span class="p">;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="se">\$</span>connection_upgrade<span class="p">;</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Host<span class="w"> </span><span class="se">\$</span>host<span class="p">;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Real-IP<span class="w"> </span><span class="se">\$</span>remote_addr<span class="p">;</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="se">\$</span>proxy_add_x_forwarded_for<span class="p">;</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="se">\$</span>scheme<span class="p">;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="o">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<h3 id="pre-requisites_2">Pre-Requisites</h3>
+<ol>
+<li>Install the necessary dependency packages using <code>yum</code> or <code>dnf</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>openldap<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
+</span></code></pre></div></li>
+<li>If using CentOS 7, replace <code>dnf</code> with <code>yum</code>.</li>
+<li>For .NET 8 runtime, you may need to add the Microsoft package repository:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>rpm<span class="w"> </span>-Uvh<span class="w"> </span>https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0
+</span></code></pre></div></li>
+<li>Create a libldap.so symlink if required (adjust path as needed):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-sf<span class="w"> </span>/usr/lib64/libldap.so<span class="w"> </span>/usr/lib64/libldap-2.5.so.0
+</span></code></pre></div></li>
+</ol>
+<h3 id="install-blazam_1">Install Blazam</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span><span class="s2">&quot;https://blazam.org/downlolad/beta&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>unzip<span class="w"> </span>-oq<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/opt/blazam&quot;</span>
+</span></code></pre></div>
+<h3 id="reverse-proxy-optional_1">Reverse Proxy (Optional)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Apached Reverse Proxy</label><label for="__tabbed_4_2">nginx Reverse Proxy</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span>&lt;VirtualHost<span class="w"> </span>*:80&gt;
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">        </span>ServerName<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span>Redirect<span class="w"> </span>permanent<span class="w"> </span>/<span class="w"> </span>https://<span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span>/
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span>&lt;/VirtualHost&gt;
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span>&lt;VirtualHost<span class="w"> </span>*:443&gt;
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span>ServerName<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="c1"># SSL Configuration</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span>SSLEngine<span class="w"> </span>on
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span>SSLCertificateFile<span class="w"> </span><span class="si">${</span><span class="nv">SSL_CERT_PATH</span><span class="si">}</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span>SSLCertificateKeyFile<span class="w"> </span><span class="si">${</span><span class="nv">SSL_KEY_PATH</span><span class="si">}</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="c1"># Proxy Configuration</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span>ProxyPreserveHost<span class="w"> </span>On
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">        </span>ProxyPass<span class="w"> </span>http://127.0.0.1:5000
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">        </span>ProxyPassReverse<span class="w"> </span>http://127.0.0.1:5000
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">        </span><span class="c1"># Required for SignalR WebSockets</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">        </span>RewriteEngine<span class="w"> </span>on
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">        </span>RewriteCond<span class="w"> </span>%<span class="o">{</span>HTTP:UPGRADE<span class="o">}</span><span class="w"> </span>^WebSocket$<span class="w"> </span><span class="o">[</span>NC<span class="o">]</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">        </span>RewriteCond<span class="w"> </span>%<span class="o">{</span>HTTP:CONNECTION<span class="o">}</span><span class="w"> </span>Upgrade$<span class="w"> </span><span class="o">[</span>NC<span class="o">]</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">        </span>RewriteRule<span class="w"> </span>/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>ws://127.0.0.1:5000<span class="o">}</span><span class="se">\$</span><span class="m">1</span><span class="w"> </span><span class="o">[</span>P,L<span class="o">]</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">        </span>RequestHeader<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="s2">&quot;X-Forwarded-Proto&quot;</span><span class="w"> </span><span class="s2">&quot;https&quot;</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">    </span>&lt;/VirtualHost&gt;
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>server<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span>server_name<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span>location<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://<span class="se">\$</span>host<span class="se">\$</span>request_uri<span class="p">;</span><span class="w"> </span><span class="o">}</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>server<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span>server_name<span class="w"> </span><span class="si">${</span><span class="nv">DOMAIN_NAME</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span>ssl_certificate<span class="w"> </span><span class="si">${</span><span class="nv">SSL_CERT_PATH</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span>ssl_certificate_key<span class="w"> </span><span class="si">${</span><span class="nv">SSL_KEY_PATH</span><span class="si">}</span><span class="p">;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span>ssl_protocols<span class="w"> </span>TLSv1.2<span class="w"> </span>TLSv1.3<span class="p">;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span>location<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">        </span>proxy_pass<span class="w"> </span>http://localhost:5000<span class="p">;</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span>proxy_http_version<span class="w"> </span><span class="m">1</span>.1<span class="p">;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w"> </span><span class="se">\$</span>http_upgrade<span class="p">;</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="se">\$</span>connection_upgrade<span class="p">;</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>Host<span class="w"> </span><span class="se">\$</span>host<span class="p">;</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Real-IP<span class="w"> </span><span class="se">\$</span>remote_addr<span class="p">;</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="se">\$</span>proxy_add_x_forwarded_for<span class="p">;</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-Proto<span class="w"> </span><span class="se">\$</span>scheme<span class="p">;</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="o">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

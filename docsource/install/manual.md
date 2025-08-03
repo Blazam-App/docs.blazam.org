@@ -43,16 +43,153 @@
     Installing Blazam on Linux manually is not a trivial
     undertaking. Using the install.sh script is more user
     friendly and streamlined for installation on Linux.
-    ### Install under Nginx
+    === "Debian/Ubuntu"
 
-    1. Install the necessary dependency packages from apt using the command
-    ``` bash
-    sudo apt-get install -y aspnetcore-runtime-8.0 openssl jq libldap2 curl wget unzip
-    ```
-    1. Create a libldap.so symlink using
-    ``` bash
-    ln -sf "${target_lib_path}" "/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0"
-    ```
-    ### Insalll under Apache
-    ### Install as Service
+        ### Pre-Requisites
+
+        1. Install the necessary dependency packages from apt using the command
+        ``` bash
+        sudo apt-get install -y aspnetcore-runtime-8.0 openssl libldap2 curl wget unzip
+        ```
+        1. Create a libldap.so symlink using
+        ``` bash
+        ln -sf "${target_lib_path}" "/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0"
+        ```
+        ### Install Blazam
+        ```bash
+            wget -q -O "blazam.zip" "https://blazam.org/downlolad/beta"
+            unzip -oq "blazam.zip" -d "/opt/blazam"
+        ```
+        ### Reverse Proxy (Optional)
+        === "Apached Reverse Proxy"
+            ```bash
+                <VirtualHost *:80>
+                    ServerName ${DOMAIN_NAME}
+                    Redirect permanent / https://${DOMAIN_NAME}/
+                </VirtualHost>
+
+                <VirtualHost *:443>
+                    ServerName ${DOMAIN_NAME}
+    
+                    # SSL Configuration
+                    SSLEngine on
+                    SSLCertificateFile ${SSL_CERT_PATH}
+                    SSLCertificateKeyFile ${SSL_KEY_PATH}
+
+                    # Proxy Configuration
+                    ProxyPreserveHost On
+                    ProxyPass http://127.0.0.1:5000
+                    ProxyPassReverse http://127.0.0.1:5000
+    
+                    # Required for SignalR WebSockets
+                    RewriteEngine on
+                    RewriteCond %{HTTP:UPGRADE} ^WebSocket$ [NC]
+                    RewriteCond %{HTTP:CONNECTION} Upgrade$ [NC]
+                    RewriteRule /(.*) ws://127.0.0.1:5000}\$1 [P,L]
+
+                    RequestHeader set "X-Forwarded-Proto" "https"
+                </VirtualHost>
+            ```
+        === "nginx Reverse Proxy"
+            ```bash
+            server {
+                listen 80;
+                server_name ${DOMAIN_NAME};
+                location { return 301 https://\$host\$request_uri; }
+            }
+            server {
+                listen 443 ssl http2;
+                server_name ${DOMAIN_NAME};
+                ssl_certificate ${SSL_CERT_PATH};
+                ssl_certificate_key ${SSL_KEY_PATH};
+                ssl_protocols TLSv1.2 TLSv1.3;
+                location {
+                    proxy_pass http://localhost:5000;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade \$http_upgrade;
+                    proxy_set_header Connection \$connection_upgrade;
+                    proxy_set_header Host \$host;
+                    proxy_set_header X-Real-IP \$remote_addr;
+                    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                    proxy_set_header X-Forwarded-Proto \$scheme;
+                }
+            }
+            ```
+    === "CentOS/RHEL"
+        ### Pre-Requisites
+
+        1. Install the necessary dependency packages using `yum` or `dnf`:
+        ```bash
+        sudo dnf install -y aspnetcore-runtime-8.0 openssl openldap curl wget unzip
+        ```
+        * If using CentOS 7, replace `dnf` with `yum`.
+        * For .NET 8 runtime, you may need to add the Microsoft package repository:
+        ```bash
+        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+        sudo dnf install -y aspnetcore-runtime-8.0
+        ```
+        2. Create a libldap.so symlink if required (adjust path as needed):
+        ```bash
+        sudo ln -sf /usr/lib64/libldap.so /usr/lib64/libldap-2.5.so.0
+        ```
+        ### Install Blazam
+        ```bash
+            wget -q -O "blazam.zip" "https://blazam.org/downlolad/beta"
+            unzip -oq "blazam.zip" -d "/opt/blazam"
+        ```
+        ### Reverse Proxy (Optional)
+        === "Apached Reverse Proxy"
+            ```bash
+                <VirtualHost *:80>
+                    ServerName ${DOMAIN_NAME}
+                    Redirect permanent / https://${DOMAIN_NAME}/
+                </VirtualHost>
+
+                <VirtualHost *:443>
+                    ServerName ${DOMAIN_NAME}
+    
+                    # SSL Configuration
+                    SSLEngine on
+                    SSLCertificateFile ${SSL_CERT_PATH}
+                    SSLCertificateKeyFile ${SSL_KEY_PATH}
+
+                    # Proxy Configuration
+                    ProxyPreserveHost On
+                    ProxyPass http://127.0.0.1:5000
+                    ProxyPassReverse http://127.0.0.1:5000
+    
+                    # Required for SignalR WebSockets
+                    RewriteEngine on
+                    RewriteCond %{HTTP:UPGRADE} ^WebSocket$ [NC]
+                    RewriteCond %{HTTP:CONNECTION} Upgrade$ [NC]
+                    RewriteRule /(.*) ws://127.0.0.1:5000}\$1 [P,L]
+
+                    RequestHeader set "X-Forwarded-Proto" "https"
+                </VirtualHost>
+            ```
+        === "nginx Reverse Proxy"
+            ```bash
+            server {
+                listen 80;
+                server_name ${DOMAIN_NAME};
+                location { return 301 https://\$host\$request_uri; }
+            }
+            server {
+                listen 443 ssl http2;
+                server_name ${DOMAIN_NAME};
+                ssl_certificate ${SSL_CERT_PATH};
+                ssl_certificate_key ${SSL_KEY_PATH};
+                ssl_protocols TLSv1.2 TLSv1.3;
+                location {
+                    proxy_pass http://localhost:5000;
+                    proxy_http_version 1.1;
+                    proxy_set_header Upgrade \$http_upgrade;
+                    proxy_set_header Connection \$connection_upgrade;
+                    proxy_set_header Host \$host;
+                    proxy_set_header X-Real-IP \$remote_addr;
+                    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                    proxy_set_header X-Forwarded-Proto \$scheme;
+                }
+            }
+            ```
 
