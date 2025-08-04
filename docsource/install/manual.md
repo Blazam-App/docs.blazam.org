@@ -57,7 +57,7 @@
         ```
         ### Install Blazam
         ```bash
-            wget -q -O "blazam.zip" "https://blazam.org/downlolad/beta"
+            wget -q -O "blazam.zip" "https://blazam.org/download/beta"
             unzip -oq "blazam.zip" -d "/opt/blazam"
         ```
         ### Reverse Proxy (Optional)
@@ -134,7 +134,7 @@
         ```
         ### Install Blazam
         ```bash
-            wget -q -O "blazam.zip" "https://blazam.org/downlolad/beta"
+            wget -q -O "blazam.zip" "https://blazam.org/download/beta"
             unzip -oq "blazam.zip" -d "/opt/blazam"
         ```
         ### Reverse Proxy (Optional)
