@@ -1390,11 +1390,11 @@ friendly and streamlined for installation on Linux.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>libldap2<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
 </span></code></pre></div></li>
 <li>Create a libldap.so symlink using
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ln<span class="w"> </span>-sf<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">target_lib_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ln<span class="w"> </span>-sf<span class="w"> </span>/usr/lib64/libldap.so<span class="w"> </span>/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0
 </span></code></pre></div></li>
 </ol>
 <h3 id="install-blazam">Install Blazam</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span><span class="s2">&quot;https://blazam.org/downlolad/beta&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span><span class="s2">&quot;https://blazam.org/download/beta&quot;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>unzip<span class="w"> </span>-oq<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/opt/blazam&quot;</span>
 </span></code></pre></div>
 <h3 id="reverse-proxy-optional">Reverse Proxy (Optional)</h3>
@@ -1473,7 +1473,7 @@ friendly and streamlined for installation on Linux.</p>
 </span></code></pre></div></li>
 </ol>
 <h3 id="install-blazam_1">Install Blazam</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span><span class="s2">&quot;https://blazam.org/downlolad/beta&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span><span class="s2">&quot;https://blazam.org/download/beta&quot;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>unzip<span class="w"> </span>-oq<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/opt/blazam&quot;</span>
 </span></code></pre></div>
 <h3 id="reverse-proxy-optional_1">Reverse Proxy (Optional)</h3>

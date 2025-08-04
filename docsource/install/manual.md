@@ -53,7 +53,7 @@
         ```
         1. Create a libldap.so symlink using
         ``` bash
-        ln -sf "${target_lib_path}" "/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0"
+        ln -sf /usr/lib64/libldap.so /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0
         ```
         ### Install Blazam
         ```bash
