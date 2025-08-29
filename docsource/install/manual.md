@@ -3,6 +3,10 @@
 * Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.
 	* Refer to your database documentation for security setup and best practices
 
+!!! warning "Installing Blazam on a Domain Controller is not recommended."
+
+    
+
 ## [Download](https://blazam.org/download)
 === "Windows Host" 
     
