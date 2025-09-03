@@ -12,13 +12,13 @@
         <meta name="author" content="Chris Jacobsen">
       
       
-        <link rel="canonical" href="https://docs.blazam.org/admin/webhooks/">
+        <link rel="canonical" href="https://docs.blazam.org/admin/sso/">
       
       
-        <link rel="prev" href="../sso/">
+        <link rel="prev" href="../settings/activeDirectory/">
       
       
-        <link rel="next" href="../permissions/">
+        <link rel="next" href="../webhooks/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Webhooks - Blazam Documentation</title>
+        <title>SSO - Blazam Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#webhooks" class="md-skip">
+        <a href="#single-sign-on-sso-administration-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Webhooks
+              SSO
             
           </span>
         </div>
@@ -722,27 +722,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../sso/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SSO
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -759,7 +738,7 @@
           
   
   <span class="md-ellipsis">
-    Webhooks
+    SSO
   </span>
   
 
@@ -770,7 +749,7 @@
         
   
   <span class="md-ellipsis">
-    Webhooks
+    SSO
   </span>
   
 
@@ -792,36 +771,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subscriptions" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Subscriptions
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#subscription-options" class="md-nav__link">
+  <a href="#password-locker" class="md-nav__link">
     <span class="md-ellipsis">
-      Subscription Options
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#webhook-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Webhook Creation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#audit-and-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Audit and Monitoring
+      Password Locker
     </span>
   </a>
   
@@ -831,6 +792,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webhooks
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1164,36 +1146,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subscriptions" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Subscriptions
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#subscription-options" class="md-nav__link">
+  <a href="#password-locker" class="md-nav__link">
     <span class="md-ellipsis">
-      Subscription Options
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#webhook-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Webhook Creation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#audit-and-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Audit and Monitoring
+      Password Locker
     </span>
   </a>
   
@@ -1214,7 +1178,7 @@
                   
 
   
-    <a href="https://github.com/Blazam-App/docs.blazam.org/blob/master/docsource/admin/webhooks.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/Blazam-App/docs.blazam.org/blob/master/docsource/admin/sso.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1222,28 +1186,15 @@
   
 
 
-<h1 id="webhooks">Webhooks</h1>
-<p>Webhooks are a way for applications to communicate
-with each other in real-time by sending data over
-HTTP(s) when specific events occur.</p>
-<h2 id="subscriptions">Subscriptions</h2>
-<p>Blazam utilizes a subscription model for webhooks.</p>
-<p>Each connection is subscribed to specific event types.</p>
-<p>For now, webhooks subscriptions are domain wide, but per
-OU subscriptions may come in a future update.</p>
-<h2 id="subscription-options">Subscription Options</h2>
-<p>Each subscription can listen for certain event types, send via POST
-or GET (only POST is implemented for now), a destination URL, SSL validation,
-and an authorization token if required.</p>
-<h2 id="webhook-creation">Webhook Creation</h2>
-<p>To create a subscription, go to <code>Configure</code>-&gt;<code>Webhooks</code> and create a new connection.</p>
-<p>Each connection shows the status of the last communication attempt to allow for
-easy identification of misconfigured connections.</p>
-<h2 id="audit-and-monitoring">Audit and Monitoring</h2>
-<p>Webhooks by their very nature, are transparent. Failure is invisible
-to the web app user. Therefore, extensive auditing of webhooks is recorded by Blazam.</p>
-<p>Every attempted message is recorded with failure details. To monitor webhook activity
-go to <code>Audit</code>-&gt;<code>Webhooks</code></p>
+<h1 id="single-sign-on-sso-administration-guide">Single Sign-On (SSO) Administration Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>Single Sign-On (SSO) allows users to authenticate once and gain access to multiple applications without needing to log in separately to each one. This guide provides instructions for administrators on how to configure and manage SSO for your organization.</p>
+<h2 id="password-locker">Password Locker</h2>
+<p>For organizations with a secure password locker platform, Blazam can be configured to use it for SSO authentication. 
+This allows users to log in using their password locker credentials.</p>
+<p>To use this feature, have your password locker platform send a POST request to your Blazam instance like the following example.</p>
+<p><code>POST =&gt; http(s)://&lt;your-blazam-domain&gt;/sso</code></p>
+<p><code>Form Body =&gt; {username:&lt;username&gt;,password:&lt;password&gt;}</code></p>
 
 
 
@@ -1315,7 +1266,7 @@ go to <code>Audit</code>-&gt;<code>Webhooks</code></p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../sso/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SSO">
+          <a href="../settings/activeDirectory/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Active Directory">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1325,20 +1276,20 @@ go to <code>Audit</code>-&gt;<code>Webhooks</code></p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                SSO
+                Active Directory
               </div>
             </div>
           </a>
         
         
           
-          <a href="../permissions/" class="md-footer__link md-footer__link--next" aria-label="Next: Permissions">
+          <a href="../webhooks/" class="md-footer__link md-footer__link--next" aria-label="Next: Webhooks">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Permissions
+                Webhooks
               </div>
             </div>
             <div class="md-footer__button md-icon">
