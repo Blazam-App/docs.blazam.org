@@ -6,50 +6,49 @@ of whatever user properties you want.
 ## Inheritance
 One very useful and powerful feature is template
 inheritance. Create a base template that contains the
-common data for all your users, like `Company` or your `Username` or `Password` algorithms, all
-child templates will inherit the values and any changes made to the base template.
+common data for all your users, like `Company` or your `Username` or `Password` algorithms. All
+child templates will inherit the values, and any changes made to the base template.
 
 ## Template Components
 ### Parent Template
-Defines a parent template from which to inherit values from.
+Defines a parent template from which to inherit values.
 
 ### Template Name
-The name for the template as will be shown to users on
+The name for the template as it will be shown to users on
 the create user page.
 
 ### Template Category
 Organize your templates into categories for easy retrieval.
 
 ### Visibility
-Control whether the template is visible on `Create User` page.
+Control whether the template is visible on the `Create User` page.
 Useful for base templates that should not be used directly.
 
 ### Username, Display Name, and Password
-Define the username and display name formats along with  the new password for created users.
-An assortment of string variables are available to compute the value
+Define the username and display name formats along with the new password for created users.
+An assortment of string variables is available to compute the value
 on creation.
 
 In addition, you can pull the first X characters of a field or perform
 regex matches.
 
-
 ### Variables
 `{variable:modifier[argument]}`, `{variable:modifier}`, `{variable[argument]}`, or just `{variable}`
 
-Variables Expressions must be surrounded by curly braces eg: `{fn}`
+Variable expressions must be surrounded by curly braces, e.g., `{fn}`
 
-Modifiers and Arguments are both optional
+Modifiers and arguments are both optional.
 
-Variable Expressions can be chained together and anything outside of curly braces will
-be copied as is. eg: `{fi}{ln}`
+Variable expressions can be chained together, and anything outside of curly braces will
+be copied as is, e.g., `{fi}{ln}`
 
 |Variable|Variable Description|Modifier|Modifier Description|Argument|Argument Description|
 | -------- | -------- | -------- | -------- | -------- | -------- |
-|fn|First Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression eg: (?<!\d)([a-zA-Z])(\d)| Pulls the first x number of characters, A custom regular expression in match mode|
+|fn|First Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)| Pulls the first x number of characters, a custom regular expression in match mode|
 |fi|First Initial| | | | |
-|mn|Middle Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression eg: (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, A custom regular expression in match mode|
+|mn|Middle Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, a custom regular expression in match mode|
 |mi|Middle Initial| | | | |
-|ln|Last Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression eg: (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, A custom regular expression in match mode|
+|ln|Last Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, a custom regular expression in match mode|
 |li|Last Initial| | | | |
 |username|Username| | | | |
 |alphanum|Random letter or number|u, l|Upper Case, Lower Case| | |
@@ -70,7 +69,7 @@ be copied as is. eg: `{fi}{ln}`
 If enabled, users will be able to change the generated username.
 !!! note
 
-	Super-admins are always able to override usernames
+	Super-admins are always able to override usernames.
 
 #### Require Password Change
 If enabled, the associated checkbox in ADUC will be checked and users
@@ -78,7 +77,7 @@ will be asked to change their password upon first domain login.
 
 #### Send Welcome Email
 If enabled, an email containing the username and password will be sent. If 
-the email field is generated, static, or editable the email will go to that address. If
+the email field is generated, static, or editable, the email will go to that address. If
 no address is entered into the email field, the user will be asked for a destination.
 
 #### Ask For Alternate Email
@@ -89,7 +88,7 @@ The formula simulator allows you to more easily construct your generated variabl
 expressions. Preview your changes on the fly while constructing your configuration.
 
 ### Fields
-This section allows for the addition of any of the user attribute you want to define.
+This section allows for the addition of any user attribute you want to define.
 After adding a field, you can then define a value, allow the user to edit the value,
 or require the value on creation.
 

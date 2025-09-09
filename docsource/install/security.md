@@ -1,7 +1,6 @@
 ﻿# Security
 
-Blazam adheres to a strict delegation of elevated privileges. It is designed to run under an un-privileged user account.
-
+Blazam adheres to a strict delegation of elevated privileges. It is designed to run under an unprivileged user account.
 
 !!! abstract
 
@@ -9,12 +8,12 @@ Blazam adheres to a strict delegation of elevated privileges. It is designed to 
     
     All passwords are encrypted both at rest and in transit. All incoming/outgoing connections are TLS/SSL capable.  
     
-    Having said that, we take no responsibillity
+    Having said that, we take no responsibility
     for any damages incurred from your use of this software. You are encouraged to review the source code for yourself.
 
 !!! danger
 
-    Running the web application under elevated privileges exposes your Web Server and Active Directory to unneccessary risk of framework exploits.
+    Running the web application under elevated privileges exposes your Web Server and Active Directory to unnecessary risk of framework exploits.
 
 ## Internet Facing
 Should you decide to publish Blazam to the internet, you should ensure that a valid
@@ -28,7 +27,7 @@ Directory for the user account provided for AD communication to limit the exposu
 
 !!! danger
     
-    Do not run the IIS application pool or application service as an adminstrator or System account.
+    Do not run the IIS application pool or application service as an administrator or System account.
 ### For IIS
 Use the default IIS_User account provided to the application pool.
 ### For Service
@@ -58,21 +57,21 @@ The application encrypts sensitive database data such as passwords. Blazam uses 
 
 !!! tip "Backup the Encryption Key"
 
-    It is highly recommended to backup the encryption key immediatly following the installation wizard.
+    It is highly recommended to back up the encryption key immediately following the installation wizard.
     
-    Loss of the encryption key will result in the inabillity to log in as the application `admin`, and
-    break communication with your Actvie Directory, effectivley locking you out without manual modifications
+    Loss of the encryption key will result in the inability to log in as the application `admin`, and
+    break communication with your Active Directory, effectively locking you out without manual modifications
     to the database.
 
-    To backup the key from the app, go to the `Settings` page and click the `System` tab. (Coming soon)
+    To back up the key from the app, go to the `Settings` page and click the `System` tab. (Coming soon)
 
 ??? failure "Lost your encryption key?"
     
     1. Connect to your database with a management application. Modify the admin password in the table 'AppSettings' to a new password in plaintext
     1. If running as a service and forcing HTTPS, change ForceHTTPS in 'AppSettings' to 0
     1. Restart Blazam and log in with the new admin password.
-    1. Reset the admin password from within Blazam, this will encypt it in the database with the new encyption key.
-    1. Reset the password for Active Directory within Blazam so it is aligned with the new encyption key.
+    1. Reset the admin password from within Blazam, this will encrypt it in the database with the new encryption key.
+    1. Reset the password for Active Directory within Blazam so it is aligned with the new encryption key.
     1. Reset Duo Private Key if set.
     1. Reset Update Credentials password if set.
     1. Reupload SSL Certificate if running as a service for HTTPS

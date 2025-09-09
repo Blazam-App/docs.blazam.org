@@ -1,17 +1,15 @@
-﻿## Pre-Requisites
-* Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. For testing, you can opt for the file based Sqlite `DatabaseType`.
-* Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.
-	* Refer to your database documentation for security setup and best practices
+﻿## Prerequisites
+* Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. For testing, you can opt for the file-based SQLite `DatabaseType`.
+* Create an empty database, a new database user to connect with, and set permissions and logins. If you chose SQLite, choose a destination directory and prepare folder permissions.
+	* Refer to your database documentation for security setup and best practices.
 
-!!! warning "Installing Blazam on a Domain Controller is not recommended."
-
-    
+    !!! warning "Installing Blazam on a Domain Controller is not recommended."
 
 ## [Download](https://blazam.org/download)
 === "Windows Host" 
-    
+
     ### Install under IIS
-    Feel free to deviate from the instructions to fit your desired deployment
+    Feel free to deviate from the instructions to fit your desired deployment.
 
     1. Download and [Install .NET Core 8.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
     1. Ensure the Web Socket Module is installed (Required)
@@ -23,40 +21,38 @@
 	    * Point the root directory to the directory you unzipped the files to.
 
     1. Set ApplicationPool to AlwaysRunning (Recommended)
-	    * In IIS Manager, right click on the application pool under which the application runs and select `Advanced Settings`.	
+	    * In IIS Manager, right-click on the application pool under which the application runs and select `Advanced Settings`.	
         * Set start mode to `Always Running`.
     1. Set IIS Site to Preload (Recommended)
-	    * In IIS Manager, right click on the site for the application, select `Manage Website` -> `Advanced Settings` and set the `Preload Enabled` value to `true`.
+	    * In IIS Manager, right-click on the site for the application, select `Manage Website` -> `Advanced Settings` and set the `Preload Enabled` value to `true`.
 
     1. Continue with [Configuration](config.md)
     ### Install as Service
 
     1. Download and [Install .NET Core 8.x Runtime](https://aka.ms/dotnet-download) from Microsoft.
-    1. Extract the application to any directory eg:`C:\Program Files\Blazam`
+    1. Extract the application to any directory, e.g.: `C:\Program Files\Blazam`
     1. Using nssm.exe in the extracted files, install `BLAZAM.exe` as a service.
     1. Continue with [Configuration](config.md)
-
 
 === "Linux Host"
 
     !!! warning
 
-        The Linux compatible Blazam is not yet available for public use in production. Beta testing only!
-
+        The Linux-compatible Blazam is not yet available for public use in production. Beta testing only!
 
     Installing Blazam on Linux manually is not a trivial
-    undertaking. Using the install.sh script is more user
+    undertaking. Using the install.sh script is more user-
     friendly and streamlined for installation on Linux.
     === "Debian/Ubuntu"
 
-        ### Pre-Requisites
+        ### Prerequisites
 
         1. Install the necessary dependency packages from apt using the command
-        ``` bash
+        ```bash
         sudo apt-get install -y aspnetcore-runtime-8.0 openssl libldap2 curl wget unzip
         ```
         1. Create a libldap.so symlink using
-        ``` bash
+        ```bash
         ln -sf /usr/lib64/libldap.so /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0
         ```
         ### Install Blazam
@@ -65,7 +61,7 @@
             unzip -oq "blazam.zip" -d "/opt/blazam"
         ```
         ### Reverse Proxy (Optional)
-        === "Apached Reverse Proxy"
+        === "Apache Reverse Proxy"
             ```bash
                 <VirtualHost *:80>
                     ServerName ${DOMAIN_NAME}
@@ -120,7 +116,7 @@
             }
             ```
     === "CentOS/RHEL"
-        ### Pre-Requisites
+        ### Prerequisites
 
         1. Install the necessary dependency packages using `yum` or `dnf`:
         ```bash
@@ -142,7 +138,7 @@
             unzip -oq "blazam.zip" -d "/opt/blazam"
         ```
         ### Reverse Proxy (Optional)
-        === "Apached Reverse Proxy"
+        === "Apache Reverse Proxy"
             ```bash
                 <VirtualHost *:80>
                     ServerName ${DOMAIN_NAME}

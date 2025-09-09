@@ -789,13 +789,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#google-authenticatior" class="md-nav__link">
+  <a href="#google-authenticator" class="md-nav__link">
     <span class="md-ellipsis">
-      Google Authenticatior
+      Google Authenticator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Google Authenticatior">
+    <nav class="md-nav" aria-label="Google Authenticator">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1286,13 +1286,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#google-authenticatior" class="md-nav__link">
+  <a href="#google-authenticator" class="md-nav__link">
     <span class="md-ellipsis">
-      Google Authenticatior
+      Google Authenticator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Google Authenticatior">
+    <nav class="md-nav" aria-label="Google Authenticator">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1344,7 +1344,7 @@ access</p>
 <p>Blazam uses a rolling expiration, which means that the session expiration time is reset on every page navigation.</p>
 </div>
 <h2 id="mfa-type">MFA Type</h2>
-<p>Blazam supports two MFA types. Cisco DUO, and Google Authenticator (and compatible) mobile apps.
+<p>Blazam supports two MFA types: Cisco DUO and Google Authenticator (and compatible) mobile apps.
 It is not currently possible to use both simultaneously.</p>
 <h2 id="duo-multi-factor-authentication">DUO Multi-Factor Authentication</h2>
 <p>Blazam supports DUO Security for 2FA/MFA</p>
@@ -1352,25 +1352,25 @@ It is not currently possible to use both simultaneously.</p>
 <p>To enable DUO...</p>
 <ol>
 <li>Go to your DUO admin console and go to Applications.</li>
-<li>Click the "Protect an Application" button to add a new application</li>
-<li>Search and choose "Web SDK"</li>
-<li>Copy the Client ID, Client secret, and API hostname to Blazam's authentication settings page.</li>
+<li>Click the "Protect an Application" button to add a new application.</li>
+<li>Search and choose "Web SDK".</li>
+<li>Copy the Client ID, Client Secret, and API hostname to Blazam's authentication settings page.</li>
 <li>Rename your DUO entry with the name of your Blazam App so your users know what the prompt is for.</li>
 </ol>
 <h4 id="duo-unreachable-behavior">DUO Unreachable Behavior</h4>
 <p>For times when the Blazam server is unable to reach the DUO servers due to connectivity, internet, or Cisco datacenter issues, this
 setting determines how a successful first-factor logon attempt should behave afterwards.</p>
-<p>Allow permits the login and bypass the second factor.</p>
+<p>Allow permits the login and bypasses the second factor.</p>
 <p>Block will prevent the logon until communication with DUO has been re-established.</p>
-<h2 id="google-authenticatior">Google Authenticatior</h2>
+<h2 id="google-authenticator">Google Authenticator</h2>
 <p>Blazam supports Google Authenticator and compatible apps for 2FA/MFA</p>
 <h3 id="setup_1">Setup</h3>
-<p>To enabble Google Authenicator...</p>
+<p>To enable Google Authenticator...</p>
 <ol>
 <li>Download Google Authenticator or a compatible app like DUO Mobile or Microsoft Authenticator.</li>
 <li>Log into Blazam.</li>
 <li>If MFA is required and the MFA Type is configured as Google Authenticator in Blazam, a Google Authenticator setup prompt will show a QR code.</li>
-<li>If MFA is not required, after logging in, click the user button in the top right, and open "Preferences", then click "Setup Google Authenticator"</li>
+<li>If MFA is not required, after logging in, click the user button in the top right, and open "Preferences", then click "Setup Google Authenticator".</li>
 <li>Add a new account on your Authenticator mobile app, and scan the QR code shown in Blazam.</li>
 <li>Confirm the configuration by entering a TOTP passcode from the app after adding the account.</li>
 </ol>

@@ -1,5 +1,5 @@
 ## Subscriptions
-Notifications in Blazam operate on the principal of subscriptions.
+Notifications in Blazam operate on the principle of subscriptions.
 
 Subscriptions can either allow or block notifications.
 
@@ -34,7 +34,7 @@ When a user, group, or OU is created.
 When an object is deleted.
 
 ### Modify
-When any field is changed, barring password changes and group membership changes.
+When any field is changed, except for password changes and group membership changes.
 
 ### Group Assignment
 When an object is assigned or unassigned from a group, a notification will be sent.
@@ -53,8 +53,8 @@ be displayed next to the Notifications button as they arrive.
 Subscriptions set for email will send an email notification to the user's configured
 email address within Blazam (accessible from the `User Button` of each Blazam user).
 
-By default Blazam populates all users emails with the value in Active Directory, if available.
+By default, Blazam populates all users' emails with the value in Active Directory, if available.
 
 ### Block
 Subscriptions that block do the exact opposite of those that don't. It provides a way to easily
-exclude certain OU's or objects from sending unnecessary notifications.
+exclude certain OUs or objects from sending unnecessary notifications.

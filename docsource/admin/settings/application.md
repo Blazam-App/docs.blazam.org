@@ -3,22 +3,22 @@
 Brand Blazam with your own personalized name.
 
 ## Homepage Message
-Messages entered here will be displayed to all user
+Messages entered here will be displayed to all users
 on their home page dashboard. The text has full HTML support
 for message customization.
 
 ## Force HTTPS
-Forces http connections to https.
+Forces HTTP connections to HTTPS.
 
 ## User Helpdesk URL
 !!! warning
 
 	Not currently implemented
 
-This is your organizations tech support portal for help buttons within Blazam.
+This is your organization's tech support portal for help buttons within Blazam.
 
 ## Branding Icon
-Upload you organization's logo or other image to use within the app. 
+Upload your organization's logo or other image to use within the app. 
 !!! note
 	
 	The icons used in Blazam are sent to the browser in a method that

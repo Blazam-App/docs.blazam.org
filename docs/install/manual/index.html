@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pre-requisites" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -429,9 +429,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-Requisites
+      Prerequisites
     </span>
   </a>
   
@@ -466,9 +466,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pre-requisites_1" class="md-nav__link">
+  <a href="#prerequisites_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-Requisites
+      Prerequisites
     </span>
   </a>
   
@@ -493,9 +493,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pre-requisites_2" class="md-nav__link">
+  <a href="#prerequisites_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-Requisites
+      Prerequisites
     </span>
   </a>
   
@@ -1218,9 +1218,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-Requisites
+      Prerequisites
     </span>
   </a>
   
@@ -1255,9 +1255,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pre-requisites_1" class="md-nav__link">
+  <a href="#prerequisites_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-Requisites
+      Prerequisites
     </span>
   </a>
   
@@ -1282,9 +1282,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pre-requisites_2" class="md-nav__link">
+  <a href="#prerequisites_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-Requisites
+      Prerequisites
     </span>
   </a>
   
@@ -1338,23 +1338,25 @@
 
   <h1>Manual Installation</h1>
 
-<h2 id="pre-requisites">Pre-Requisites</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. For testing, you can opt for the file based Sqlite <code>DatabaseType</code>.</li>
-<li>Create an empty database, a new database user to connect with, and permissions and logons set. If you chose Sqlite, choose a destination directory and prepare folder permissions.<ul>
-<li>Refer to your database documentation for security setup and best practices</li>
-</ul>
-</li>
+<li>Install an SQL Express, MS SQL, MySQL, MariaDB server, or use an existing one. For testing, you can opt for the file-based SQLite <code>DatabaseType</code>.</li>
+<li>
+<p>Create an empty database, a new database user to connect with, and set permissions and logins. If you chose SQLite, choose a destination directory and prepare folder permissions.</p>
+<ul>
+<li>Refer to your database documentation for security setup and best practices.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Installing Blazam on a Domain Controller is not recommended.</p>
 </div>
+</li>
+</ul>
 <h2 id="download"><a href="https://blazam.org/download">Download</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows Host</label><label for="__tabbed_1_2">Linux Host</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <h3 id="install-under-iis">Install under IIS</h3>
-<p>Feel free to deviate from the instructions to fit your desired deployment</p>
+<p>Feel free to deviate from the instructions to fit your desired deployment.</p>
 <ol>
 <li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Web Hosting Bundle</a>, also from Microsoft.</li>
 <li>Ensure the Web Socket Module is installed (Required)<ul>
@@ -1375,14 +1377,14 @@
 <li>
 <p>Set ApplicationPool to AlwaysRunning (Recommended)</p>
 <ul>
-<li>In IIS Manager, right click on the application pool under which the application runs and select <code>Advanced Settings</code>.  </li>
+<li>In IIS Manager, right-click on the application pool under which the application runs and select <code>Advanced Settings</code>.  </li>
 <li>Set start mode to <code>Always Running</code>.</li>
 </ul>
 </li>
 <li>
 <p>Set IIS Site to Preload (Recommended)</p>
 <ul>
-<li>In IIS Manager, right click on the site for the application, select <code>Manage Website</code> -&gt; <code>Advanced Settings</code> and set the <code>Preload Enabled</code> value to <code>true</code>.</li>
+<li>In IIS Manager, right-click on the site for the application, select <code>Manage Website</code> -&gt; <code>Advanced Settings</code> and set the <code>Preload Enabled</code> value to <code>true</code>.</li>
 </ul>
 </li>
 <li>
@@ -1392,7 +1394,7 @@
 <h3 id="install-as-service">Install as Service</h3>
 <ol>
 <li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Runtime</a> from Microsoft.</li>
-<li>Extract the application to any directory eg:<code>C:\Program Files\Blazam</code></li>
+<li>Extract the application to any directory, e.g.: <code>C:\Program Files\Blazam</code></li>
 <li>Using nssm.exe in the extracted files, install <code>BLAZAM.exe</code> as a service.</li>
 <li>Continue with <a href="../config/">Configuration</a></li>
 </ol>
@@ -1400,15 +1402,15 @@
 <div class="tabbed-block">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The Linux compatible Blazam is not yet available for public use in production. Beta testing only!</p>
+<p>The Linux-compatible Blazam is not yet available for public use in production. Beta testing only!</p>
 </div>
 <p>Installing Blazam on Linux manually is not a trivial
-undertaking. Using the install.sh script is more user
+undertaking. Using the install.sh script is more user-
 friendly and streamlined for installation on Linux.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian/Ubuntu</label><label for="__tabbed_2_2">CentOS/RHEL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<h3 id="pre-requisites_1">Pre-Requisites</h3>
+<h3 id="prerequisites_1">Prerequisites</h3>
 <ol>
 <li>Install the necessary dependency packages from apt using the command
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>libldap2<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
@@ -1422,7 +1424,7 @@ friendly and streamlined for installation on Linux.</p>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>unzip<span class="w"> </span>-oq<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/opt/blazam&quot;</span>
 </span></code></pre></div>
 <h3 id="reverse-proxy-optional">Reverse Proxy (Optional)</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Apached Reverse Proxy</label><label for="__tabbed_3_2">nginx Reverse Proxy</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Apache Reverse Proxy</label><label for="__tabbed_3_2">nginx Reverse Proxy</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>&lt;VirtualHost<span class="w"> </span>*:80&gt;
@@ -1482,7 +1484,7 @@ friendly and streamlined for installation on Linux.</p>
 </div>
 </div>
 <div class="tabbed-block">
-<h3 id="pre-requisites_2">Pre-Requisites</h3>
+<h3 id="prerequisites_2">Prerequisites</h3>
 <ol>
 <li>Install the necessary dependency packages using <code>yum</code> or <code>dnf</code>:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>openldap<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
@@ -1501,7 +1503,7 @@ friendly and streamlined for installation on Linux.</p>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>unzip<span class="w"> </span>-oq<span class="w"> </span><span class="s2">&quot;blazam.zip&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/opt/blazam&quot;</span>
 </span></code></pre></div>
 <h3 id="reverse-proxy-optional_1">Reverse Proxy (Optional)</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Apached Reverse Proxy</label><label for="__tabbed_4_2">nginx Reverse Proxy</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Apache Reverse Proxy</label><label for="__tabbed_4_2">nginx Reverse Proxy</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span>&lt;VirtualHost<span class="w"> </span>*:80&gt;

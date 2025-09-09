@@ -1487,31 +1487,31 @@ of whatever user properties you want.</p>
 <h2 id="inheritance">Inheritance</h2>
 <p>One very useful and powerful feature is template
 inheritance. Create a base template that contains the
-common data for all your users, like <code>Company</code> or your <code>Username</code> or <code>Password</code> algorithms, all
-child templates will inherit the values and any changes made to the base template.</p>
+common data for all your users, like <code>Company</code> or your <code>Username</code> or <code>Password</code> algorithms. All
+child templates will inherit the values, and any changes made to the base template.</p>
 <h2 id="template-components">Template Components</h2>
 <h3 id="parent-template">Parent Template</h3>
-<p>Defines a parent template from which to inherit values from.</p>
+<p>Defines a parent template from which to inherit values.</p>
 <h3 id="template-name">Template Name</h3>
-<p>The name for the template as will be shown to users on
+<p>The name for the template as it will be shown to users on
 the create user page.</p>
 <h3 id="template-category">Template Category</h3>
 <p>Organize your templates into categories for easy retrieval.</p>
 <h3 id="visibility">Visibility</h3>
-<p>Control whether the template is visible on <code>Create User</code> page.
+<p>Control whether the template is visible on the <code>Create User</code> page.
 Useful for base templates that should not be used directly.</p>
 <h3 id="username-display-name-and-password">Username, Display Name, and Password</h3>
-<p>Define the username and display name formats along with  the new password for created users.
-An assortment of string variables are available to compute the value
+<p>Define the username and display name formats along with the new password for created users.
+An assortment of string variables is available to compute the value
 on creation.</p>
 <p>In addition, you can pull the first X characters of a field or perform
 regex matches.</p>
 <h3 id="variables">Variables</h3>
 <p><code>{variable:modifier[argument]}</code>, <code>{variable:modifier}</code>, <code>{variable[argument]}</code>, or just <code>{variable}</code></p>
-<p>Variables Expressions must be surrounded by curly braces eg: <code>{fn}</code></p>
-<p>Modifiers and Arguments are both optional</p>
-<p>Variable Expressions can be chained together and anything outside of curly braces will
-be copied as is. eg: <code>{fi}{ln}</code></p>
+<p>Variable expressions must be surrounded by curly braces, e.g., <code>{fn}</code></p>
+<p>Modifiers and arguments are both optional.</p>
+<p>Variable expressions can be chained together, and anything outside of curly braces will
+be copied as is, e.g., <code>{fi}{ln}</code></p>
 <table>
 <thead>
 <tr>
@@ -1529,8 +1529,8 @@ be copied as is. eg: <code>{fi}{ln}</code></p>
 <td>First Name</td>
 <td>u, l, regex</td>
 <td>Upper Case, Lower Case, Regular Expression</td>
-<td>0-10000, Regex Expression eg: (?&lt;!\d)([a-zA-Z])(\d)</td>
-<td>Pulls the first x number of characters, A custom regular expression in match mode</td>
+<td>0-10000, Regex Expression e.g., (?&lt;!\d)([a-zA-Z])(\d)</td>
+<td>Pulls the first x number of characters, a custom regular expression in match mode</td>
 </tr>
 <tr>
 <td>fi</td>
@@ -1545,8 +1545,8 @@ be copied as is. eg: <code>{fi}{ln}</code></p>
 <td>Middle Name</td>
 <td>u, l, regex</td>
 <td>Upper Case, Lower Case, Regular Expression</td>
-<td>0-10000, Regex Expression eg: (?&lt;!\d)([a-zA-Z])(\d)</td>
-<td>Pulls the first x number of characters, A custom regular expression in match mode</td>
+<td>0-10000, Regex Expression e.g., (?&lt;!\d)([a-zA-Z])(\d)</td>
+<td>Pulls the first x number of characters, a custom regular expression in match mode</td>
 </tr>
 <tr>
 <td>mi</td>
@@ -1561,8 +1561,8 @@ be copied as is. eg: <code>{fi}{ln}</code></p>
 <td>Last Name</td>
 <td>u, l, regex</td>
 <td>Upper Case, Lower Case, Regular Expression</td>
-<td>0-10000, Regex Expression eg: (?&lt;!\d)([a-zA-Z])(\d)</td>
-<td>Pulls the first x number of characters, A custom regular expression in match mode</td>
+<td>0-10000, Regex Expression e.g., (?&lt;!\d)([a-zA-Z])(\d)</td>
+<td>Pulls the first x number of characters, a custom regular expression in match mode</td>
 </tr>
 <tr>
 <td>li</td>
@@ -1640,14 +1640,14 @@ be copied as is. eg: <code>{fi}{ln}</code></p>
 <p>If enabled, users will be able to change the generated username.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Super-admins are always able to override usernames</p>
+<p>Super-admins are always able to override usernames.</p>
 </div>
 <h4 id="require-password-change">Require Password Change</h4>
 <p>If enabled, the associated checkbox in ADUC will be checked and users
 will be asked to change their password upon first domain login.</p>
 <h4 id="send-welcome-email">Send Welcome Email</h4>
 <p>If enabled, an email containing the username and password will be sent. If 
-the email field is generated, static, or editable the email will go to that address. If
+the email field is generated, static, or editable, the email will go to that address. If
 no address is entered into the email field, the user will be asked for a destination.</p>
 <h4 id="ask-for-alternate-email">Ask For Alternate Email</h4>
 <p>If enabled, Blazam will always ask for a custom destination address for credential emails.</p>
@@ -1655,7 +1655,7 @@ no address is entered into the email field, the user will be asked for a destina
 <p>The formula simulator allows you to more easily construct your generated variable
 expressions. Preview your changes on the fly while constructing your configuration.</p>
 <h3 id="fields">Fields</h3>
-<p>This section allows for the addition of any of the user attribute you want to define.
+<p>This section allows for the addition of any user attribute you want to define.
 After adding a field, you can then define a value, allow the user to edit the value,
 or require the value on creation.</p>
 <h3 id="organizational-unit">Organizational Unit</h3>

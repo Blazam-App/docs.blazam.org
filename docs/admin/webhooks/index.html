@@ -1224,26 +1224,26 @@
 
 <h1 id="webhooks">Webhooks</h1>
 <p>Webhooks are a way for applications to communicate
-with each other in real-time by sending data over
+with each other in real time by sending data over
 HTTP(s) when specific events occur.</p>
 <h2 id="subscriptions">Subscriptions</h2>
 <p>Blazam utilizes a subscription model for webhooks.</p>
 <p>Each connection is subscribed to specific event types.</p>
-<p>For now, webhooks subscriptions are domain wide, but per
+<p>For now, webhook subscriptions are domain-wide, but per
 OU subscriptions may come in a future update.</p>
 <h2 id="subscription-options">Subscription Options</h2>
 <p>Each subscription can listen for certain event types, send via POST
-or GET (only POST is implemented for now), a destination URL, SSL validation,
+or GET (only POST is implemented for now), specify a destination URL, SSL validation,
 and an authorization token if required.</p>
 <h2 id="webhook-creation">Webhook Creation</h2>
-<p>To create a subscription, go to <code>Configure</code>-&gt;<code>Webhooks</code> and create a new connection.</p>
+<p>To create a subscription, go to <code>Configure</code> -&gt; <code>Webhooks</code> and create a new connection.</p>
 <p>Each connection shows the status of the last communication attempt to allow for
 easy identification of misconfigured connections.</p>
 <h2 id="audit-and-monitoring">Audit and Monitoring</h2>
-<p>Webhooks by their very nature, are transparent. Failure is invisible
+<p>Webhooks, by their very nature, are transparent. Failure is invisible
 to the web app user. Therefore, extensive auditing of webhooks is recorded by Blazam.</p>
-<p>Every attempted message is recorded with failure details. To monitor webhook activity
-go to <code>Audit</code>-&gt;<code>Webhooks</code></p>
+<p>Every attempted message is recorded with failure details. To monitor webhook activity,
+go to <code>Audit</code> -&gt; <code>Webhooks</code></p>
 
 
 

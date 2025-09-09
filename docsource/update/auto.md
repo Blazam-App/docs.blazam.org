@@ -1,7 +1,7 @@
 ﻿# Automatic Updates
 
 ## Self-Update Setup
-Some manual configuration is neccessary to perform self-updates for now.
+Some manual configuration is necessary to perform self-updates for now.
 
 First decide the account to use. There are two approved options.
 

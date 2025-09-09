@@ -985,9 +985,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#last-triggerd" class="md-nav__link">
+  <a href="#last-triggered" class="md-nav__link">
     <span class="md-ellipsis">
-      Last Triggerd
+      Last Triggered
     </span>
   </a>
   
@@ -1378,9 +1378,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#last-triggerd" class="md-nav__link">
+  <a href="#last-triggered" class="md-nav__link">
     <span class="md-ellipsis">
-      Last Triggerd
+      Last Triggered
     </span>
   </a>
   
@@ -1433,14 +1433,20 @@
 
 
 <h1 id="rules">Rules</h1>
-<p>Rules provide an additional level of automation. With it,
-business rules and conformity standards can be applied. With the use of custom Active
-Directory Schema unlimited functionality is possible.</p>
+<p>Rules provide an additional level of automation. With them,
+business rules and conformity standards can be applied. With the use of a custom Active
+Directory schema, unlimited functionality is possible.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Rules are blocked from executing on the account provided to Blazam.
+This is currently the only safeguard against total domain lockout.</p>
+<p>In a future update, a configurable list of excluded groups will be available.</p>
+</div>
 <h2 id="rule-triggers">Rule Triggers</h2>
-<p>There are two type of rules in Blazam, Event-Based and Scheduled.</p>
+<p>There are two types of rules in Blazam: Event-Based and Scheduled.</p>
 <h3 id="event-based-rules">Event-Based Rules</h3>
-<p>Event-based triggers fire when the object type must be all or matching and 
-any filters applied will be respected.</p>
+<p>Event-based triggers fire when the object type of the rule is set to <code>All</code> or matches the
+changed entry's type and all attribute filters applied are met.</p>
 <h4 id="trigger-types">Trigger Types</h4>
 <ul>
 <li>Assign</li>
@@ -1454,20 +1460,20 @@ any filters applied will be respected.</p>
 <li>Enable</li>
 </ul>
 <h3 id="scheduled-rules">Scheduled Rules</h3>
-<p>Scheduled Rules run, on a schedule, of course.</p>
+<p>Scheduled rules run on a schedule, of course.</p>
 <p>To determine which Active Directory objects apply to the rule's
 filter, the filter is converted to an LDAP query and polled against
 AD. The returned objects are then verified a second time before applying
 any rule actions to the object.</p>
 <p>Currently, rules can only be scheduled to run daily.
 Depending on the response to this feature, additional
-scheduling flexibillity may be added in the future.</p>
+scheduling flexibility may be added in the future.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>Scheduled rules are powerful tools. Configurations exist that could,
-in very rare circumstances, disable every Domain account, effectively disabling your domain.</p>
-<p>Chances are ~ 1/(Number of User Accounts)^2</p>
-<p>The following combniation of conditions warrant precautions for this</p>
+in very rare circumstances, disable every domain account other than the one
+provided to Blazam. This would be a very bad day.</p>
+<p>The following combination of conditions warrants precautions for this:</p>
 <ul>
 <li>The Application Base DN is the domain root</li>
 <li>The rule filter could apply to all domain admins</li>
@@ -1476,7 +1482,7 @@ in very rare circumstances, disable every Domain account, effectively disabling 
 </div>
 <h2 id="rule-filters">Rule Filters</h2>
 <p>Filters allow filtering against any default or custom Active
-Directory field. </p>
+Directory field.</p>
 <p>Leaving a filter blank results in the rule running for every
 entry triggered.</p>
 <div class="admonition danger">
@@ -1486,12 +1492,12 @@ object type in Active Directory under the Application Root DN
 being acted on.</p>
 </div>
 <h3 id="operators">Operators</h3>
-<p>Not all operators available for all attribute types.</p>
+<p>Not all operators are available for all attribute types.</p>
 <p>Operators can be inverted with the Negate checkbox.</p>
 <ul>
 <li>Equals</li>
 <li>Starts With</li>
-<li>End With</li>
+<li>Ends With</li>
 <li>Contains</li>
 <li>Before Now</li>
 <li>After Now</li>
@@ -1499,12 +1505,12 @@ being acted on.</p>
 <li>Future Time Frame</li>
 </ul>
 <h2 id="rule-actions">Rule Actions</h2>
-<p>Rule actions allow for Blazam to modify Active Directory objects.</p>
+<p>Rule actions allow Blazam to modify Active Directory objects.</p>
 <ul>
 <li>Modify Field</li>
 <li>Send Email (Not Yet Implemented)</li>
 <li>Assign</li>
-<li>Unasign</li>
+<li>Unassign</li>
 <li>Lockout</li>
 <li>Unlock</li>
 <li>Enable</li>
@@ -1516,11 +1522,11 @@ being acted on.</p>
 rule should conflict with the intent of a lower priority rule.</p>
 <h2 id="matches-preview">Matches Preview</h2>
 <p>When viewing rules, a matches button will show the matched Active Directory
-objects for that rule's filtes when clicked. This allows visibility into
+objects for that rule's filters when clicked. This allows visibility into
 what objects will be affected when the rule is triggered/run.</p>
 <h2 id="rule-timestamps">Rule Timestamps</h2>
 <p>Rules show the last triggered and last executed times.</p>
-<h3 id="last-triggerd">Last Triggerd</h3>
+<h3 id="last-triggered">Last Triggered</h3>
 <p>The last time a matching event within Blazam occurs, or the scheduled time
 is reached.</p>
 <h3 id="last-executed">Last Executed</h3>

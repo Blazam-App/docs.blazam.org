@@ -1115,19 +1115,19 @@
 
 
 <h1 id="active-directory">Active Directory</h1>
-<p><code>Server</code> - This can be your domain's FQDN, but if that doesn't work pick a domain controller to connect to and use it's FQDN.</p>
-<p><code>Port</code> - The port to connect to. </p>
+<p><code>Server</code> - This can be your domain's FQDN, but if that doesn't work, pick a domain controller to connect to and use its FQDN.</p>
+<p><code>Port</code> - The port to connect to.</p>
 <p>389 for LDAP, 636 for LDAPS, or a custom port. If you are using LDAPS, ensure that the certificate is valid and trusted by the Blazam server.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When connecting via LDAP, Blazam will always attempt to establish an encrypted connection using StartTLS. 
+<p>When connecting via LDAP, Blazam will always attempt to establish an encrypted connection using StartTLS.
 If this fails and Use TLS is enabled, the connection will not be able to be established. If you are enforcing TLS, ensure that your domain controller supports StartTLS.</p>
 </div>
-<p><code>Username</code> - The account name excluding the domain. (eg:blazam) This account should have administrative permissions for whatever scope you intend to use the application for.</p>
+<p><code>Username</code> - The account name excluding the domain (e.g., blazam). This account should have administrative permissions for whatever scope you intend to use the application for.</p>
 <p><code>Password</code> - The password for the domain account.</p>
-<p><code>Use TLS</code> - Whether to force TLS when connecting. For internal networks this is optional. It is highly recommended if you are communicating to your domain over the internet.</p>
+<p><code>Use TLS</code> - Whether to force TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to your domain over the internet.</p>
 <p><code>FQDN</code> - The fully qualified domain name of your Active Directory domain.</p>
-<p><code>Base DN</code> - The base organizational unit distinguished name from where to begin scoping the application. Any OU's above this DN are not available to Blazam.</p>
+<p><code>Base DN</code> - The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not available to Blazam.</p>
 
 
 

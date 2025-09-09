@@ -36,4 +36,4 @@ For monitoring and managing remote workstations, Blazam uses standard Windows pr
     * **TCP 135** (RPC Endpoint Mapper)
     * **TCP 49152-65535** (RPC Dynamic Port Range for modern Windows systems)
 * **ICMP (Ping):** Allowing the **ICMP protocol** is required for Blazam to check if workstations are online.
-* **SMB:** **TCP 445** is needed to check the existing of home directories.
+* **SMB:** **TCP 445** is needed to check the existence of home directories.

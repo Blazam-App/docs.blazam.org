@@ -1118,7 +1118,7 @@
 to guide you in completing the initial configuration.</p>
 <h1 id="setup-wizard">Setup Wizard</h1>
 <h2 id="database">Database</h2>
-<h3 id="pre-requisites-excluding-sqlite">Pre-requisites (Excluding Sqlite)</h3>
+<h3 id="prerequisites-excluding-sqlite">Prerequisites (Excluding SQLite)</h3>
 <ul>
 <li>A database must be created prior to first launch.</li>
 <li>A user account with permission to write to the database and create and delete tables must also be provided.</li>
@@ -1127,27 +1127,27 @@ to guide you in completing the initial configuration.</p>
 <p class="admonition-title">Tip</p>
 <p>The <a href="../../install/web/">web installer</a> ensures the prerequisites are fulfilled before allowing installation.</p>
 </div>
-<p>The database page confirms that the settings you configured in <a href="../../install/config/">appSettings.json</a> (or as performed by the web installer) are correct and a connection to the 
+<p>The database page confirms that the settings you configured in <a href="../../install/config/">appSettings.json</a> (or as performed by the web installer) are correct and a connection to the
 database is successful.</p>
 <p>You can then "install" the database, which will set up all the necessary tables and seed data.</p>
 <h2 id="authentication">Authentication</h2>
-<p>The authentication install page allows you to set up your built-in admin password. </p>
+<p>The authentication install page allows you to set up your built-in admin password.</p>
 <p>This account is provided to allow login even when no connection to Active Directory can be made.</p>
 <h2 id="active-directory">Active Directory</h2>
-<p>This is the most important of first launch steps.</p>
-<p><code>Server</code> - This can be your domain name, but if that doesn't work pick a domain controller to connect to and use it's DNS name.</p>
+<p>This is the most important of the first launch steps.</p>
+<p><code>Server</code> - This can be your domain name, but if that doesn't work, pick a domain controller to connect to and use its DNS name.</p>
 <p><code>Port</code> - The port to connect to.</p>
-<p><code>Username</code> - The account name excluding the domain. (eg:blazam) This account should have administrative permissions for whatever scope you intend to use the application for.</p>
+<p><code>Username</code> - The account name excluding the domain. (e.g., blazam) This account should have administrative permissions for whatever scope you intend to use the application for.</p>
 <p><code>Password</code> - The password for the domain account.</p>
-<p><code>Use TLS</code> - Whether to use TLS when connecting. For internal networks this is optional. It is highly recommended if you are communicating to your domain over the internet.</p>
+<p><code>Use TLS</code> - Whether to use TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to your domain over the internet.</p>
 <p><code>FQDN</code> - The fully qualified domain name of your Active Directory domain.</p>
-<p><code>Base DN</code> - The base organizational unit distinguished name from where to begin scoping the application. Any OU's above this DN are not available to Blazam.</p>
+<p><code>Base DN</code> - The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not available to Blazam.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>At the bottom of the page is a connection status panel that will show you the state of the connection as you make changes.</p>
 </div>
 <h2 id="finalize-install">Finalize Install</h2>
-<p>After finalizing install you will be brought to the login page.
+<p>After finalizing the install, you will be brought to the login page.
 Enter the <code>admin</code> username and the password you set during the initial setup.</p>
 <p><img alt="Screenshot of login page" src="/admin/img/install/login.png" /></p>
 
