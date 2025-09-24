@@ -25,7 +25,7 @@
 
     It always installs the latest version.
 
-     ``` bash linenums="1"
+    ``` bash
     wget https://blazam.org/download/linux_install.sh linux_install.sh
-        sudo linux_install.sh
+    sudo linux_install.sh
     ```
