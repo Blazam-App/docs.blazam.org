@@ -19,6 +19,9 @@
 
 === "Linux Host"
 
+    !!! warning
+        The Linux-compatible Blazam is not yet available for public use in production. Beta testing only!
+
     Installing via the Web installer script is the recommended method as it performs all required pre-installation checks automatically, and configures the application to launch based on the chosen installation type.
 
     The Web installer script allows installing the application under Apache, nginx, or as a stand-alone service installed under /opt/.
