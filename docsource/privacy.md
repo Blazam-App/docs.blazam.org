@@ -75,6 +75,8 @@ We may update this Privacy Policy from time to time to reflect changes in our da
 
 If you have any questions or comments about this Privacy Policy or our data practices, please contact us at:
 
-Jacobsen Productions
+Jacobsen Productions LLC
+
 USA
+
 Email: support@blazam.org
