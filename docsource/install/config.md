@@ -22,6 +22,7 @@ file in the root path of the application directory.
   },
   "EncryptionKey": "supersecretstring",
   "DebugMode": "false",
+  "PathBase": "",       
   "ListeningAddress": "*",
   "HTTPPort": "79",
   "HTTPSPort": "442",
@@ -83,6 +84,10 @@ It is recommended not to modify logging settings. They may be useful for issues 
 | `true`      | The application will provide additional debugging information to the browser (This may expose priviledged information to users, only enable for assisting development)  |
 | `false`     | The application will operate in the normal mode |
 
+### PathBase
+| Values      | Description                          |
+| ----------- | ------------------------------------ |
+| `SubDirectory` | If running under a proxied subdirectory, set this value to the subdirectory path (e.g. `/blazam`)| 
 
 ### HTTPPort
 
