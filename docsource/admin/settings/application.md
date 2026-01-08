@@ -29,7 +29,7 @@ Upload your organization's logo or other image to use within the app.
 ## Website FQDN
 !!! note
 
-	Will be used for links within notification emails in an upcoming update
+	This must be set to allow for email links and self-service password reset email verifications
 
 The fully qualified domain name of your Blazam instance for use in email notification links.
 
@@ -37,6 +37,7 @@ The fully qualified domain name of your Blazam instance for use in email notific
 !!! info
 
 	Only available when running Blazam as a service. Use IIS Manager to control
-	SSL when running under IIS.
+	SSL when running under IIS. For nginx or Apache, configure SSL via their 
+	respective hosting settings or by utilizing this settings.
 
 Upload an SSL certificate with private key to use for encryption

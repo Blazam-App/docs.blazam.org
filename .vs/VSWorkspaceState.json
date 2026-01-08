@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docsource",
-    "\\docsource\\admin",
-    "\\docsource\\admin\\settings",
-    "\\docsource\\install",
-    "\\docsource\\stylesheets",
-    "\\docsource\\user"
+    "\\docsource"
   ],
-  "SelectedNode": "\\docsource\\install\\manual.md",
   "PreviewInSolutionExplorer": false
 }
