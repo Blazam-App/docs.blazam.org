@@ -51,7 +51,7 @@ If MFA is enabled for the user, it will be required after the password reset pro
  
 !!! note
      
-     This requires that the application FQDN be set in the [Application Settings](app-settings.md) within Blazam. Email must also be configured for Blazam to send the reset email.
+     This requires that the application FQDN be set in the [Application Settings](settings/application.md) within Blazam. Email must also be configured for Blazam to send the reset email.
 
 When enabled, this requires that the user have an email address in their Blazam profile. Note, this is pulled from 
 Active Directory at first sync.

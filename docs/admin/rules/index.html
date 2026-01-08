@@ -1076,6 +1076,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#global-rule-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Rule Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rule-triggers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1128,17 +1139,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-rule-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Global Rule Settings
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1628,6 +1628,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#global-rule-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Rule Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rule-triggers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1680,17 +1691,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-rule-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Global Rule Settings
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1838,7 +1838,10 @@ Directory schema, unlimited functionality is possible.</p>
 <p class="admonition-title">Info</p>
 <p>Rules are blocked from executing on the account provided to Blazam.</p>
 <p>Objects that are a member of excluded groups in the Global Rule Settings will also be skipped.</p>
+<p>By default, the Domain Adminstrators, Entrerprise Adminstrators, and Domain Controllers groups are excluded from rule execution but can be customized.</p>
 </div>
+<h2 id="global-rule-settings">Global Rule Settings</h2>
+<p>Global rule settings allow the disabling of all rules and exclusion of execution of Active Directory objects in specific groups.</p>
 <h2 id="rule-triggers">Rule Triggers</h2>
 <p>There are two types of rules in Blazam: Event-Based and Scheduled.</p>
 <h3 id="event-based-rules">Event-Based Rules</h3>
@@ -1875,10 +1878,9 @@ provided to Blazam. This would be a very bad day.</p>
 <li>The Application Base DN is the domain root</li>
 <li>The rule filter could apply to all domain admins</li>
 <li>The action disables or otherwise incapacitates the account</li>
+<li>No excluded groups are set in the Global Rule Settings</li>
 </ul>
 </div>
-<h2 id="global-rule-settings">Global Rule Settings</h2>
-<p>Global rule settings allow the disabling of all rules and exclusion of execution of Active Directory objects in specific groups.</p>
 <h2 id="rule-filters">Rule Filters</h2>
 <p>Filters allow filtering against any default or custom Active
 Directory field.</p>

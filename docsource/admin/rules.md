@@ -6,8 +6,13 @@ Directory schema, unlimited functionality is possible.
 !!! info
 
     Rules are blocked from executing on the account provided to Blazam.
-   
+
     Objects that are a member of excluded groups in the Global Rule Settings will also be skipped.
+
+    By default, the Domain Adminstrators, Entrerprise Adminstrators, and Domain Controllers groups are excluded from rule execution but can be customized.
+   
+## Global Rule Settings
+Global rule settings allow the disabling of all rules and exclusion of execution of Active Directory objects in specific groups.
 
 ## Rule Triggers
 There are two types of rules in Blazam: Event-Based and Scheduled.
@@ -52,9 +57,8 @@ scheduling flexibility may be added in the future.
     * The Application Base DN is the domain root
     * The rule filter could apply to all domain admins
     * The action disables or otherwise incapacitates the account
+    * No excluded groups are set in the Global Rule Settings
 
-## Global Rule Settings
-Global rule settings allow the disabling of all rules and exclusion of execution of Active Directory objects in specific groups.
 
 ## Rule Filters
 Filters allow filtering against any default or custom Active

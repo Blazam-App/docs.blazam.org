@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docsource"
+    "\\docsource",
+    "\\docsource\\admin",
+    "\\docsource\\admin\\settings",
+    "\\docsource\\user"
   ],
+  "SelectedNode": "\\docsource\\admin\\permissions.md",
   "PreviewInSolutionExplorer": false
 }
