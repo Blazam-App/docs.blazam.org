@@ -4,7 +4,9 @@
     "\\docsource",
     "\\docsource\\admin",
     "\\docsource\\admin\\settings",
+    "\\docsource\\install",
     "\\docsource\\user"
   ],
+  "SelectedNode": "\\docsource\\install\\config.md",
   "PreviewInSolutionExplorer": false
 }

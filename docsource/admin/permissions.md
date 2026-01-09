@@ -37,7 +37,7 @@ Any "Delegate" added with any read permissions applied, or self-edit permissions
 Nested group members are counted.
 
 ### Allow Password Reset
-When enabled, this allows the delegate to reset passwords their own password if forgotten via the login screen.
+When enabled, this allows the delegate to reset their own password if forgotten via the login screen.
 
 The requirements for utilizing this feature are set below.
 
@@ -45,9 +45,11 @@ Users under multiple delegates with differing password reset requirements will h
 
 Multiple requirements can be combined.
 
+Users with password reset enabled will be able to optionally set any/all of the below requirements if they wish to do so, even if not required.
+
 If MFA is enabled for the user, it will be required after the password reset process is complete.
 
-#### Rquire Email
+#### Require Email
  
 !!! note
      
@@ -56,13 +58,15 @@ If MFA is enabled for the user, it will be required after the password reset pro
 When enabled, this requires that the user have an email address in their Blazam profile. Note, this is pulled from 
 Active Directory at first sync.
 
-#### Require PIN
-When enabled, this requires that the user provide their PIN (set in their Blazam profile) to utilize the password reset feature.
+An email with a password reset link will be sent to the user's email address.
 
-You can set a minimum PIN length in the application settings.
+#### Require PIN
+When enabled, this requires that the set a PIN in their Blazam profile to utilize the password reset feature.
+
+You can also set a minimum PIN length.
 
 #### Require Security Questions
-When enabled, this requires that the user answer their security questions (set in their Blazam profile) to utilize the password reset feature.
+When enabled, this requires that the user set their security questions in their Blazam profile to utilize the password reset feature.
 
 Users create three of their own questions and answers in their Blazam profile.
 
