@@ -106,6 +106,8 @@ nav:
     - User Guide:
       - User Interface :  'user/index.md'
       - Notifications: 'user/notifications.md'
+      - Profile: 'user/profile.md'
+      - Password Reset: 'user/password.md'
     - About:
         - 'License': 'license.md'
         - 'Privacy': 'privacy.md'

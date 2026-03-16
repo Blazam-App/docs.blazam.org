@@ -111,6 +111,8 @@ be scheduled for the same time on the following day.
     * The Application Base DN is the domain root
     * The rule filter could apply to all domain admins
     * The action disables or otherwise incapacitates the account
+    * No excluded groups are set in the Global Rule Settings
+
 
 ## Rule Expiration
 
