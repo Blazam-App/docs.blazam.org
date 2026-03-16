@@ -6,11 +6,9 @@ Some manual configuration is necessary to perform self-updates for now.
 
 First, decide which account to use. There are two approved options:
 
-1. Use the Active Directory credentials provided to Blazam.
-2. Use a custom set of credentials. *(This can be a local user account with no administrative permissions, but granted management permissions to IIS or the service.)*
+1. Use the Active Directory credentials provided to Blazam *(This account must be an administrator on the web host.)*.
+2. Use a custom set of credentials. *(This account must be a local administrator.)*
 
-Finally, apply write permissions to the application installation directory 
-for the chosen account.
 
 ## How?
 To update, go to `Configure` -> `Settings` -> `Update`. If an update is available, an update button and release notes will be available.
