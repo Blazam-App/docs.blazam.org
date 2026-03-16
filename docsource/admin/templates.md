@@ -37,23 +37,30 @@ regex matches.
 
 Variable expressions must be surrounded by curly braces, e.g., `{fn}`
 
-Modifiers and arguments are both optional.
+Modifiers and arguments are both optional. Modifiers can be chained together, e.g., `{fn:du}` removes diacritics and converts to uppercase.
 
 Variable expressions can be chained together, and anything outside of curly braces will
 be copied as is, e.g., `{fi}{ln}`
 
 |Variable|Variable Description|Modifier|Modifier Description|Argument|Argument Description|
 | -------- | -------- | -------- | -------- | -------- | -------- |
-|fn|First Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)| Pulls the first x number of characters, a custom regular expression in match mode|
-|fi|First Initial| | | | |
-|mn|Middle Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, a custom regular expression in match mode|
-|mi|Middle Initial| | | | |
-|ln|Last Name|u, l, regex|Upper Case, Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, a custom regular expression in match mode|
-|li|Last Initial| | | | |
-|username|Username| | | | |
-|alphanum|Random letter or number|u, l|Upper Case, Lower Case| | |
-|alpha|Random letter|u, l|Upper Case, Lower Case| | |
+|fn|First Name|d, u, l, regex|Removes diacritics, Force Upper Case, Force Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)| Pulls the first x number of characters, a custom regular expression in match mode|
+|fi|First Initial|d, u, l|Removes diacritics, Force Upper Case, Force Lower Case| | |
+|mn|Middle Name|d, u, l, regex|Removes diacritics, Force Upper Case, Force Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, a custom regular expression in match mode|
+|mi|Middle Initial|d, u, l|Removes diacritics, Force Upper Case, Force Lower Case| | |
+|ln|Last Name|d, u, l, regex|Removes diacritics, Force Upper Case, Force Lower Case, Regular Expression|0-10000, Regex Expression e.g., (?<!\d)([a-zA-Z])(\d)|Pulls the first x number of characters, a custom regular expression in match mode|
+|li|Last Initial|d, u, l|Removes diacritics, Force Upper Case, Force Lower Case| | |
+|username|Username|d, u, l|Removes diacritics, Force Upper Case, Force Lower Case| | |
+|alphanumsym|Random letter, number, or symbol|u, l|Force Upper Case, Force Lower Case| | |
+|alphanum|Random letter or number|u, l|Force Upper Case, Force Lower Case| | |
+|alpha|Random letter|u, l|Force Upper Case, Force Lower Case| | |
+|sym|Random symbol| | | | |
 |num|Random number| | | | |
+|#|Username Number Incrementor| | | | |
+|.|Username Incrementor Separator| | | | |
+|(space)|Username Incrementor Separator| | | | |
+|_|Username Incrementor Separator| | | | |
+|-|Username Incrementor Separator| | | | |
 
 !!! example "Examples"
 
@@ -62,6 +69,8 @@ be copied as is, e.g., `{fi}{ln}`
 	|`{fn}`|Returns the whole first name|
 	|`{fn[1]}` or `{fi}`|Returns the first initial|
 	|`{fn:l[2]}`|Returns the first two characters of the first name in lower case|
+	|`{fi:l}{ln:l}{.}{#}`|Returns the first initial in lower case, the last name in lower case, and if a username conflicts, a period separator and an incrementing number to resolve the conflict.|
+	|`{fn:du}`|Returns the whole first name with diacritics removed and in upper case. Modifiers can be chained.|
 	|`{ln:regex[^(.{3})(.*Jr)$]}`|A regex search on the last name pulling the first 3 characters and includes Jr if the last name ends in Jr|
 
 ### Account Options
