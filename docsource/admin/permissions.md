@@ -69,12 +69,27 @@ An effective permission simulator is available to test `user`→`target` applied
 ## Global Permission Settings
 These permissions apply to all users and Active Directory search results.
 
-### Allow Access Requests
-Allow users to request group assign and/or unassign access to groups that a user has read access to but lacks those assignment
-action permissions from within Blazam.
+### Allow Action Access Requests
+Allow users to request action permissions for objects they have read access to but lack the necessary action permissions.
 
-Upon request, a notification is sent to all `Super-Users` for approval or rejection. If approved, Blazam automatically assigns
-access to the group for the user.
+Upon request, a notification is sent to all `Super-Users` for approval or rejection. If approved, Blazam automatically grants
+the requested action permission to the user.
+
+#### Available Actions
+- **Assign** - Request permission to assign users or groups to groups
+- **Unassign** - Request permission to unassign users or groups from groups
+- **Unlock** - Request permission to unlock user accounts
+
+### Allow Field Access Requests
+Allow users to request read or edit access to specific Active Directory fields that they currently cannot access.
+
+You can configure which fields are available for users to request access to. For each field, you can also specify whether
+edit access requests are allowed in addition to read access requests.
+
+Upon request, a notification is sent to all `Super-Users` for approval or rejection. If approved, Blazam automatically grants
+access to the requested field for the user.
+
+This feature allows for dynamic, on-demand permission escalation while maintaining administrative oversight and approval workflows.
 
 ### Allow self access
 Allows all users that can log into Blazam (anyone under Delegates) to have additional permissions applied to their
