@@ -36,10 +36,6 @@
 
 === "Linux Host"
 
-    !!! warning
-
-        The Linux-compatible Blazam is not yet available for public use in production. Beta testing only!
-
     Installing Blazam on Linux manually is not a trivial
     undertaking. Using the install.sh script is more user-
     friendly and streamlined for installation on Linux.
