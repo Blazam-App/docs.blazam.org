@@ -11,7 +11,7 @@
     ### Install under IIS
     Feel free to deviate from the instructions to fit your desired deployment.
 
-    1. Download and [Install .NET Core 8.x Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
+    1. Download and [Install .NET 10 Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
     1. Ensure the Web Socket Module is installed (Required)
 	    * You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Web Sockets`.
     1. Install the Application Initialization Module (Recommended)
@@ -29,7 +29,7 @@
     1. Continue with [Configuration](config.md)
     ### Install as Service
 
-    1. Download and [Install .NET Core 8.x Runtime](https://aka.ms/dotnet-download) from Microsoft.
+    1. Download and [Install .NET 10 Runtime](https://aka.ms/dotnet-download) from Microsoft.
     1. Extract the application to any directory, e.g.: `C:\Program Files\Blazam`
     1. Using nssm.exe in the extracted files, install `BLAZAM.exe` as a service.
     1. Continue with [Configuration](config.md)
@@ -45,7 +45,7 @@
 
         1. Install the necessary dependency packages from apt using the command
         ```bash
-        sudo apt-get install -y aspnetcore-runtime-8.0 openssl libldap2 curl wget unzip
+        sudo apt-get install -y aspnetcore-runtime-10.0 openssl libldap2 curl wget unzip
         ```
         1. Create a libldap.so symlink using
         ```bash
@@ -116,13 +116,13 @@
 
         1. Install the necessary dependency packages using `yum` or `dnf`:
         ```bash
-        sudo dnf install -y aspnetcore-runtime-8.0 openssl openldap curl wget unzip
+        sudo dnf install -y aspnetcore-runtime-10.0 openssl openldap curl wget unzip
         ```
         * If using CentOS 7, replace `dnf` with `yum`.
-        * For .NET 8 runtime, you may need to add the Microsoft package repository:
+        * For .NET 10 runtime, you may need to add the Microsoft package repository:
         ```bash
         sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
-        sudo dnf install -y aspnetcore-runtime-8.0
+        sudo dnf install -y aspnetcore-runtime-10.0
         ```
         2. Create a libldap.so symlink if required (adjust path as needed):
         ```bash

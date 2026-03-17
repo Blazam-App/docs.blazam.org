@@ -1778,7 +1778,7 @@
 <h3 id="install-under-iis">Install under IIS</h3>
 <p>Feel free to deviate from the instructions to fit your desired deployment.</p>
 <ol>
-<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Web Hosting Bundle</a>, also from Microsoft.</li>
+<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET 10 Web Hosting Bundle</a>, also from Microsoft.</li>
 <li>Ensure the Web Socket Module is installed (Required)<ul>
 <li>You can find the module under <code>Server Roles</code> -&gt; <code>Web Server</code> -&gt; <code>Application Developer</code> -&gt; <code>Web Sockets</code>.</li>
 </ul>
@@ -1813,7 +1813,7 @@
 </ol>
 <h3 id="install-as-service">Install as Service</h3>
 <ol>
-<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET Core 8.x Runtime</a> from Microsoft.</li>
+<li>Download and <a href="https://aka.ms/dotnet-download">Install .NET 10 Runtime</a> from Microsoft.</li>
 <li>Extract the application to any directory, e.g.: <code>C:\Program Files\Blazam</code></li>
 <li>Using nssm.exe in the extracted files, install <code>BLAZAM.exe</code> as a service.</li>
 <li>Continue with <a href="../config/">Configuration</a></li>
@@ -1829,7 +1829,7 @@ friendly and streamlined for installation on Linux.</p>
 <h3 id="prerequisites_1">Prerequisites</h3>
 <ol>
 <li>Install the necessary dependency packages from apt using the command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>libldap2<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-10.0<span class="w"> </span>openssl<span class="w"> </span>libldap2<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
 </span></code></pre></div></li>
 <li>Create a libldap.so symlink using
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ln<span class="w"> </span>-sf<span class="w"> </span>/usr/lib64/libldap.so<span class="w"> </span>/usr/lib/x86_64-linux-gnu/libldap-2.5.so.0
@@ -1903,12 +1903,12 @@ friendly and streamlined for installation on Linux.</p>
 <h3 id="prerequisites_2">Prerequisites</h3>
 <ol>
 <li>Install the necessary dependency packages using <code>yum</code> or <code>dnf</code>:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0<span class="w"> </span>openssl<span class="w"> </span>openldap<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-10.0<span class="w"> </span>openssl<span class="w"> </span>openldap<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip
 </span></code></pre></div></li>
 <li>If using CentOS 7, replace <code>dnf</code> with <code>yum</code>.</li>
-<li>For .NET 8 runtime, you may need to add the Microsoft package repository:
+<li>For .NET 10 runtime, you may need to add the Microsoft package repository:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>rpm<span class="w"> </span>-Uvh<span class="w"> </span>https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-8.0
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>aspnetcore-runtime-10.0
 </span></code></pre></div></li>
 <li>Create a libldap.so symlink if required (adjust path as needed):
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-sf<span class="w"> </span>/usr/lib64/libldap.so<span class="w"> </span>/usr/lib64/libldap-2.5.so.0

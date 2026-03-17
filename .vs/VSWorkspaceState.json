@@ -6,7 +6,9 @@
     "\\docsource\\admin\\settings",
     "\\docsource\\install",
     "\\docsource\\stylesheets",
+    "\\docsource\\update",
     "\\docsource\\user"
   ],
+  "SelectedNode": "\\docsource\\install\\web.md",
   "PreviewInSolutionExplorer": false
 }

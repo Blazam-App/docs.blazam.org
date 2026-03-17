@@ -10,7 +10,7 @@
     | **CPU** | 1.5Ghz Single Core | 2Ghz Dual Core |
     | **RAM (Application Only)** | 250MB | 1GB |
     | **Disk Space** | 600MB | 2GB |
-    | **.NET Core** | .NET Core 8 | .NET Core 8+ |
+    | **.NET Core** | .NET Core 8 | .NET Core 10 |
 
 === "Linux Host"
 
@@ -22,7 +22,7 @@
     | **CPU** | 1.0Ghz Single Core | 1.5Ghz Dual Core |
     | **RAM (Application Only)** | 250MB | 1GB |
     | **Disk Space** | 600MB | 2GB |
-    | **.NET Core** | .NET Core 8 | .NET Core 8+ |
+    | **.NET Core** | .NET Core 8 | .NET Core 10 |
 
 
 ## Database Options
