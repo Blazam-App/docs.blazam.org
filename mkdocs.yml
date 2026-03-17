@@ -95,6 +95,8 @@ nav:
         - Application: 'admin/settings/application.md'
         - Authentication: 'admin/settings/authentication.md'
         - Active Directory: 'admin/settings/activeDirectory.md'
+        - Email: 'admin/settings/email.md'
+        - System: 'admin/settings/system.md'
       - SSO: 'admin/sso.md'
       - Webhooks: 'admin/webhooks.md'
       - Permissions: 'admin/permissions.md'
