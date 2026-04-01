@@ -12,7 +12,7 @@ to be registered on the web host. Run the following script as **Administrator**
 from your Blazam installation directory:
 
 ````powershell
-.\updater\update-register.ps1
+.\updater\register-update-task.ps1
 ````
 
 During registration you will be prompted to choose the account the task runs as:

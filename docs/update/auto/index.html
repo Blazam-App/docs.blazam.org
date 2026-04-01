@@ -1634,7 +1634,7 @@ Task coordinated with the application's built-in download and staging pipeline.<
 <p>Automatic updates require the <strong>"BLAZAM Auto Updater"</strong> Windows Scheduled Task
 to be registered on the web host. Run the following script as <strong>Administrator</strong>
 from your Blazam installation directory:</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.\</span><span class="n">updater</span><span class="p">\</span><span class="nb">update-register</span><span class="p">.</span><span class="n">ps1</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.\</span><span class="n">updater</span><span class="p">\</span><span class="nb">register-update</span><span class="n">-task</span><span class="p">.</span><span class="n">ps1</span>
 </span></code></pre></div>
 <p>During registration you will be prompted to choose the account the task runs as:</p>
 <table>
