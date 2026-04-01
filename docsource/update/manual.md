@@ -3,7 +3,7 @@
 !!! info
 
     Blazam can update itself, but some configuration
-    is required. Check the [self-update](self.md) page for more information.
+    is required. Check the [aut-update](auto.md) page for more information.
 
 Manual updating is very easy with Blazam:
 

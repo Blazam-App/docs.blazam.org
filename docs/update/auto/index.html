@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.blazam.org/update/auto/">
       
       
-        <link rel="prev" href="../self/">
+        <link rel="prev" href="../manual/">
       
       
         <link rel="next" href="../../admin/initialSetup/">
@@ -590,34 +590,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../self/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Self Updates
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -681,10 +653,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#self-update-setup" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Self-Update Setup
+        Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-register-the-scheduled-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Register the Scheduled Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-update-credentials-application-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configure Update Credentials (Application Side)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
       
     </span>
   </a>
@@ -692,10 +703,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how" class="md-nav__link">
+  <a href="#configuring-the-schedule" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How?
+        Configuring the Schedule
       
     </span>
   </a>
@@ -1530,10 +1541,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#self-update-setup" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Self-Update Setup
+        Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-register-the-scheduled-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Register the Scheduled Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-update-credentials-application-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configure Update Credentials (Application Side)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
       
     </span>
   </a>
@@ -1541,10 +1591,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how" class="md-nav__link">
+  <a href="#configuring-the-schedule" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How?
+        Configuring the Schedule
       
     </span>
   </a>
@@ -1577,18 +1627,92 @@
 
 
 <h1 id="automatic-updates">Automatic Updates</h1>
-<h2 id="self-update-setup">Self-Update Setup</h2>
-<p>Some manual configuration is necessary to perform self-updates for now.</p>
-<p>First decide the account to use. There are two approved options.</p>
+<p>Blazam can automatically apply updates on a schedule using a Windows Scheduled
+Task coordinated with the application's built-in download and staging pipeline.</p>
+<h2 id="setup">Setup</h2>
+<h3 id="1-register-the-scheduled-task">1. Register the Scheduled Task</h3>
+<p>Automatic updates require the <strong>"BLAZAM Auto Updater"</strong> Windows Scheduled Task
+to be registered on the web host. Run the following script as <strong>Administrator</strong>
+from your Blazam installation directory:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.\</span><span class="n">updater</span><span class="p">\</span><span class="nb">update-register</span><span class="p">.</span><span class="n">ps1</span>
+</span></code></pre></div>
+<p>During registration you will be prompted to choose the account the task runs as:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SYSTEM</strong></td>
+<td>Default. No password required. Must have write access to the Blazam installation directory.</td>
+</tr>
+<tr>
+<td><strong>Custom user</strong></td>
+<td>Must be a local administrator. Domain accounts (e.g. <code>DOMAIN\ServiceAccount</code>) and local accounts (e.g. <code>.\LocalUser</code>) are supported.</td>
+</tr>
+</tbody>
+</table>
+<p>The registered task has the following behaviour:</p>
+<ul>
+<li>Executes <code>updater\update.ps1</code> using PowerShell with <code>-ExecutionPolicy Bypass</code></li>
+<li>Runs with the <strong>highest available</strong> privilege level</li>
+<li>Enforces a <strong>1-hour</strong> maximum execution time</li>
+<li>Uses <strong>StartWhenAvailable</strong> — catches up if the server was offline at the scheduled time</li>
+<li>Uses <strong>IgnoreNew</strong> — will not queue a second run if already executing</li>
+</ul>
+<h3 id="2-configure-update-credentials-application-side">2. Configure Update Credentials (Application Side)</h3>
+<p>In the Blazam application, go to <code>Configure</code> -&gt; <code>Settings</code> -&gt; <code>Update</code> and
+configure the credentials used to download and stage update files:</p>
 <ol>
-<li>Use the Active Directory credentials provided to Blazam <em>(This account must be an administrator on the web host.)</em>.</li>
-<li>Use a custom set of credentials. <em>(This account must be a local administrator.)</em></li>
+<li>Use the Active Directory credentials provided to Blazam <em>(this account must
+   have write permissions to the application directory)</em>.</li>
+<li>Use a custom set of credentials <em>(this account must have write permissions 
+   to the application directory)</em>.</li>
 </ol>
-<h2 id="how">How?</h2>
-<p>To configure automatic updates, go to <code>Configure</code> -&gt; <code>Settings</code> -&gt; <code>Update</code> and enable auto updates.</p>
-<p>You can then choose a time of day to perform the update. The default value is 2:00 
-AM local server time. Choose a time with minimal user activity to avoid disruptions.</p>
-<p>When an update is released, Blazam will schedule a self update at the configured time.</p>
+<hr />
+<h2 id="how-it-works">How It Works</h2>
+<p>When an update is available and automatic updates are enabled, Blazam performs
+the following coordinated sequence:</p>
+<ol>
+<li>
+<p><strong>Download &amp; Stage</strong> — The application downloads the update zip to a
+   temporary directory and extracts it to <code>&lt;app_root&gt;\updater\staged\</code>. This
+   happens within the running application process using the configured update
+   credentials.</p>
+</li>
+<li>
+<p><strong>Backup</strong> — The current installation is backed up to the running user's
+   temporary folder (e.g. <code>C:\Windows\Temp\Blazam\backup\</code>) before any files
+   are replaced.</p>
+</li>
+<li>
+<p><strong>Updater Self-Update</strong> — The <code>updater\</code> scripts are replaced from the
+   staged copy, keeping the task runner up to date.</p>
+</li>
+<li>
+<p><strong>Coordination with Scheduled Task</strong> — The application will stage the update files
+   at the time schedule in the app at <code>Configure</code> -&gt; <code>Settings</code> -&gt; <code>Update</code>. Set this
+   time to 15 mins before the scheduled task to ensure the update is staged
+   and ready to be applied when the task runs (Default Schedueled Task runs at 2AM so
+   1:45AM is recommended).</p>
+</li>
+</ol>
+<hr />
+<h2 id="configuring-the-schedule">Configuring the Schedule</h2>
+<p>To enable automatic updates and set the update time, go to
+<code>Configure</code> -&gt; <code>Settings</code> -&gt; <code>Update</code>:</p>
+<ul>
+<li>Toggle <strong>Enable Automatic Updates</strong></li>
+<li>Set your preferred <strong>time of day</strong> — the default is <strong>2:00 AM</strong> local server time</li>
+</ul>
+<blockquote>
+<p>Choose a time with minimal user activity to avoid disruptions. If the server
+is offline at the scheduled time, the task will run as soon as it becomes
+available (<code>StartWhenAvailable</code>).</p>
+</blockquote>
 
 
 
@@ -1670,7 +1794,7 @@ AM local server time. Choose a time with minimal user activity to avoid disrupti
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../self/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Self Updates">
+          <a href="../manual/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Manual Updates">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1680,7 +1804,7 @@ AM local server time. Choose a time with minimal user activity to avoid disrupti
                 Previous
               </span>
               <div class="md-ellipsis">
-                Self Updates
+                Manual Updates
               </div>
             </div>
           </a>

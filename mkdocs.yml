@@ -87,7 +87,6 @@ nav:
 
         - Updating:
           - 'Manual Updates': 'update/manual.md'
-          - 'Self Updates': 'update/self.md'
           - 'Auto Updates': 'update/auto.md'
     - Admin Guide:
       - First Run: 'admin/initialSetup.md'
