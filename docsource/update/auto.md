@@ -15,6 +15,11 @@ from your Blazam installation directory:
 .\updater\register-update-task.ps1
 ````
 
+If the PowerShell execution policy prevents the script from running, you can temporarily bypass it by running:
+````powershell
+powershell -ExecutionPolicy Bypass -File .\updater\register-update-task.ps1
+````
+
 During registration you will be prompted to choose the account the task runs as:
 
 | Option | Requirement |
