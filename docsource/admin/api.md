@@ -1,7 +1,3 @@
-# API
-Blazam is still young, so the API is currently quite
-limited.
-
 ## Documentation
 For the latest API documentation, open your Blazam installation,
 log in, and click your user avatar button. There you will find the "API"
