@@ -18,14 +18,43 @@ The `Access Levels` you define can be reused or combined to create exactly the c
 
     Permissions that are applied inherit fully down the OU tree unless a `Deny` permission is set at a lower level.
 
-!!! example
+!!! example "Access Based Example"
+    
+    With the four `Access Levels` below:
+   
+    - `Read Users` — read access to user demographic fields
+    - `Unlock Users` — permission to unlock locked-out accounts
+    - `Reset Passwords` — permission to reset user passwords
+    - `Read Groups` — read access to group memberships
 
-    A group `HR` could be given the `Access Level` `Read Users` (which allows only read access to user demographic fields)
-    and the `Read Groups` `Access Level` to the OU `/Company` while also receiving `Rename Users` for the `/Company/Marketing` OU
-    as well as the `Deny Group Read` `Access Level` for the `/Company/IT` OU.
+    Assign all four of these `Access Levels` to the delegate group `Help Desk` for the `/Company` OU.
 
-    This will result in a member of `HR` being able to read user demographics and rename users in `/Company/Marketing` and read user demographics in
-    `/Company/IT` while being able to read the groups a user is a member of, only if the group is not under the `/Company/IT` OU.
+    Now any member of `Help Desk` automatically receives all four permissions across the entire `/Company` OU tree.
+    If a change to an `Access Level` needs to be made, it only needs to be changed in one place,
+    and it immediately applies everywhere the `Access Level` is mapped.
+
+    A second group, `Tier 2 Support`, also a member of the `Help Desk` group, could receive the same four `Access Levels`
+    **plus** `Edit Users` for `/Company`, without needing to recreate any of the underlying definitions — simply reusing what already exists.
+
+!!! example "Role-Based Example"
+
+    An `Access Level` can be named and configured to represent an entire role rather than a single type of access.
+
+    For example, create an `Access Level` called `Help Desk` and configure it with:
+
+    - Read access to user demographic fields
+    - Unlock action on user accounts
+    - Reset password action on user accounts
+    - Read access to group memberships
+
+    Now assign the single `Help Desk` `Access Level` to any delegate group for any OU you'd like.
+
+    A group `IT Support` mapped to `/Company` with the `Help Desk` `Access Level` and a group `Regional Admins`
+    mapped to `/Company/Europe` with the same `Help Desk` `Access Level` both receive the exact same set of
+    permissions — defined once, reused everywhere.
+
+    If the role ever needs to change (e.g., adding edit access to phone numbers), update the single `Help Desk`
+    `Access Level` and the change is instantly reflected for every group and OU it is mapped to.
 
 ## Delegates
 The core element of the permission system in Blazam is the "Delegate".
@@ -135,4 +164,4 @@ You could, for instance, allow additional fields to be read, like Employee ID.
 You can provide edit access to phone numbers or home addresses for self-service of address changes and emergency notification
 destinations.
 
-You can allow a user to disable their own account if that is something people do.
+You can allow a user to disable their own account if desired.
