@@ -2065,12 +2065,37 @@ you can create a single ACL rule and reuse it for as many groups on as many OUs 
 <p>Permissions that are applied inherit fully down the OU tree unless a <code>Deny</code> permission is set at a lower level.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>A group <code>HR</code> could be given the <code>Access Level</code> <code>Read Users</code> (which allows only read access to user demographic fields)
-and the <code>Read Groups</code> <code>Access Level</code> to the OU <code>/Company</code> while also receiving <code>Rename Users</code> for the <code>/Company/Marketing</code> OU
-as well as the <code>Deny Group Read</code> <code>Access Level</code> for the <code>/Company/IT</code> OU.</p>
-<p>This will result in a member of <code>HR</code> being able to read user demographics and rename users in <code>/Company/Marketing</code> and read user demographics in
-<code>/Company/IT</code> while being able to read the groups a user is a member of, only if the group is not under the <code>/Company/IT</code> OU.</p>
+<p class="admonition-title">Access Based Example</p>
+<p>With the four <code>Access Levels</code> below:</p>
+<ul>
+<li><code>Read Users</code> — read access to user demographic fields</li>
+<li><code>Unlock Users</code> — permission to unlock locked-out accounts</li>
+<li><code>Reset Passwords</code> — permission to reset user passwords</li>
+<li><code>Read Groups</code> — read access to group memberships</li>
+</ul>
+<p>Assign all four of these <code>Access Levels</code> to the delegate group <code>Help Desk</code> for the <code>/Company</code> OU.</p>
+<p>Now any member of <code>Help Desk</code> automatically receives all four permissions across the entire <code>/Company</code> OU tree.
+If a change to an <code>Access Level</code> needs to be made, it only needs to be changed in one place,
+and it immediately applies everywhere the <code>Access Level</code> is mapped.</p>
+<p>A second group, <code>Tier 2 Support</code>, also a member of the <code>Help Desk</code> group, could receive the same four <code>Access Levels</code>
+<strong>plus</strong> <code>Edit Users</code> for <code>/Company</code>, without needing to recreate any of the underlying definitions — simply reusing what already exists.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Role-Based Example</p>
+<p>An <code>Access Level</code> can be named and configured to represent an entire role rather than a single type of access.</p>
+<p>For example, create an <code>Access Level</code> called <code>Help Desk</code> and configure it with:</p>
+<ul>
+<li>Read access to user demographic fields</li>
+<li>Unlock action on user accounts</li>
+<li>Reset password action on user accounts</li>
+<li>Read access to group memberships</li>
+</ul>
+<p>Now assign the single <code>Help Desk</code> <code>Access Level</code> to any delegate group for any OU you'd like.</p>
+<p>A group <code>IT Support</code> mapped to <code>/Company</code> with the <code>Help Desk</code> <code>Access Level</code> and a group <code>Regional Admins</code>
+mapped to <code>/Company/Europe</code> with the same <code>Help Desk</code> <code>Access Level</code> both receive the exact same set of
+permissions — defined once, reused everywhere.</p>
+<p>If the role ever needs to change (e.g., adding edit access to phone numbers), update the single <code>Help Desk</code>
+<code>Access Level</code> and the change is instantly reflected for every group and OU it is mapped to.</p>
 </div>
 <h2 id="delegates">Delegates</h2>
 <p>The core element of the permission system in Blazam is the "Delegate".</p>
@@ -2147,7 +2172,7 @@ applied only to their own accounts.</p>
 <p>You could, for instance, allow additional fields to be read, like Employee ID.</p>
 <p>You can provide edit access to phone numbers or home addresses for self-service of address changes and emergency notification
 destinations.</p>
-<p>You can allow a user to disable their own account if that is something people do.</p>
+<p>You can allow a user to disable their own account if desired.</p>
 
 
 
