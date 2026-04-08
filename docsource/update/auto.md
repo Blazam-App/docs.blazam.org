@@ -65,7 +65,7 @@ the following coordinated sequence:
    staged copy, keeping the task runner up to date.
 
 4. **Coordination with Scheduled Task** — The application will stage the update files
-   at the time schedule in the app at `Configure` -> `Settings` -> `Update`. Set this
+   at the time scheduled in the app at `Configure` -> `Settings` -> `Update`. Set this
    time to 15 mins before the scheduled task to ensure the update is staged
    and ready to be applied when the task runs (Default Schedueled Task runs at 2AM so
    1:45AM is recommended).
@@ -78,7 +78,7 @@ To enable automatic updates and set the update time, go to
 `Configure` -> `Settings` -> `Update`:
 
 - Toggle **Enable Automatic Updates**
-- Set your preferred **time of day** — the default is **2:00 AM** local server time
+- Set your preferred **time of day** — the default is **1:45 AM** local server time
 
 > Choose a time with minimal user activity to avoid disruptions. If the server
 > is offline at the scheduled time, the task will run as soon as it becomes
