@@ -11,7 +11,7 @@ Blazam offers a flexible notification system for both in-app and email notificat
 In order for email notifications to be sent, email must be enabled in `Configure -> Settings`.
 
 ## Behavior
-Notification settings, much like permissions, are applied to OUs and propagate down the OU tree
+Notification settings, much like permissions, notification subscriptions are applied to OUs and propagate down the OU tree
 unless a `Block` is placed at a lower level.
 
 In-app and email notification types can be included/excluded together or independently.
