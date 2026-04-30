@@ -4,8 +4,8 @@
 
     | Requirement | Minimum | Recommended |
     | :--- | :--- | :--- |
-    | **Operating System** | Microsoft Windows 10 | Microsoft Server 2019 |
-    | **Directory** | Active Directory 2008R2 Schema | Active Directory 2012 Schema |
+    | **Operating System** | Microsoft Windows 10 | Latest Microsoft Server |
+    | **Directory** | Active Directory 2008R2 Schema | Latest Active Directory Schema |
     | **Web Server** | Self-Served Service | IIS |
     | **CPU** | 1.5Ghz Single Core | 2Ghz Dual Core |
     | **RAM (Application Only)** | 250MB | 1GB |
@@ -16,8 +16,8 @@
 
     | Requirement | Minimum | Recommended |
     | :--- | :--- | :--- |
-    | **Operating System** | Ubuntu/Debian/RHEL | Ubuntu Server 2022 |
-    | **Directory** | Active Directory 2008R2 Schema | Active Directory 2012 Schema |
+    | **Operating System** | Ubuntu/Debian/RHEL | Latest Ubuntu Server |
+    | **Directory** | Active Directory 2008R2 Schema | Latest Active Directory Schema |
     | **Web Server** | Self-Served Service | Apache/nginx Revese-Proxy |
     | **CPU** | 1.0Ghz Single Core | 1.5Ghz Dual Core |
     | **RAM (Application Only)** | 250MB | 1GB |
