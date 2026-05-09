@@ -49,6 +49,19 @@ Subscriptions applying to In App will be posted for display in the notifications
 panel within the Blazam web application. A highlight of unread message count will
 be displayed next to the Notifications button as they arrive.
 
+#### Browser Notifications
+Browser notifications leverage Progressive Web App (PWA) capabilities to send notifications
+directly to your browser, even when the Blazam tab is not active. These notifications appear
+as native system notifications on your device. They are triggered along witth in-app notifications.
+
+To enable browser notifications:
+1. Click on the `User Menu` button
+2. Select your notification settings
+3. Click the `BROWSER NOTIFICATIONS` button to enable browser push notifications
+
+Your browser will prompt you to allow notifications from Blazam. Once enabled, you'll receive
+real-time alerts for subscribed events even when not actively viewing the application.
+
 ### To Email
 Subscriptions set for email will send an email notification to the user's configured
 email address within Blazam (accessible from the `User Button` of each Blazam user).

@@ -3,12 +3,11 @@
     "",
     "\\docsource",
     "\\docsource\\admin",
-    "\\docsource\\admin\\settings",
     "\\docsource\\install",
     "\\docsource\\stylesheets",
     "\\docsource\\update",
     "\\docsource\\user"
   ],
-  "SelectedNode": "\\docsource\\admin\\api.md",
+  "SelectedNode": "\\docsource\\install\\requirements.md",
   "PreviewInSolutionExplorer": false
 }
