@@ -2,12 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\docsource",
-    "\\docsource\\admin",
-    "\\docsource\\install",
-    "\\docsource\\stylesheets",
-    "\\docsource\\update",
     "\\docsource\\user"
   ],
-  "SelectedNode": "\\docsource\\install\\requirements.md",
+  "SelectedNode": "\\docsource\\user\\notifications.md",
   "PreviewInSolutionExplorer": false
 }

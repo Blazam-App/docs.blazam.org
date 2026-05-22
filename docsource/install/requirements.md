@@ -4,25 +4,25 @@
 
     | Requirement | Minimum | Recommended |
     | :--- | :--- | :--- |
-    | **Operating System** | Microsoft Windows 10 | Latest Microsoft Server |
-    | **Directory** | Active Directory 2008R2 Schema | Latest Active Directory Schema |
+    | **Operating System** | Microsoft Windows 11 | Latest Microsoft Server |
+    | **Directory** | Active Directory 2012 Schema | Latest Active Directory Schema |
     | **Web Server** | Self-Served Service | IIS |
     | **CPU** | 1.5Ghz Single Core | 2Ghz Dual Core |
     | **RAM (Application Only)** | 250MB | 1GB |
     | **Disk Space** | 600MB | 2GB |
-    | **.NET Core** | .NET Core 8 | .NET Core 10 |
+    | **.NET Core** | .NET Core 10 | .NET Core 10 |
 
 === "Linux Host"
 
     | Requirement | Minimum | Recommended |
     | :--- | :--- | :--- |
     | **Operating System** | Ubuntu/Debian/RHEL | Latest Ubuntu Server |
-    | **Directory** | Active Directory 2008R2 Schema | Latest Active Directory Schema |
+    | **Directory** | Active Directory 2012 Schema | Latest Active Directory Schema |
     | **Web Server** | Self-Served Service | Apache/nginx Revese-Proxy |
     | **CPU** | 1.0Ghz Single Core | 1.5Ghz Dual Core |
     | **RAM (Application Only)** | 250MB | 1GB |
     | **Disk Space** | 600MB | 2GB |
-    | **.NET Core** | .NET Core 8 | .NET Core 10 |
+    | **.NET Core** | .NET Core 10 | .NET Core 10 |
 
 
 ## Database Options
