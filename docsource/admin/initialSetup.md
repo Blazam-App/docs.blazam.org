@@ -39,7 +39,8 @@ This is the most important of the first launch steps.
 
 `Password` - The password for the domain account.
 
-`Use TLS` - Whether to use TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to your domain over the internet.
+`Use TLS` - Whether to use TLS when connecting. For Windows Blazam hosts on internal networks using the standard LDAP port (default:389), this is optional, and Blazam will attempt encryption regardless of this setting in that case.
+It is highly recommended if you are communicating to your domain over the internet or running a Linux Blazam host.
 
 `FQDN` - The fully qualified domain name of your Active Directory domain.
 

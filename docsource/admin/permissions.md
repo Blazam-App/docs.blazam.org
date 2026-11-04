@@ -90,7 +90,7 @@ Active Directory at first sync.
 An email with a password reset link will be sent to the user's email address.
 
 #### Require PIN
-When enabled, this requires that the set a PIN in their Blazam profile to utilize the password reset feature.
+When enabled, this requires that the user set a PIN in their Blazam profile to utilize the password reset feature.
 
 You can also set a minimum PIN length.
 

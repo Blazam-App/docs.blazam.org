@@ -11,12 +11,12 @@
     ### Install under IIS
     Feel free to deviate from the instructions to fit your desired deployment.
 
-    1. Download and [Install .NET 10 Web Hosting Bundle](https://aka.ms/dotnet-download), also from Microsoft.
+    1. Download and [Install .NET 10 Web Hosting Bundle](https://aka.ms/dotnet-download) from Microsoft.
     1. Ensure the Web Socket Module is installed (Required)
 	    * You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Web Sockets`.
     1. Install the Application Initialization Module (Recommended)
 	    * You can find the module under `Server Roles` -> `Web Server` -> `Application Developer` -> `Application Initialization`.
-    1. Copy contents of zip file to a directory accessible by IIS
+    1. Copy contents of zip file to a directory accessible by IIS like `C:\inetpub\wwwroot\Blazam` or `C:\Program Files\Blazam`.
     1. Create new Site in IIS for Blazam
 	    * Point the root directory to the directory you unzipped the files to.
 
@@ -53,7 +53,7 @@
         ```
         ### Install Blazam
         ```bash
-            wget -q -O "blazam.zip" "https://blazam.org/download/beta"
+            wget -q -O "blazam.zip" "https://blazam.org/download/zip"
             unzip -oq "blazam.zip" -d "/opt/blazam"
         ```
         ### Reverse Proxy (Optional)
@@ -111,6 +111,8 @@
                 }
             }
             ```
+        Continue with [Configuration](config.md)
+
     === "CentOS/RHEL"
         ### Prerequisites
 
@@ -130,7 +132,7 @@
         ```
         ### Install Blazam
         ```bash
-            wget -q -O "blazam.zip" "https://blazam.org/download/beta"
+            wget -q -O "blazam.zip" "https://blazam.org/download/zip"
             unzip -oq "blazam.zip" -d "/opt/blazam"
         ```
         ### Reverse Proxy (Optional)
@@ -188,4 +190,5 @@
                 }
             }
             ```
+        Continue with [Configuration](config.md)
 

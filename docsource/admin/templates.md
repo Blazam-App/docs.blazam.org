@@ -66,12 +66,16 @@ be copied as is, e.g., `{fi}{ln}`
 
 	|Expression|Description|
 	| ----- | ----- |
-	|`{fn}`|Returns the whole first name|
-	|`{fn[1]}` or `{fi}`|Returns the first initial|
-	|`{fn:l[2]}`|Returns the first two characters of the first name in lower case|
-	|`{fi:l}{ln:l}{.}{#}`|Returns the first initial in lower case, the last name in lower case, and if a username conflicts, a period separator and an incrementing number to resolve the conflict.|
-	|`{fn:du}`|Returns the whole first name with diacritics removed and in upper case. Modifiers can be chained.|
-	|`{ln:regex[^(.{3})(.*Jr)$]}`|A regex search on the last name pulling the first 3 characters and includes Jr if the last name ends in Jr|
+	|`{fn}`|Returns the whole first name (e.g., `John`).|
+	|`{fn[1]}` or `{fi}`|Returns the first initial (e.g., `J`).|
+	|`{fn:l[2]}`|Returns the first two characters of the first name in lower case (e.g., `jo`).|
+	|`{fi:l}{ln:l}{.}{#}`|Returns the first initial in lower case, the last name in lower case, and if a username conflicts, a period separator and an incrementing number to resolve the conflict (e.g., `jdoe.1`).|
+	|`{fn:l}.{ln:l}{_}{#}`|Returns lowercase first name, a period, lowercase last name, and if a conflict occurs, an underscore separator with an incrementing number (e.g., `john.doe_1`).|
+	|`{fi:l}{ln:l}{-}{#}`|Returns lowercase first initial and last name, appending a hyphen separator and an incrementing number on conflict (e.g., `jdoe-1`).|
+	|`{fi:l}{ln:l}{#}`|Returns lowercase first initial and last name, appending an incrementing number with no separator on conflict (e.g., `jdoe1`).|
+	|`{fn:l}{ }{#}`|Returns lowercase first name, using a space separator before the incrementing number on conflict (e.g., `john 1`).|
+	|`{fn:du}`|Returns the whole first name with diacritics removed and in upper case. Modifiers can be chained (e.g., `JOHN`).|
+	|`{ln:regex[^(.{3})(.*Jr)$]}`|A regex search on the last name pulling the first 3 characters and includes Jr if the last name ends in Jr (e.g., `DoeJr` for `Doe Jr`).|
 
 ### Account Options
 #### Allow Username Override

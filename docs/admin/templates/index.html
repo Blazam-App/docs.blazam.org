@@ -2094,27 +2094,43 @@ be copied as is, e.g., <code>{fi}{ln}</code></p>
 <tbody>
 <tr>
 <td><code>{fn}</code></td>
-<td>Returns the whole first name</td>
+<td>Returns the whole first name (e.g., <code>John</code>).</td>
 </tr>
 <tr>
 <td><code>{fn[1]}</code> or <code>{fi}</code></td>
-<td>Returns the first initial</td>
+<td>Returns the first initial (e.g., <code>J</code>).</td>
 </tr>
 <tr>
 <td><code>{fn:l[2]}</code></td>
-<td>Returns the first two characters of the first name in lower case</td>
+<td>Returns the first two characters of the first name in lower case (e.g., <code>jo</code>).</td>
 </tr>
 <tr>
 <td><code>{fi:l}{ln:l}{.}{#}</code></td>
-<td>Returns the first initial in lower case, the last name in lower case, and if a username conflicts, a period separator and an incrementing number to resolve the conflict.</td>
+<td>Returns the first initial in lower case, the last name in lower case, and if a username conflicts, a period separator and an incrementing number to resolve the conflict (e.g., <code>jdoe.1</code>).</td>
+</tr>
+<tr>
+<td><code>{fn:l}.{ln:l}{_}{#}</code></td>
+<td>Returns lowercase first name, a period, lowercase last name, and if a conflict occurs, an underscore separator with an incrementing number (e.g., <code>john.doe_1</code>).</td>
+</tr>
+<tr>
+<td><code>{fi:l}{ln:l}{-}{#}</code></td>
+<td>Returns lowercase first initial and last name, appending a hyphen separator and an incrementing number on conflict (e.g., <code>jdoe-1</code>).</td>
+</tr>
+<tr>
+<td><code>{fi:l}{ln:l}{#}</code></td>
+<td>Returns lowercase first initial and last name, appending an incrementing number with no separator on conflict (e.g., <code>jdoe1</code>).</td>
+</tr>
+<tr>
+<td><code>{fn:l}{ }{#}</code></td>
+<td>Returns lowercase first name, using a space separator before the incrementing number on conflict (e.g., <code>john 1</code>).</td>
 </tr>
 <tr>
 <td><code>{fn:du}</code></td>
-<td>Returns the whole first name with diacritics removed and in upper case. Modifiers can be chained.</td>
+<td>Returns the whole first name with diacritics removed and in upper case. Modifiers can be chained (e.g., <code>JOHN</code>).</td>
 </tr>
 <tr>
 <td><code>{ln:regex[^(.{3})(.*Jr)$]}</code></td>
-<td>A regex search on the last name pulling the first 3 characters and includes Jr if the last name ends in Jr</td>
+<td>A regex search on the last name pulling the first 3 characters and includes Jr if the last name ends in Jr (e.g., <code>DoeJr</code> for <code>Doe Jr</code>).</td>
 </tr>
 </tbody>
 </table>

@@ -1484,7 +1484,8 @@ database is successful.</p>
 <p><code>Port</code> - The port to connect to.</p>
 <p><code>Username</code> - The account name excluding the domain. (e.g., blazam) This account should have administrative permissions for whatever scope you intend to use the application for.</p>
 <p><code>Password</code> - The password for the domain account.</p>
-<p><code>Use TLS</code> - Whether to use TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to your domain over the internet.</p>
+<p><code>Use TLS</code> - Whether to use TLS when connecting. For Windows Blazam hosts on internal networks using the standard LDAP port (default:389), this is optional, and Blazam will attempt encryption regardless of this setting in that case.
+It is highly recommended if you are communicating to your domain over the internet or running a Linux Blazam host.</p>
 <p><code>FQDN</code> - The fully qualified domain name of your Active Directory domain.</p>
 <p><code>Base DN</code> - The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not available to Blazam.</p>
 <div class="admonition info">

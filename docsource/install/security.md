@@ -63,7 +63,7 @@ The application encrypts sensitive database data such as passwords. Blazam uses 
     break communication with your Active Directory, effectively locking you out without manual modifications
     to the database.
 
-    To back up the key from the app, go to the `Settings` page and click the `System` tab. (Coming soon)
+    To back up the key from the app, go to the `Settings` page and click the `System` tab.
 
 ??? failure "Lost your encryption key?"
     
