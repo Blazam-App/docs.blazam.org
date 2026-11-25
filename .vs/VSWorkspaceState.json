@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\docs",
     "\\docsource",
+    "\\docsource\\admin",
+    "\\docsource\\admin\\settings",
     "\\docsource\\install",
+    "\\docsource\\update",
     "\\docsource\\user"
   ],
+  "SelectedNode": "\\docsource\\admin\\templates.md",
   "PreviewInSolutionExplorer": false
 }

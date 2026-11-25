@@ -84,6 +84,10 @@ If enabled, users will be able to change the generated username.
 
 	Super-admins are always able to override usernames.
 
+#### UPN Suffix
+Define the UPN suffix for the new user. If left blank, users will be able to choose from the available UPN suffixes in the domain.
+If only one UPN suffix is available, it will be automatically applied.
+
 #### Require Password Change
 If enabled, the associated checkbox in ADUC will be checked and users
 will be asked to change their password upon first domain login.
@@ -102,8 +106,14 @@ expressions. Preview your changes on the fly while constructing your configurati
 
 ### Fields
 This section allows for the addition of any user attribute you want to define.
-After adding a field, you can then define a value, allow the user to edit the value,
+After adding a field, you can then define a value or value list, allow the user to edit the value,
 or require the value on creation.
+#### Values
+Applying a value allows you to set a static value for the field. By enabling the editable checkbox, you can allow the user to change the value on creation.
+If a value list is applied any value set is ignored on creation.
+#### Value Lists
+Value Lists are shared across all templates and can be used to provide an option list for any string field.
+Updates to value lists propagate to all templates using that list. When a value list is used, the editable checkbox is checked by default and disabled.
 
 ### Organizational Unit
 Where the new user should be placed. Users must have "Create User" permission in this OU to use this template.
