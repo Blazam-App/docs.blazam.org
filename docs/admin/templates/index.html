@@ -1228,6 +1228,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Value Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1868,6 +1896,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Value Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2181,8 +2237,14 @@ no address is entered into the email field, the user will be asked for a destina
 expressions. Preview your changes on the fly while constructing your configuration.</p>
 <h3 id="fields">Fields</h3>
 <p>This section allows for the addition of any user attribute you want to define.
-After adding a field, you can then define a value, allow the user to edit the value,
+After adding a field, you can then define a value or value list, allow the user to edit the value,
 or require the value on creation.</p>
+<h4 id="values">Values</h4>
+<p>Applying a value allows you to set a static value for the field. By enabling the editable checkbox, you can allow the user to change the value on creation.
+If a value list is applied any value set is ignored on creation.</p>
+<h4 id="value-lists">Value Lists</h4>
+<p>Value Lists are shared across all templates and can be used to provide an option list for any string field.
+Updates to value lists propagate to all templates using that list. When a value list is used, the editable checkbox is checked by default and disabled.</p>
 <h3 id="organizational-unit">Organizational Unit</h3>
 <p>Where the new user should be placed. Users must have "Create User" permission in this OU to use this template.</p>
 <h3 id="groups">Groups</h3>

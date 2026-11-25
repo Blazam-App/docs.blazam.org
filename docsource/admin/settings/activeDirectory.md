@@ -14,16 +14,23 @@ The port to connect to.
 	If this fails and Use TLS is enabled, the connection will not be able to be established. If you are enforcing TLS, ensure that your domain controller supports StartTLS.
 
 ## Username
-The account name excluding the domain (e.g., blazam). This account should have administrative permissions for whatever scope you intend to use the application for.
+The account name excluding the domain (e.g., blazam). This account should have administrative permissions for whatever scope you intend
+to use the application for.
 
 ## Password
 The password for the domain account.
 
 ## Use TLS
-Whether to force TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to your domain over the internet.
+Whether to force TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to 
+your domain over the internet.
 
 ## FQDN
 The fully qualified domain name of your Active Directory domain.
 
 ## Base DN
-The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not available to Blazam.
+The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not 
+available to Blazam.
+
+## Maximum Search Results
+The maximum number of results to return from a search. If the search exceeds this number, no more results will be returned. 
+This is to prevent excessive load on your domain controller.

@@ -950,6 +950,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#maximum-search-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum Search Results
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1633,6 +1644,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#maximum-search-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum Search Results
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1670,15 +1692,21 @@
 If this fails and Use TLS is enabled, the connection will not be able to be established. If you are enforcing TLS, ensure that your domain controller supports StartTLS.</p>
 </div>
 <h2 id="username">Username</h2>
-<p>The account name excluding the domain (e.g., blazam). This account should have administrative permissions for whatever scope you intend to use the application for.</p>
+<p>The account name excluding the domain (e.g., blazam). This account should have administrative permissions for whatever scope you intend
+to use the application for.</p>
 <h2 id="password">Password</h2>
 <p>The password for the domain account.</p>
 <h2 id="use-tls">Use TLS</h2>
-<p>Whether to force TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to your domain over the internet.</p>
+<p>Whether to force TLS when connecting. For internal networks, this is optional. It is highly recommended if you are communicating to 
+your domain over the internet.</p>
 <h2 id="fqdn">FQDN</h2>
 <p>The fully qualified domain name of your Active Directory domain.</p>
 <h2 id="base-dn">Base DN</h2>
-<p>The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not available to Blazam.</p>
+<p>The base organizational unit distinguished name from where to begin scoping the application. Any OUs above this DN are not 
+available to Blazam.</p>
+<h2 id="maximum-search-results">Maximum Search Results</h2>
+<p>The maximum number of results to return from a search. If the search exceeds this number, no more results will be returned. 
+This is to prevent excessive load on your domain controller.</p>
 
 
 
